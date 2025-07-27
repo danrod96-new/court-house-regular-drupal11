@@ -12581,4 +12581,8 @@ textarea.form-control-lg {
   opacity: 0.25;
 }
 
+@font-face {
+  font-family: Droid Sans ", " Helvetica Neue ", " Nimbus Sans L ", sans-serif";
+}
+
 /*# sourceMappingURL=main.style.css.map*/
