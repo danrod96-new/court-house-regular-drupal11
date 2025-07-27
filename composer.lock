@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f2f7fd786720fb77aa981e24f883282b",
+    "content-hash": "82a21a5116d8907a107039ec78b431f2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1003,6 +1003,18 @@
             "dist": {
                 "type": "zip",
                 "url": "https://github.com/danrod96-new/bartik/archive/refs/tags/1.0.0.zip"
+            },
+            "type": "drupal-theme",
+            "extra": {
+                "installer-name": "garland"
+            }
+        },
+        {
+            "name": "danrod96-new/venture",
+            "version": "1.0.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/danrod96-new/venture/archive/refs/tags/1.0.0.zip"
             },
             "type": "drupal-theme",
             "extra": {

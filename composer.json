@@ -42,12 +42,28 @@
                 "type": "zip"
               }
             }
+        },
+        {
+            "type": "package",
+            "package": {
+              "name": "danrod96-new/venture",
+              "version": "1.0.0",
+              "type": "drupal-theme",
+              "extra": {
+                "installer-name": "garland"
+              },
+              "dist": {
+                "url": "https://github.com/danrod96-new/venture/archive/refs/tags/1.0.0.zip",
+                "type": "zip"
+              }
+            }
         }
     ],
     "require": {
         "composer/installers": "^2.3",
         "danrod96-new/bartik": "^1.0",
         "danrod96-new/garland": "^1.0",
+        "danrod96-new/venture": "^1.0",
         "drupal/admin_toolbar": "^3.6",
         "drupal/backup_migrate": "^5.1",
         "drupal/basecore": "^1.0",
