@@ -1,0 +1,22 @@
+uuid: 1e8fcd62-d191-4775-96b4-2bac92645377
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - venture
+_core:
+  default_config_hash: ziAmgekHY413nI5P68cQEhRLUmot8Re5V7PT-vGrgTw
+id: venture_powered_by_drupal
+theme: venture
+region: footer
+weight: 0
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  label_display: '0'
+  provider: system
+visibility: {  }

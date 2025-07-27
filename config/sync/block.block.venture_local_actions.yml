@@ -1,0 +1,20 @@
+uuid: 22b0f8d5-0d15-44a5-9354-362cb2c2d41b
+langcode: en
+status: true
+dependencies:
+  theme:
+    - venture
+_core:
+  default_config_hash: OUPm0e_84859GHEunz1kgA0g13EayC1KsAcScIuN_mo
+id: venture_local_actions
+theme: venture
+region: content
+weight: -2
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  label_display: '0'
+  provider: core
+visibility: {  }

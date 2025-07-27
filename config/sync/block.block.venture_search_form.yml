@@ -1,0 +1,23 @@
+uuid: 44e72b14-2c2d-4fad-aae2-e7632b20a97b
+langcode: en
+status: true
+dependencies:
+  module:
+    - search
+  theme:
+    - venture
+_core:
+  default_config_hash: Bk6UL_R3cuCbHmwUDDPBEDYBMLShQPqFh6Z_CZKNm44
+id: venture_search_form
+theme: venture
+region: nav_additional
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: 'Search form'
+  label_display: '0'
+  provider: search
+  page_id: null
+visibility: {  }

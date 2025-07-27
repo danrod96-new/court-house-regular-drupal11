@@ -1,0 +1,20 @@
+uuid: 52399513-7b85-4173-babb-d7cc8adb86a6
+langcode: en
+status: true
+dependencies:
+  theme:
+    - venture
+_core:
+  default_config_hash: 8CQT19gcs6Ocrpz1OdqIZNzrEHASSX5cJ9bFV8p-j7w
+id: venture_page_title
+theme: venture
+region: content
+weight: -6
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  label_display: '0'
+  provider: core
+visibility: {  }

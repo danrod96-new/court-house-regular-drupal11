@@ -1,0 +1,27 @@
+uuid: d931f2c1-d3c2-40bc-9465-82ab138a10d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - venture
+_core:
+  default_config_hash: tdmMVeRwf0bQKtteWFGZ1umVV1u9HFYN_wf16Emq33Y
+id: venture_main_navigation
+theme: venture
+region: nav_main
+weight: 0
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 0
+  expand_all_items: true
+visibility: {  }

@@ -1,0 +1,22 @@
+uuid: 6120f557-123b-4b82-b4f4-59994c6da4c3
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - venture
+_core:
+  default_config_hash: PAWm62S_5c28MmSkaFAqXVlyv0YUf82B6FwRPg-gYQU
+id: venture_content
+theme: venture
+region: content
+weight: -1
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

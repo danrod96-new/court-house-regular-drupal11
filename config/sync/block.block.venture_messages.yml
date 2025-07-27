@@ -1,0 +1,22 @@
+uuid: e95a644e-3506-442c-b6fb-13cd2e86a661
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - venture
+_core:
+  default_config_hash: ipZmwemzd_ZSO0DCmwvMEK2oDeioMeunkgkfgmCq3Dw
+id: venture_messages
+theme: venture
+region: content
+weight: -7
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: Messages
+  label_display: '0'
+  provider: system
+visibility: {  }
