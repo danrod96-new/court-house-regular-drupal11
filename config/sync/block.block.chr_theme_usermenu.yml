@@ -1,0 +1,29 @@
+uuid: 8e3d201f-0c81-4914-9e23-b9bc7ab6106c
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.account
+  module:
+    - system
+  theme:
+    - chr_theme
+id: chr_theme_usermenu
+theme: chr_theme
+region: sidebar_first
+weight: -5
+provider: null
+plugin: 'system_menu_block:account'
+settings:
+  id: 'system_menu_block:account'
+  label: 'User Menu'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: null
+  expand_all_items: false
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: "<front>\r\n/user/login\r\n/receive/register\r\n/place/register\r\n/content/placement-only-bounty-program\r\n/content/charterplacement-only-subscriber-benefits"

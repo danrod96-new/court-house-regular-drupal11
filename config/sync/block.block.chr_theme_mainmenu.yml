@@ -1,4 +1,4 @@
-uuid: fe12abf4-1dc4-47dd-aab2-bd8ba24246f4
+uuid: bb1abc63-8159-4c75-8a86-d142465d26b7
 langcode: en
 status: true
 dependencies:
@@ -8,20 +8,18 @@ dependencies:
     - system
   theme:
     - chr_theme
-_core:
-  default_config_hash: GmMhmYfr_jhw5FfKdA_fx3jepIxxi5KjX2wLxn9KCGU
-id: chr_theme_main_menu
+id: chr_theme_mainmenu
 theme: chr_theme
-region: navbar_left
-weight: -5
+region: header
+weight: -2
 provider: null
 plugin: 'system_menu_block:main'
 settings:
   id: 'system_menu_block:main'
-  label: 'Main navigation'
+  label: 'Main menu'
   label_display: '0'
   provider: system
   level: 1
-  depth: 2
+  depth: null
   expand_all_items: false
 visibility: {  }

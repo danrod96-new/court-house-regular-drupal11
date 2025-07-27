@@ -1,0 +1,30 @@
+uuid: ec5e6e9c-5045-4cf0-a9d6-fa8c20639c6a
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:816d2862-7958-43b7-9841-794bdb63103c'
+  module:
+    - block_content
+    - system
+  theme:
+    - chr_theme
+id: chr_theme_chartersearchheader
+theme: chr_theme
+region: content
+weight: -2
+provider: null
+plugin: 'block_content:816d2862-7958-43b7-9841-794bdb63103c'
+settings:
+  id: 'block_content:816d2862-7958-43b7-9841-794bdb63103c'
+  label: 'Charter Search Header'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/charter-search/*'

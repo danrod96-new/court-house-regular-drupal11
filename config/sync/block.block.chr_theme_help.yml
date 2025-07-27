@@ -1,0 +1,20 @@
+uuid: b851d815-8b52-4c3b-818a-ceab03a4ea62
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - chr_theme
+id: chr_theme_help
+theme: chr_theme
+region: help
+weight: 0
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

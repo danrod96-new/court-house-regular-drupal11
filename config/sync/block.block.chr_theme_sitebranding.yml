@@ -1,4 +1,4 @@
-uuid: c68a502e-9450-4a73-84e4-9594c768e550
+uuid: f6563112-eed4-4e95-bcb8-942a4f09df56
 langcode: en
 status: true
 dependencies:
@@ -6,12 +6,10 @@ dependencies:
     - system
   theme:
     - chr_theme
-_core:
-  default_config_hash: idxcchl52y9YBjhPfxI6i9mWo57m9XQ4DH4ltOv_hZs
-id: chr_theme_branding
+id: chr_theme_sitebranding
 theme: chr_theme
-region: navbar_branding
-weight: -1
+region: header
+weight: -3
 provider: null
 plugin: system_branding_block
 settings:
@@ -20,6 +18,6 @@ settings:
   label_display: '0'
   provider: system
   use_site_logo: true
-  use_site_name: false
-  use_site_slogan: false
+  use_site_name: true
+  use_site_slogan: true
 visibility: {  }

@@ -10,13 +10,16 @@ starterkit: true
 'interface translation project': chr_theme
 'interface translation server pattern': themes/custom/chr_theme/translations/%language.po
 regions:
-  navbar_branding: 'Navbar branding'
-  navbar_left: 'Navbar left'
-  navbar_right: 'Navbar right'
-  header: Header
+  header: 'Header'
+  sidebar_first: 'First Sidebar'
+  sidebar_second: 'Second Sidebar'
   content: Content
-  page_bottom: 'Page bottom'
-  footer: Footer
+  content_top: 'Content Top'
+  help: 'Help'
+  footer: 'Footer'
+  footer_first: 'First Bottom'
+  footer_second: 'Second Bottom'
+  footer_third: 'Third Bottom'
 libraries:
   - chr_theme/style
 ckeditor5-stylesheets:
