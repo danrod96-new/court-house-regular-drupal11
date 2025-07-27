@@ -1,6 +1,6 @@
-uuid: 0a24c3df-9243-461e-9bea-2a66d73b4e39
+uuid: da683880-b0cd-42b3-9e26-ba8bdfc301e3
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - views.view.who_s_new
@@ -8,10 +8,10 @@ dependencies:
     - system
     - views
   theme:
-    - bartik
-id: bartik_user_new
-theme: bartik
-region: ''
+    - radix
+id: radix_professional_theme_user_new
+theme: radix
+region: content
 weight: 4
 provider: null
 plugin: 'views_block:who_s_new-block_1'

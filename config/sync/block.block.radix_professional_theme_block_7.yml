@@ -1,6 +1,6 @@
-uuid: 4e227c3e-1694-41d4-9233-c12d20f65867
+uuid: 53bca42c-4879-40b2-8d1d-96c7dcc895b9
 langcode: en
-status: false
+status: true
 dependencies:
   content:
     - 'block_content:basic:816d2862-7958-43b7-9841-794bdb63103c'
@@ -8,10 +8,10 @@ dependencies:
     - block_content
     - system
   theme:
-    - corporateclean
-id: corporateclean_block_7
-theme: corporateclean
-region: ''
+    - radix
+id: radix_professional_theme_block_7
+theme: radix
+region: content
 weight: -17
 provider: null
 plugin: 'block_content:816d2862-7958-43b7-9841-794bdb63103c'

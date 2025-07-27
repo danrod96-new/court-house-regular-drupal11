@@ -1,15 +1,17 @@
-uuid: cd3810b3-ef1c-478b-a80a-f51868626e82
+uuid: a5f9626e-16ba-4a53-bd7e-5e26566114b9
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - system
     - user
   theme:
-    - corporateclean
-id: corporateclean_system_main
-theme: corporateclean
-region: ''
+    - radix
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: radix_professional_theme_system_main
+theme: radix
+region: content
 weight: -15
 provider: null
 plugin: system_main_block

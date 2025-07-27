@@ -1,0 +1,22 @@
+uuid: 6754c97d-a9d1-4770-9666-9849f57cdd98
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - chr_theme
+_core:
+  default_config_hash: 32BDkuUixW9WVqakkplz2zr5mjfTB1YSRe6J0_Scdy8
+id: chr_theme_content
+theme: chr_theme
+region: content
+weight: -5
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  label_display: '0'
+  provider: system
+visibility: {  }

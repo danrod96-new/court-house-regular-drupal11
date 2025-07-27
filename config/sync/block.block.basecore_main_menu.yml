@@ -1,0 +1,27 @@
+uuid: b70a1311-6eb8-4bb1-b43f-ab8033fc6928
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - basecore
+_core:
+  default_config_hash: jzJur2KPpvdcvrfLBQkmhQol5vnnYnE8Tvd8Pn-ZcZQ
+id: basecore_main_menu
+theme: basecore
+region: header
+weight: -22
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: false
+visibility: {  }

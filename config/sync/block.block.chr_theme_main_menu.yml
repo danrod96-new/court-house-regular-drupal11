@@ -1,0 +1,27 @@
+uuid: fe12abf4-1dc4-47dd-aab2-bd8ba24246f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - chr_theme
+_core:
+  default_config_hash: GmMhmYfr_jhw5FfKdA_fx3jepIxxi5KjX2wLxn9KCGU
+id: chr_theme_main_menu
+theme: chr_theme
+region: navbar_left
+weight: -5
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Main navigation'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 2
+  expand_all_items: false
+visibility: {  }

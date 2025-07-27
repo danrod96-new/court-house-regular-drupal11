@@ -83,6 +83,7 @@ module:
   toolbar: 0
   typed_data: 0
   update: 0
+  upgrade_status: 0
   user: 0
   views_bulk_operations: 0
   views_ui: 0
@@ -93,4 +94,10 @@ module:
 theme:
   olivero: 0
   claro: 0
+  radix: 0
+  chr_theme: 0
+  stable9: 0
+  starterkit_theme: 0
+  basecore: 0
+  bootstrap5: 0
 profile: standard

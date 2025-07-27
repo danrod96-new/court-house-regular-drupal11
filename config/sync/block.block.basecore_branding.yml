@@ -1,0 +1,29 @@
+uuid: c5749f11-810d-47b9-979e-c807fc82f5a0
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - basecore
+_core:
+  default_config_hash: HHU6woBKOhHIUFhSa6V7xwOxKtSMr4hnktZ4SdJlstw
+id: basecore_branding
+theme: basecore
+region: header_first
+weight: -6
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  label_display: '0'
+  provider: system
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility:
+  request_path:
+    id: request_path
+    pages: /home-pages
+    negate: true
