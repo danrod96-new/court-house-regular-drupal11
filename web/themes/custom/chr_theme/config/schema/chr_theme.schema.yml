@@ -1,0 +1,5 @@
+# Schema for the configuration files of the chr_theme theme.
+
+chr_theme.settings:
+  type: theme_settings
+  label: 'chr_theme settings'
