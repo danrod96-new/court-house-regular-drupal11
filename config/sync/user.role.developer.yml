@@ -1,0 +1,107 @@
+uuid: bf14c1d2-db25-4c77-9de1-2aac1490ecea
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.1
+    - filter.format.2
+    - filter.format.3
+    - node.type.book
+    - node.type.page
+    - node.type.profile
+    - node.type.story
+  module:
+    - backup_migrate
+    - block
+    - captcha
+    - comment
+    - contact
+    - filter
+    - flag
+    - forum
+    - image
+    - node
+    - path
+    - pathauto
+    - profile
+    - rules
+    - security_review
+    - system
+    - taxonomy
+    - token_custom
+    - toolbar
+    - views_ui
+id: developer
+label: Developer
+weight: 2
+is_admin: false
+permissions:
+  - 'access administration pages'
+  - 'access backup files'
+  - 'access content overview'
+  - 'access rules debug'
+  - 'access security review list'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access site-wide contact form'
+  - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'administer CAPTCHA settings'
+  - 'administer actions'
+  - 'administer backup and migrate'
+  - 'administer blocks'
+  - 'administer comments'
+  - 'administer contact forms'
+  - 'administer content types'
+  - 'administer custom tokens'
+  - 'administer filters'
+  - 'administer flags'
+  - 'administer forums'
+  - 'administer image styles'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer pathauto'
+  - 'administer permissions'
+  - 'administer profile types'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer url aliases'
+  - 'administer users'
+  - 'administer views'
+  - 'bypass node access'
+  - 'cancel account'
+  - 'change own username'
+  - 'create book content'
+  - 'create page content'
+  - 'create story content'
+  - 'create url aliases'
+  - 'delete any book content'
+  - 'delete any page content'
+  - 'delete any profile content'
+  - 'delete any story content'
+  - 'delete own book content'
+  - 'delete own page content'
+  - 'delete own profile content'
+  - 'delete own story content'
+  - 'edit any book content'
+  - 'edit any page content'
+  - 'edit any profile content'
+  - 'edit any story content'
+  - 'edit own book content'
+  - 'edit own comments'
+  - 'edit own page content'
+  - 'edit own profile content'
+  - 'edit own story content'
+  - 'notify of path changes'
+  - 'perform backup'
+  - 'restore from backup'
+  - 'run security checks'
+  - 'skip CAPTCHA'
+  - 'use text format 1'
+  - 'use text format 2'
+  - 'use text format 3'
+  - 'view the administration theme'

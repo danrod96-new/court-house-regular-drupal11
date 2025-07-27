@@ -1,0 +1,35 @@
+uuid: cefbbf31-d893-427f-8c30-d80f765f5de6
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.forum
+    - node.type.profile
+    - node.type.virtual_law_firm
+  module:
+    - comment
+    - contact
+    - node
+    - search
+    - system
+id: place_assignments_only_subscriber_firm_
+label: 'Place Assignments Only Subscriber ("Firm")'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'cancel account'
+  - 'change own username'
+  - 'create forum content'
+  - 'create profile content'
+  - 'create virtual_law_firm content'
+  - 'delete own forum content'
+  - 'delete own virtual_law_firm content'
+  - 'edit own comments'
+  - 'edit own forum content'
+  - 'edit own virtual_law_firm content'
+  - 'search content'
+  - 'use advanced search'

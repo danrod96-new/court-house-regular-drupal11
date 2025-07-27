@@ -1,0 +1,20 @@
+uuid: 46929710-3ece-4a4f-9ed5-c9cc6bb32221
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_uc_recurring_subs
+field_name: comment_node_uc_recurring_subs
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_uc_recurring_subs
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

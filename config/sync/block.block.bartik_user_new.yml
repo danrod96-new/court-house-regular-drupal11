@@ -1,0 +1,29 @@
+uuid: 0a24c3df-9243-461e-9bea-2a66d73b4e39
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.who_s_new
+  module:
+    - system
+    - views
+  theme:
+    - bartik
+id: bartik_user_new
+theme: bartik
+region: ''
+weight: 4
+provider: null
+plugin: 'views_block:who_s_new-block_1'
+settings:
+  id: 'views_block:who_s_new-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: 5
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

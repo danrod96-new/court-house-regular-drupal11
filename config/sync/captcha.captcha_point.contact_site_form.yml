@@ -1,0 +1,7 @@
+uuid: 9abf6e9a-f2d1-4ae1-a3d6-bc3abb56b84a
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_site_form
+captchaType: riddler/Riddler
+label: contact_site_form

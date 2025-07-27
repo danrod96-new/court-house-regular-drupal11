@@ -1,0 +1,23 @@
+uuid: 8c66dd8f-1495-4db9-a94c-55a785b84fd7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_willing_to_act_as_local_co
+    - profile.type.recieve_assignments
+id: profile.recieve_assignments.field_willing_to_act_as_local_co
+field_name: field_willing_to_act_as_local_co
+entity_type: profile
+bundle: recieve_assignments
+label: 'Willing to act as Local Counsel'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'No'
+  off_label: 'Yes'
+field_type: boolean

@@ -1,0 +1,14 @@
+uuid: 412ba617-fc50-4aa8-a5e0-7f87bd7f688d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.place_assignments_only_subscriber_firm_
+  module:
+    - user
+id: user_add_role_action.place_assignments_only_subscriber_firm_
+label: 'Add the Place Assignments Only Subscriber (&quot;Firm&quot;) role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: place_assignments_only_subscriber_firm_

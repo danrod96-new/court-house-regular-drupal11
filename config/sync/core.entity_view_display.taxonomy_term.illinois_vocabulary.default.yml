@@ -1,0 +1,30 @@
+uuid: d22851db-5811-416b-a69a-ee2f5d3801cf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.illinois_vocabulary.field_illinoiscourts
+    - taxonomy.vocabulary.illinois_vocabulary
+  module:
+    - text
+id: taxonomy_term.illinois_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: illinois_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_illinoiscourts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

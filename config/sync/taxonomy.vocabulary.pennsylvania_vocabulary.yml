@@ -1,0 +1,9 @@
+uuid: d47ba5d5-2e13-4909-9de4-e9774356bf18
+langcode: en
+status: true
+dependencies: {  }
+name: 'Pennsylvania Vocabulary'
+vid: pennsylvania_vocabulary
+description: null
+weight: 0
+new_revision: false

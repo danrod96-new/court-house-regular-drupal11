@@ -1,0 +1,34 @@
+uuid: cd3810b3-ef1c-478b-a80a-f51868626e82
+langcode: en
+status: false
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - corporateclean
+id: corporateclean_system_main
+theme: corporateclean
+region: ''
+weight: -15
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      place_assignments_only_subscriber_firm_: place_assignments_only_subscriber_firm_
+      receive_and_place_assignments_subscriber_regular_: receive_and_place_assignments_subscriber_regular_
+      administrator: administrator
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

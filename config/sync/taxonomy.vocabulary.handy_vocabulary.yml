@@ -1,0 +1,9 @@
+uuid: 8c892b06-f5cd-4929-a762-d3b6c547dd4d
+langcode: en
+status: true
+dependencies: {  }
+name: 'Handy Vocabulary'
+vid: handy_vocabulary
+description: null
+weight: 0
+new_revision: false

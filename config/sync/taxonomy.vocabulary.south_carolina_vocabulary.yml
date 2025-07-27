@@ -1,0 +1,9 @@
+uuid: d5126424-b94c-4fc4-af3d-26002f7a800b
+langcode: en
+status: true
+dependencies: {  }
+name: 'South Carolina Vocabulary'
+vid: south_carolina_vocabulary
+description: null
+weight: 0
+new_revision: false

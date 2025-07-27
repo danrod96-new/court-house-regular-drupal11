@@ -1,0 +1,9 @@
+uuid: f754b509-b7a7-454a-a681-f2f8a40125d1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Federal Bankruptcy Courthouses'
+vid: vocabulary_3
+description: null
+weight: 0
+new_revision: false

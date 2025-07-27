@@ -1,0 +1,36 @@
+uuid: e061eb09-7f83-451c-9765-7bcbe91e70be
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+    - user
+  theme:
+    - olivero
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: professional_theme_system_main
+theme: olivero
+region: content
+weight: -15
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility:
+  user_role:
+    id: user_role
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'
+    roles:
+      place_assignments_only_subscriber_firm_: place_assignments_only_subscriber_firm_
+      receive_and_place_assignments_subscriber_regular_: receive_and_place_assignments_subscriber_regular_
+      administrator: administrator
+  request_path:
+    id: request_path
+    negate: true
+    pages: '<front>'

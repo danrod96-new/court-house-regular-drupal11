@@ -1,0 +1,11 @@
+uuid: d903ac7d-86c3-49d6-912d-37c5cc6a28f2
+langcode: en
+status: true
+dependencies: {  }
+name: Profile
+type: profile
+description: 'A user profile built as content.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

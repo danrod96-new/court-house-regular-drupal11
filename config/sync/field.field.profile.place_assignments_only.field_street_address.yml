@@ -1,0 +1,19 @@
+uuid: 73b12c35-f6f3-49c5-a6dd-b2128aad20d5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_street_address
+    - profile.type.place_assignments_only
+id: profile.place_assignments_only.field_street_address
+field_name: field_street_address
+entity_type: profile
+bundle: place_assignments_only
+label: 'Street Address'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,29 @@
+uuid: fd6f1a48-dbda-4d98-bf63-7029557d4953
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.who_s_new
+  module:
+    - system
+    - views
+  theme:
+    - olivero
+id: professional_theme_user_new
+theme: olivero
+region: content
+weight: 4
+provider: null
+plugin: 'views_block:who_s_new-block_1'
+settings:
+  id: 'views_block:who_s_new-block_1'
+  label: ''
+  label_display: '0'
+  provider: views
+  views_label: ''
+  items_per_page: 5
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

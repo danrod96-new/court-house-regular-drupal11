@@ -1,0 +1,31 @@
+uuid: aed814c5-3817-4103-b043-3826e5ab6e1b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.forum
+    - node.type.profile
+  module:
+    - comment
+    - contact
+    - node
+    - search
+    - system
+id: receive_and_place_assignments_subscriber_regular_
+label: 'Receive and Place Assignments Subscriber ("Regular")'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'cancel account'
+  - 'change own username'
+  - 'create forum content'
+  - 'create profile content'
+  - 'delete own forum content'
+  - 'edit own comments'
+  - 'edit own forum content'
+  - 'search content'
+  - 'use advanced search'

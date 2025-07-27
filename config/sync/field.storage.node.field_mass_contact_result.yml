@@ -1,0 +1,19 @@
+uuid: e4fa9dd4-ac7c-4974-bf08-e82f7e9d7248
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_mass_contact_result
+field_name: field_mass_contact_result
+entity_type: node
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,25 @@
+uuid: 1a1bca22-87d7-485d-84f6-d59ee7e0c36c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_courts
+    - taxonomy.vocabulary.vocabulary_4
+id: taxonomy_term.vocabulary_4.field_courts
+field_name: field_courts
+entity_type: taxonomy_term
+bundle: vocabulary_4
+label: courts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      vocabulary_4: vocabulary_4
+    sort:
+      field: _none
+field_type: entity_reference

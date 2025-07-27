@@ -1,0 +1,14 @@
+uuid: 2ae7e23e-768e-483d-8437-7544bb5c396f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.self
+  module:
+    - user
+id: user_remove_role_action.self
+label: 'Remove the Self role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: self

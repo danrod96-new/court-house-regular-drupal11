@@ -1,0 +1,18 @@
+uuid: 559108ea-6a52-4c77-a0e8-ae6a19e80675
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_willing_to_act_as_local_co
+field_name: field_willing_to_act_as_local_co
+entity_type: profile
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

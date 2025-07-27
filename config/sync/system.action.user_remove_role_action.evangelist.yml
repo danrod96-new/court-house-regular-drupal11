@@ -1,0 +1,14 @@
+uuid: c9fda372-bc70-42f1-92cc-16b43f150534
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.evangelist
+  module:
+    - user
+id: user_remove_role_action.evangelist
+label: 'Remove the Evangelist role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: evangelist

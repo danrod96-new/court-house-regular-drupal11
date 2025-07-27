@@ -1,0 +1,31 @@
+uuid: 9bd05d68-ac36-45b5-9884-31be1e69b4bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: bookmarks
+label: Bookmarks
+bundles:
+  - story
+entity_type: node
+global: false
+flag_short: 'Bookmark this'
+flag_long: 'Add this post to your bookmarks'
+flag_message: 'This post has been added to your bookmarks'
+unflag_short: 'Unbookmark this'
+unflag_long: 'Remove this post from your bookmarks'
+unflag_message: 'This post has been removed from your bookmarks'
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:node'
+link_type: reload
+flagTypeConfig:
+  show_in_links:
+    full: '1'
+    teaser: '1'
+  show_as_field: false
+  show_on_form: true
+  show_contextual_link: false
+  extra_permissions: {  }
+linkTypeConfig: {  }

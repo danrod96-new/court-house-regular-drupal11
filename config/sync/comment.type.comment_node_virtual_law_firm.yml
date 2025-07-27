@@ -1,0 +1,8 @@
+uuid: 7db27d93-8728-44f2-8938-955c913e95ff
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_virtual_law_firm
+label: 'Virtual Law Firm comment'
+target_entity_type_id: node
+description: null

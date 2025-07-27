@@ -1,0 +1,30 @@
+uuid: cd0f5a3d-17f7-4b4f-a6ad-bb40066fd8d4
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.tennessee_vocabulary.field_tenncourt
+    - taxonomy.vocabulary.tennessee_vocabulary
+  module:
+    - text
+id: taxonomy_term.tennessee_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: tennessee_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_tenncourt:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

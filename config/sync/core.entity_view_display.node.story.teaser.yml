@@ -1,0 +1,32 @@
+uuid: 6f3977dc-0ec7-4584-a35e-1cb33133748c
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.story.body
+    - field.field.node.story.comment_node_story
+    - node.type.story
+  module:
+    - text
+    - user
+id: node.story.teaser
+targetEntityType: node
+bundle: story
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_story: true

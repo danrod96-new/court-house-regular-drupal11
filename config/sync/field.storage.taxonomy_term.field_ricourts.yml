@@ -1,0 +1,19 @@
+uuid: c9f54347-5727-4598-9e76-2eb15006a573
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_ricourts
+field_name: field_ricourts
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

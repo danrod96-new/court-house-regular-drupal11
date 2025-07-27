@@ -1,0 +1,9 @@
+uuid: b4ffcc23-847d-47d2-b23d-95b42bceea56
+langcode: en
+status: true
+dependencies: {  }
+name: 'Virginia Vocabulary'
+vid: virginia_vocabulary
+description: null
+weight: 0
+new_revision: false

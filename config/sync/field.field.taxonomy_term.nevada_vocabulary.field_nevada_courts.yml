@@ -1,0 +1,25 @@
+uuid: 729af7b6-8a0e-4eb9-8f92-f8bdaad5050d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_nevada_courts
+    - taxonomy.vocabulary.nevada_vocabulary
+id: taxonomy_term.nevada_vocabulary.field_nevada_courts
+field_name: field_nevada_courts
+entity_type: taxonomy_term
+bundle: nevada_vocabulary
+label: 'nevada courts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      nevada_vocabulary: nevada_vocabulary
+    sort:
+      field: _none
+field_type: entity_reference

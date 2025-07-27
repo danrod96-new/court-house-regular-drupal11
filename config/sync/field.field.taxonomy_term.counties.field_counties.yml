@@ -1,0 +1,25 @@
+uuid: dceb9388-9e2d-4faf-9c4c-7879ec115384
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_counties
+    - taxonomy.vocabulary.counties
+id: taxonomy_term.counties.field_counties
+field_name: field_counties
+entity_type: taxonomy_term
+bundle: counties
+label: Counties
+description: 'Select those counties and county-equivalents that you are licensed and willing to appear in. This is in addition to the selection of court houses below. If only appearing in Federal Courts, you must still select the county that the court is physically in. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      counties: counties
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,18 @@
+uuid: c0fabd29-00b7-46ac-a023-d424c68181a5
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mass_contact
+id: node.mass_contact.title
+field_name: title
+entity_type: node
+bundle: mass_contact
+label: Subject
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

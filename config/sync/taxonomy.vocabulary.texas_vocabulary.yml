@@ -1,0 +1,9 @@
+uuid: fb90aa18-0a6b-4e3d-b407-82de5bc408a1
+langcode: en
+status: true
+dependencies: {  }
+name: 'Texas Vocabulary'
+vid: texas_vocabulary
+description: null
+weight: 0
+new_revision: false

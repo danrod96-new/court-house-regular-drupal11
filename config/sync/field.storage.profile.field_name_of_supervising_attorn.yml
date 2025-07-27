@@ -1,0 +1,21 @@
+uuid: 67cf2bfb-e712-4fcd-9851-8fb023aba226
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_name_of_supervising_attorn
+field_name: field_name_of_supervising_attorn
+entity_type: profile
+type: string
+settings:
+  max_length: 57
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: 6746fc72-c686-4390-afe6-e382a7b148ab
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:816d2862-7958-43b7-9841-794bdb63103c'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: bartik_block_7
+theme: bartik
+region: ''
+weight: -17
+provider: null
+plugin: 'block_content:816d2862-7958-43b7-9841-794bdb63103c'
+settings:
+  id: 'block_content:816d2862-7958-43b7-9841-794bdb63103c'
+  label: ''
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/charter-search/*'

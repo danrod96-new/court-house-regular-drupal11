@@ -1,0 +1,21 @@
+uuid: f03eb570-56d1-4f56-819b-9b10aec9b3c3
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+  module:
+    - contact
+    - node
+    - system
+_core:
+  default_config_hash: 6WavjUYXIegP9AAg2zXGx54MWIVoomC3SZhNiqe-Dyk
+id: anonymous
+label: 'anonymous user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access site-wide contact form'
+  - 'delete own page content'
+  - 'edit own page content'

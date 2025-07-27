@@ -1,0 +1,18 @@
+uuid: e94583e9-a2b7-409d-95d1-6c82c19254b3
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_interested_in_free_cle
+field_name: field_interested_in_free_cle
+entity_type: profile
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

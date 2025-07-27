@@ -1,0 +1,9 @@
+uuid: a398d9b6-aa20-4aad-83b8-0e85147d1480
+langcode: en
+status: true
+dependencies: {  }
+name: 'User Type'
+vid: user_type
+description: 'Types of users i.e Receve and Place assingments or Placement only'
+weight: 0
+new_revision: false

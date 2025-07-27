@@ -1,0 +1,32 @@
+uuid: 919bd17c-fab5-438a-87e2-72d605ae5920
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.profile
+    - node.type.virtual_law_firm
+  module:
+    - comment
+    - node
+    - search
+    - system
+_core:
+  default_config_hash: cFrlqjtkTfvY3RGccjJkPf1SGIfJ942IrxTLWAO4mgA
+id: authenticated
+label: 'authenticated user'
+weight: 0
+is_admin: false
+permissions:
+  - 'access comments'
+  - 'access content'
+  - 'create profile content'
+  - 'create virtual_law_firm content'
+  - 'delete any virtual_law_firm content'
+  - 'delete own virtual_law_firm content'
+  - 'edit any virtual_law_firm content'
+  - 'edit own virtual_law_firm content'
+  - 'post comments'
+  - 'search content'
+  - 'skip comment approval'
+  - 'use advanced search'
+  - 'view own unpublished content'

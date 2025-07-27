@@ -1,0 +1,24 @@
+uuid: a6485ec4-2c85-40e5-a226-62943fe6d4bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.book
+  module:
+    - text
+id: node.book.body
+field_name: body
+entity_type: node
+bundle: book
+label: Body
+description: 'A <em>book page</em> is a page of content, organized into a collection of related entries collectively known as a <em>book</em>. A <em>book page</em> automatically displays links to adjacent pages, providing a simple navigation system for organizing and reviewing structured content.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

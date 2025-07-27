@@ -1,0 +1,23 @@
+uuid: 6295b66b-b7be-4797-9a30-d222b013652c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_willing_to_handle_depositi
+    - profile.type.recieve_assignments
+id: profile.recieve_assignments.field_willing_to_handle_depositi
+field_name: field_willing_to_handle_depositi
+entity_type: profile
+bundle: recieve_assignments
+label: 'Willing to handle Depositions'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'No'
+  off_label: 'Yes'
+field_type: boolean

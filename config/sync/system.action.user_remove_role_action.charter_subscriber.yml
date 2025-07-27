@@ -1,0 +1,14 @@
+uuid: e6fbe029-cb5a-4386-8868-92a296fc9ec4
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.charter_subscriber
+  module:
+    - user
+id: user_remove_role_action.charter_subscriber
+label: 'Remove the Charter Subscriber role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: charter_subscriber

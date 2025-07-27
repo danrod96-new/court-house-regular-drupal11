@@ -1,0 +1,9 @@
+uuid: 9d745ab1-0314-43d7-b5b3-95e7eed49ffa
+langcode: en
+status: true
+dependencies: {  }
+name: 'Illinois vocabulary'
+vid: illinois_vocabulary
+description: null
+weight: 0
+new_revision: false

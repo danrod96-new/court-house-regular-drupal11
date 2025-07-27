@@ -1,0 +1,21 @@
+uuid: 017bc8e7-c311-483a-b061-4e3bb3e8c7e4
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_receive_city_or_town
+field_name: field_receive_city_or_town
+entity_type: profile
+type: string
+settings:
+  max_length: 57
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,30 @@
+uuid: fe2e4a34-0546-4eae-a47a-8bd212a56b75
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:64bf20f5-de31-4915-92cf-a102bdce2545'
+  module:
+    - block_content
+    - system
+  theme:
+    - olivero
+id: professional_theme_block_4
+theme: olivero
+region: content
+weight: -18
+provider: null
+plugin: 'block_content:64bf20f5-de31-4915-92cf-a102bdce2545'
+settings:
+  id: 'block_content:64bf20f5-de31-4915-92cf-a102bdce2545'
+  label: 'Registration & Log-in'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

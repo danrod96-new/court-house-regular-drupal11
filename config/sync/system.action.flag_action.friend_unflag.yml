@@ -1,0 +1,15 @@
+uuid: e002a1ac-15af-410a-9b13-bcb3ac8e6f0e
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.friend
+  module:
+    - flag
+id: flag_action.friend_unflag
+label: 'Remove this Colleague from your list.'
+type: user
+plugin: 'flag_action:friend_unflag'
+configuration:
+  flag_id: friend
+  flag_action: unflag

@@ -1,0 +1,20 @@
+uuid: 9dbf0d42-aaa2-4a95-acc4-a42b9b509142
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - claro
+id: garland_system_powered_by
+theme: claro
+region: content
+weight: 10
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: ''
+  label_display: '0'
+  provider: system
+visibility: {  }

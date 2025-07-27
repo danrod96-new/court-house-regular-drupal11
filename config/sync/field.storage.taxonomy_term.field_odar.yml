@@ -1,0 +1,19 @@
+uuid: 85d3b916-dedd-4ce0-a534-138906732569
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_odar
+field_name: field_odar
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

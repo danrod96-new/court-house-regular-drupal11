@@ -1,0 +1,26 @@
+uuid: c42bb87d-c8a2-41fc-b3a4-d3919ab514db
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.taxonomy_vocabulary_3
+    - node.type.profile
+    - taxonomy.vocabulary.vocabulary_3
+id: node.profile.taxonomy_vocabulary_3
+field_name: taxonomy_vocabulary_3
+entity_type: node
+bundle: profile
+label: 'Federal Bankruptcy Courthouses'
+description: 'Select those Federal Bankruptcy Courthouses of interest. Remember, if you agree to accept assignments, you may only select those Courts that you are legally permitted to appear in'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      vocabulary_3: vocabulary_3
+    sort:
+      field: _none
+field_type: entity_reference

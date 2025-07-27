@@ -1,0 +1,10 @@
+uuid: 196d19c2-fc79-407d-b1f4-a2f35883a703
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: f7dN3Eb7xyyMUWug2Gwt-bjoXTpTvtXXGMQmIS4LJ44
+id: example
+question: 'Do you really hate Spam?'
+solution: 'Yes,Yes!,y,absolutely,yeah'
+hint: 'I think you do!'

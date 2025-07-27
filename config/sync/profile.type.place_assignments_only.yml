@@ -1,0 +1,12 @@
+uuid: 7f269e12-e6f9-4b80-abc7-d2006fb0cc0f
+langcode: en
+status: true
+dependencies: {  }
+id: place_assignments_only
+label: 'Place Assignments Only'
+display_label: null
+multiple: false
+registration: false
+roles: {  }
+allow_revisions: false
+new_revision: false

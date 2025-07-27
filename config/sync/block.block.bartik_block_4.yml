@@ -1,0 +1,30 @@
+uuid: 7dd4857e-1fd7-47ac-a8c7-bc7c42e4e5b2
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:64bf20f5-de31-4915-92cf-a102bdce2545'
+  module:
+    - block_content
+    - system
+  theme:
+    - bartik
+id: bartik_block_4
+theme: bartik
+region: ''
+weight: -9
+provider: null
+plugin: 'block_content:64bf20f5-de31-4915-92cf-a102bdce2545'
+settings:
+  id: 'block_content:64bf20f5-de31-4915-92cf-a102bdce2545'
+  label: 'Registration & Log-in'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

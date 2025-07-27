@@ -1,0 +1,19 @@
+uuid: 684224e2-f9fc-48a3-8e9f-7d17d04cfb34
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_about_my_practice
+    - profile.type.recieve_assignments
+id: profile.recieve_assignments.field_about_my_practice
+field_name: field_about_my_practice
+entity_type: profile
+bundle: recieve_assignments
+label: 'My Appearance Practice/Other Legal Work'
+description: "<p>This is an optional field. </p>\r\n\r\n<p>Write a short note on your appearance practice, e.g familiarity with debt collection, immigration, etc. In addition, you can also write about what other litigation and transactional work you are involved in.</p>\r\n\r\n<p><strong>Do not use this field to list additional courts over what you selected above that you are willing to appear in, e.g. do not write that you are also available in such and such a county or in federal court. Please use the \"Counties, Courthouses and Courts\" field above </strong></p>\r\n"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

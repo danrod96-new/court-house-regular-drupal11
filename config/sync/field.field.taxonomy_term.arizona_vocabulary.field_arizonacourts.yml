@@ -1,0 +1,25 @@
+uuid: 65ed4ef7-2022-47a5-8e1a-bf3782f4a09c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_arizonacourts
+    - taxonomy.vocabulary.arizona_vocabulary
+id: taxonomy_term.arizona_vocabulary.field_arizonacourts
+field_name: field_arizonacourts
+entity_type: taxonomy_term
+bundle: arizona_vocabulary
+label: arizonacourts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      arizona_vocabulary: arizona_vocabulary
+    sort:
+      field: _none
+field_type: entity_reference

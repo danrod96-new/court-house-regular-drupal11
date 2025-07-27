@@ -1,0 +1,25 @@
+uuid: d11717f2-d90e-488d-9299-2be1620eb74d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_washingtonct
+    - taxonomy.vocabulary.washington_vocabulart
+id: taxonomy_term.washington_vocabulart.field_washingtonct
+field_name: field_washingtonct
+entity_type: taxonomy_term
+bundle: washington_vocabulart
+label: 'Washington Courts'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      washington_vocabulart: washington_vocabulart
+    sort:
+      field: _none
+field_type: entity_reference

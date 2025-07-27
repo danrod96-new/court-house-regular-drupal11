@@ -1,0 +1,9 @@
+uuid: 7c9911a0-9d05-4db7-b0b0-a0b7adad27c5
+langcode: en
+status: true
+dependencies: {  }
+name: 'State and Territorial Courthouses'
+vid: vocabulary_4
+description: null
+weight: -1
+new_revision: false

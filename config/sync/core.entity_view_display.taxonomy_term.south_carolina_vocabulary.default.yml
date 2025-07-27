@@ -1,0 +1,30 @@
+uuid: 0b681878-d1de-40dd-b1bc-a35dbede4861
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.south_carolina_vocabulary.field_sccourts
+    - taxonomy.vocabulary.south_carolina_vocabulary
+  module:
+    - text
+id: taxonomy_term.south_carolina_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: south_carolina_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_sccourts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

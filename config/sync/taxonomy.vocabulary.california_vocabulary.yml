@@ -1,0 +1,9 @@
+uuid: a7e4f261-5bc0-49a0-bee6-703a7d12c53c
+langcode: en
+status: true
+dependencies: {  }
+name: 'California Vocabulary'
+vid: california_vocabulary
+description: null
+weight: 0
+new_revision: false

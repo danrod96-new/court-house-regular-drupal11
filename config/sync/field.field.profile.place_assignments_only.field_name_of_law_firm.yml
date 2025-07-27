@@ -1,0 +1,19 @@
+uuid: 98ac0f05-b6a6-45c0-8459-e7bfc5198f72
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_name_of_law_firm
+    - profile.type.place_assignments_only
+id: profile.place_assignments_only.field_name_of_law_firm
+field_name: field_name_of_law_firm
+entity_type: profile
+bundle: place_assignments_only
+label: 'Name of Law Firm'
+description: 'This is the name that will show in the search results.  Only use name of law firm, e.g Law Office of John Smith, Smith and Jones, etc. '
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

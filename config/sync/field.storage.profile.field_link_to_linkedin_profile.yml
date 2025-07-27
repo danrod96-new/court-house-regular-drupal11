@@ -1,0 +1,21 @@
+uuid: 1d849ac9-9906-422a-af33-7a76beac4920
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_link_to_linkedin_profile
+field_name: field_link_to_linkedin_profile
+entity_type: profile
+type: string
+settings:
+  max_length: 55
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

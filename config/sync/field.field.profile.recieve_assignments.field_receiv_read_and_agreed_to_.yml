@@ -1,0 +1,23 @@
+uuid: 714a8c59-17cf-47fe-b156-5100eec4cfa1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_receiv_read_and_agreed_to_
+    - profile.type.recieve_assignments
+id: profile.recieve_assignments.field_receiv_read_and_agreed_to_
+field_name: field_receiv_read_and_agreed_to_
+entity_type: profile
+bundle: recieve_assignments
+label: 'I have read and agreed to the terms and conditions of this website'
+description: 'You must click to indicate that you have read and agreed to the terms and conditions of this website.'
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'Yes'
+  off_label: 'No'
+field_type: boolean

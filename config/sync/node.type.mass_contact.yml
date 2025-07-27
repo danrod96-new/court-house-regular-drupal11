@@ -1,0 +1,11 @@
+uuid: d51905ba-1934-4787-acef-9c192c3bc597
+langcode: en
+status: true
+dependencies: {  }
+name: 'Mass Contact message'
+type: mass_contact
+description: 'Archived copies of mass email messages sent from this site.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

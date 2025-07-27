@@ -1,0 +1,9 @@
+uuid: 5990b869-c1b8-4f1b-91ad-f3c04ae16c60
+langcode: en
+status: true
+dependencies: {  }
+name: 'Arizona Vocabulary'
+vid: arizona_vocabulary
+description: null
+weight: 0
+new_revision: false

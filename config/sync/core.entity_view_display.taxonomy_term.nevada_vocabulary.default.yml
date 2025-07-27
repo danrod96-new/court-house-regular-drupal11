@@ -1,0 +1,30 @@
+uuid: 6dd4a3a1-8a7e-4a0d-895d-f6a0a9b8e536
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.nevada_vocabulary.field_nevada_courts
+    - taxonomy.vocabulary.nevada_vocabulary
+  module:
+    - text
+id: taxonomy_term.nevada_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: nevada_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_nevada_courts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

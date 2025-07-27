@@ -1,0 +1,14 @@
+uuid: 75f241ca-333d-4258-8b8e-3f58d601e420
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.evangelist
+  module:
+    - user
+id: user_add_role_action.evangelist
+label: 'Add the Evangelist role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: evangelist

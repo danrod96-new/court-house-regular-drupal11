@@ -1,0 +1,9 @@
+uuid: 9b634dda-8a4c-45b9-a5ca-5fb25a01345f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Federal District Courthouses'
+vid: vocabulary_2
+description: null
+weight: 0
+new_revision: false

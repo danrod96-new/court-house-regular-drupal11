@@ -1,0 +1,8 @@
+uuid: 649e276c-197a-4ac6-b513-6f5d3068d1d3
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_panel
+label: 'Panel comment'
+target_entity_type_id: node
+description: null

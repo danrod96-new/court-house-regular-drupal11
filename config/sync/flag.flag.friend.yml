@@ -1,0 +1,31 @@
+uuid: fbdf2518-03ef-4fa1-8205-06f917915bde
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: friend
+label: Colleague
+bundles: {  }
+entity_type: user
+global: false
+flag_short: 'Add this Colleague to your list.'
+flag_long: ''
+flag_message: ''
+unflag_short: 'Remove this Colleague from your list.'
+unflag_long: ''
+unflag_message: ''
+unflag_denied_text: ''
+weight: 0
+flag_type: 'entity:user'
+link_type: reload
+flagTypeConfig:
+  show_in_links:
+    full: '0'
+    token: '0'
+  show_as_field: false
+  show_on_form: false
+  show_contextual_link: false
+  extra_permissions: {  }
+  show_on_profile: true
+linkTypeConfig: {  }

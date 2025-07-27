@@ -1,0 +1,26 @@
+uuid: 289d19d2-57a1-46af-8fa4-0843b8dc6371
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_state_or_territory
+    - profile.type.place_assignments_only
+    - taxonomy.vocabulary.states_and_territories
+id: profile.place_assignments_only.field_state_or_territory
+field_name: field_state_or_territory
+entity_type: profile
+bundle: place_assignments_only
+label: 'State or Territory'
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      states_and_territories: states_and_territories
+    sort:
+      field: _none
+field_type: entity_reference

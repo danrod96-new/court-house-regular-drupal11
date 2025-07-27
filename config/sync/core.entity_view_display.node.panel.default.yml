@@ -1,0 +1,31 @@
+uuid: d3f28f45-167f-4109-b311-5bdd1c41e19d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_panel.default
+    - field.field.node.panel.comment_node_panel
+    - node.type.panel
+  module:
+    - comment
+    - user
+id: node.panel.default
+targetEntityType: node
+bundle: panel
+mode: default
+content:
+  comment_node_panel:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

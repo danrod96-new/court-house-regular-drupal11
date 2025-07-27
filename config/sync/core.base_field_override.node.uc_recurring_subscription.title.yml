@@ -1,0 +1,18 @@
+uuid: 39b39fa6-6962-4c28-ba25-db8e546f856c
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.uc_recurring_subscription
+id: node.uc_recurring_subscription.title
+field_name: title
+entity_type: node
+bundle: uc_recurring_subscription
+label: Name
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,19 @@
+uuid: 8d895775-9764-41b4-bb18-2b37444fc540
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mass_contact_bcc
+    - node.type.mass_contact
+id: node.mass_contact.field_mass_contact_bcc
+field_name: field_mass_contact_bcc
+entity_type: node
+bundle: mass_contact
+label: BCC
+description: 'The person or people the message was blind copied to.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

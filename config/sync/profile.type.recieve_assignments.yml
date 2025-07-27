@@ -1,0 +1,12 @@
+uuid: e0132a51-f1a3-4c48-ba79-ea95bfaede20
+langcode: en
+status: true
+dependencies: {  }
+id: recieve_assignments
+label: 'Receive Assignments'
+display_label: null
+multiple: false
+registration: false
+roles: {  }
+allow_revisions: false
+new_revision: false

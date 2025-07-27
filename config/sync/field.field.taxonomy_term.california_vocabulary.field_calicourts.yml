@@ -1,0 +1,25 @@
+uuid: d7720205-edfb-4464-b225-dafd6525ab7a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_calicourts
+    - taxonomy.vocabulary.california_vocabulary
+id: taxonomy_term.california_vocabulary.field_calicourts
+field_name: field_calicourts
+entity_type: taxonomy_term
+bundle: california_vocabulary
+label: calicourts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      california_vocabulary: california_vocabulary
+    sort:
+      field: _none
+field_type: entity_reference

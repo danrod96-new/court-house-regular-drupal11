@@ -1,0 +1,42 @@
+uuid: 4e0a1e9e-3589-4a8f-8be8-d5c13d37684a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_virtual_law_firm.default
+    - field.field.node.virtual_law_firm.body
+    - field.field.node.virtual_law_firm.comment_node_virtual_law_firm
+    - field.field.node.virtual_law_firm.group_group
+    - node.type.virtual_law_firm
+  module:
+    - comment
+    - text
+    - user
+id: node.virtual_law_firm.default
+targetEntityType: node
+bundle: virtual_law_firm
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  comment_node_virtual_law_firm:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  group_group: true

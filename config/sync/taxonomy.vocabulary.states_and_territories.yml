@@ -1,0 +1,9 @@
+uuid: 96c4bab6-0f3c-4db6-b0c1-7a2dc0891a8a
+langcode: en
+status: true
+dependencies: {  }
+name: 'States and Territories'
+vid: states_and_territories
+description: null
+weight: 0
+new_revision: false

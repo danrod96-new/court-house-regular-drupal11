@@ -1,0 +1,141 @@
+uuid: b915e8d5-c20b-4796-bd10-2744f1866a9d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.mass_contact.body
+    - field.field.node.mass_contact.comment_node_mass_contact
+    - field.field.node.mass_contact.field_mass_contact_attachments
+    - field.field.node.mass_contact.field_mass_contact_bcc
+    - field.field.node.mass_contact.field_mass_contact_category
+    - field.field.node.mass_contact.field_mass_contact_from
+    - field.field.node.mass_contact.field_mass_contact_headers
+    - field.field.node.mass_contact.field_mass_contact_result
+    - field.field.node.mass_contact.field_mass_contact_to
+    - node.type.mass_contact
+  module:
+    - comment
+    - path
+    - text
+id: node.mass_contact.default
+targetEntityType: node
+bundle: mass_contact
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 0
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  comment_node_mass_contact:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_mass_contact_bcc:
+    type: string_textfield
+    weight: -7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mass_contact_category:
+    type: string_textfield
+    weight: -9
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mass_contact_from:
+    type: string_textfield
+    weight: -10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_mass_contact_headers:
+    type: string_textarea
+    weight: -6
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_mass_contact_result:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_mass_contact_to:
+    type: string_textfield
+    weight: -8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_mass_contact_attachments: true

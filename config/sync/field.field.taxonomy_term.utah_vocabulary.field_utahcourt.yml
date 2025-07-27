@@ -1,0 +1,25 @@
+uuid: b1550ea7-b7cc-44fb-9c18-55d7e25c0130
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_utahcourt
+    - taxonomy.vocabulary.utah_vocabulary
+id: taxonomy_term.utah_vocabulary.field_utahcourt
+field_name: field_utahcourt
+entity_type: taxonomy_term
+bundle: utah_vocabulary
+label: utahcourt
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      utah_vocabulary: utah_vocabulary
+    sort:
+      field: _none
+field_type: entity_reference

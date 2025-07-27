@@ -1,0 +1,118 @@
+uuid: 50063bef-e8b2-4788-85af-3e9d3d09836b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.recieve_assignments.field_about_my_practice
+    - field.field.profile.recieve_assignments.field_find_lawyer_by_court_house
+    - field.field.profile.recieve_assignments.field_interested_in_free_cle
+    - field.field.profile.recieve_assignments.field_link_to_linkedin_profile
+    - field.field.profile.recieve_assignments.field_receiv_read_and_agreed_to_
+    - field.field.profile.recieve_assignments.field_receive_city_or_town
+    - field.field.profile.recieve_assignments.field_receive_name_of_law_firm
+    - field.field.profile.recieve_assignments.field_receive_street_address
+    - field.field.profile.recieve_assignments.field_receive_supervising_attorn
+    - field.field.profile.recieve_assignments.field_states_and_territories
+    - field.field.profile.recieve_assignments.field_website_url
+    - field.field.profile.recieve_assignments.field_willing_to_act_as_local_co
+    - field.field.profile.recieve_assignments.field_willing_to_handle_depositi
+    - field.field.profile.recieve_assignments.field_zip_code_receive
+    - field.field.profile.recieve_assignments.taxonomy_vocabulary_4
+    - profile.type.recieve_assignments
+  module:
+    - options
+id: profile.recieve_assignments.default
+targetEntityType: profile
+bundle: recieve_assignments
+mode: default
+content:
+  field_about_my_practice:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_link_to_linkedin_profile:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 19
+    region: content
+  field_receive_city_or_town:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_receive_name_of_law_firm:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_receive_street_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_receive_supervising_attorn:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_states_and_territories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_website_url:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_willing_to_act_as_local_co:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_willing_to_handle_depositi:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_zip_code_receive:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden:
+  field_find_lawyer_by_court_house: true
+  field_interested_in_free_cle: true
+  field_receiv_read_and_agreed_to_: true
+  taxonomy_vocabulary_4: true

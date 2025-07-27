@@ -1,0 +1,27 @@
+uuid: 30e702e2-15d0-402e-814c-bfb668b72f71
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_virtual_law_firm
+    - field.field.comment.comment_node_virtual_law_firm.comment_body
+  module:
+    - text
+id: comment.comment_node_virtual_law_firm.default
+targetEntityType: comment
+bundle: comment_node_virtual_law_firm
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

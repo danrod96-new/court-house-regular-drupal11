@@ -1,0 +1,20 @@
+uuid: 9d5fab47-ab7a-4829-88f8-9db4a2773b22
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.comment_node_virtual_law_firm
+field_name: comment_node_virtual_law_firm
+entity_type: node
+type: comment
+settings:
+  comment_type: comment_node_virtual_law_firm
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: ac7781f8-c412-4f3f-983c-c7e94b34d4a7
+langcode: en
+status: true
+dependencies: {  }
+name: 'Nevada Vocabulary'
+vid: nevada_vocabulary
+description: null
+weight: 0
+new_revision: false

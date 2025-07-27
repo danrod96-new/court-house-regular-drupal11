@@ -1,0 +1,25 @@
+uuid: 279115be-3a35-4bfe-904e-c34173a0b379
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_penncourt
+    - taxonomy.vocabulary.pennsylvania_vocabulary
+id: taxonomy_term.pennsylvania_vocabulary.field_penncourt
+field_name: field_penncourt
+entity_type: taxonomy_term
+bundle: pennsylvania_vocabulary
+label: 'penncourt '
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      pennsylvania_vocabulary: pennsylvania_vocabulary
+    sort:
+      field: _none
+field_type: entity_reference

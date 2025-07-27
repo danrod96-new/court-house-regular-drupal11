@@ -1,0 +1,30 @@
+uuid: 53e4a4f7-2bb9-42b6-9f2a-83771a595faa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.pennsylvania_vocabulary.field_penncourt
+    - taxonomy.vocabulary.pennsylvania_vocabulary
+  module:
+    - text
+id: taxonomy_term.pennsylvania_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: pennsylvania_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_penncourt:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

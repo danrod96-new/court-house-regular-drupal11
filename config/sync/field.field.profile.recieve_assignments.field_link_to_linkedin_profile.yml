@@ -1,0 +1,19 @@
+uuid: a9f562f4-05c7-4089-83ff-d2edb5d059f1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_link_to_linkedin_profile
+    - profile.type.recieve_assignments
+id: profile.recieve_assignments.field_link_to_linkedin_profile
+field_name: field_link_to_linkedin_profile
+entity_type: profile
+bundle: recieve_assignments
+label: 'Link to LinkedIn Profile'
+description: "Optional Field - you may paste a link to your Linkedin Profile here.\r\n\r\nAlso, please follow Court House Regular, Inc. on Linkedin at https://www.linkedin.com/company-beta/5299169/"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,25 @@
+uuid: 54fceded-2310-491f-bee7-f2b4c0db0849
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_states_and_territories
+    - taxonomy.vocabulary.states_and_territories
+id: taxonomy_term.states_and_territories.field_states_and_territories
+field_name: field_states_and_territories
+entity_type: taxonomy_term
+bundle: states_and_territories
+label: 'States and Territories'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      states_and_territories: states_and_territories
+    sort:
+      field: _none
+field_type: entity_reference

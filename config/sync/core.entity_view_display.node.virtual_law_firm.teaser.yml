@@ -1,0 +1,34 @@
+uuid: 9bb8b13b-74d2-40ad-8637-36e55428fa0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.virtual_law_firm.body
+    - field.field.node.virtual_law_firm.comment_node_virtual_law_firm
+    - field.field.node.virtual_law_firm.group_group
+    - node.type.virtual_law_firm
+  module:
+    - text
+    - user
+id: node.virtual_law_firm.teaser
+targetEntityType: node
+bundle: virtual_law_firm
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_virtual_law_firm: true
+  group_group: true

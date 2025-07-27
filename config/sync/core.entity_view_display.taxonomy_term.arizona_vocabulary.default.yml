@@ -1,0 +1,30 @@
+uuid: 100b5cae-7f34-495e-b493-da3bea9b14f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.arizona_vocabulary.field_arizonacourts
+    - taxonomy.vocabulary.arizona_vocabulary
+  module:
+    - text
+id: taxonomy_term.arizona_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: arizona_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_arizonacourts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

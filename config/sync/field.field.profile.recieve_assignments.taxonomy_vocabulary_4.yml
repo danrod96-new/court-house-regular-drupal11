@@ -1,0 +1,26 @@
+uuid: 303d6dac-283e-4153-8841-dae1fc36c4df
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.taxonomy_vocabulary_4
+    - profile.type.recieve_assignments
+    - taxonomy.vocabulary.vocabulary_4
+id: profile.recieve_assignments.taxonomy_vocabulary_4
+field_name: taxonomy_vocabulary_4
+entity_type: profile
+bundle: recieve_assignments
+label: 'Counties, Courthouses and Courts'
+description: "<p>Select the Counties, Courthouses and Courts that you are willing to appear in using the drop-downs, starting with clicking on \"Select a value,\" waiting until the \"slide-out\" appears. Then select the appropriate value and the appropriate subsequent values from their slide-outs.</p>\r\n\r\n<p><strong> Use the button \"Add another item\" below to add additional courts. As long as you are licensed to appear in a particular court, you may select any number of subsequent courts for your profile by clicking on  \"Add another item\" below after completing your current choice of court by selecting the deepest term.</strong></p>\r\n\r\n<p><strong> If you are available for more than one court, please select more than one court. Law firms search for appearance attorneys by the courts they list.</strong></p>\r\n\r\n<p>As long as you are licensed in a particular jurisdiction, you may select an unlimited number of courts therein, but you need to select a term from the deepest level in the field.</p> \r\n\r\n<p>E.g. \"State Courts > Ohio > Butler County > County Courthouse > Court of Common Pleas > General Division.\" and not \"e.g. \"State Courts > Ohio > Butler County.\"</p>\r\n\r\n<p><strong>Remember, as long as you are licensed to appear in a particular court, you may select any number of subsequent courts for your profile by clicking on the \"Add another item\" button below after completing your current choice of court by selecting the deepest term.</strong></p>\r\n\r\n<p>Click the \"Save\" button once you have finished with filling out your profile.</p>\r\n\r\n<p>Remember to check occasionally on what courthouses, courts and constituent parts are listed for your jurisdiction(s), as all of the foregoing are added on a constant basis. You may want to add them to your profile</p>\r\n"
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      vocabulary_4: vocabulary_4
+    sort:
+      field: _none
+field_type: entity_reference

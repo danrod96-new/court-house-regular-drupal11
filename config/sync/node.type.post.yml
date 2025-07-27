@@ -1,0 +1,11 @@
+uuid: bd067b7c-e8c9-43de-929a-85ad36df6dcd
+langcode: en
+status: true
+dependencies: {  }
+name: Post
+type: post
+description: 'Content that will belong to a single or multiple groups.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

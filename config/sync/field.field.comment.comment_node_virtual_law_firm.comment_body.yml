@@ -1,0 +1,22 @@
+uuid: 2693ce57-16a1-4ecc-a4a9-0db6e712bf72
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_virtual_law_firm
+    - field.storage.comment.comment_body
+  module:
+    - text
+id: comment.comment_node_virtual_law_firm.comment_body
+field_name: comment_body
+entity_type: comment
+bundle: comment_node_virtual_law_firm
+label: Comment
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  allowed_formats: {  }
+field_type: text_long

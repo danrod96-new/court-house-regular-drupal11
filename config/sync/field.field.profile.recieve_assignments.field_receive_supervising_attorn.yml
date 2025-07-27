@@ -1,0 +1,19 @@
+uuid: fe104198-de28-4b0d-9d97-7a11c7bc4c9a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_receive_supervising_attorn
+    - profile.type.recieve_assignments
+id: profile.recieve_assignments.field_receive_supervising_attorn
+field_name: field_receive_supervising_attorn
+entity_type: profile
+bundle: recieve_assignments
+label: 'Name of Attorney'
+description: 'Actual name of licensed attorney.'
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

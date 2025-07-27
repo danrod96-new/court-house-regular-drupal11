@@ -1,0 +1,19 @@
+uuid: f732e035-70bc-4cf6-8479-0c32b100687c
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_nebraskacourts
+field_name: field_nebraskacourts
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

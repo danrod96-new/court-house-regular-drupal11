@@ -1,0 +1,19 @@
+uuid: d3b50a47-fda0-46a9-8f4a-b39b7418df65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_about_our_practice
+    - profile.type.place_assignments_only
+id: profile.place_assignments_only.field_about_our_practice
+field_name: field_about_our_practice
+entity_type: profile
+bundle: place_assignments_only
+label: 'About Our Practice'
+description: 'Optional field. Write a short note on the area(s) of law that your firm practices.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

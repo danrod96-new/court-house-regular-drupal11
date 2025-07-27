@@ -1,0 +1,19 @@
+uuid: 7ba22ece-fc53-4292-879e-db9b8bbc1a9b
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+id: node.og_group_ref
+field_name: og_group_ref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: node
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

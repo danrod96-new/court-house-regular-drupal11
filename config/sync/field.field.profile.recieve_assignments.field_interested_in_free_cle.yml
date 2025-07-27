@@ -1,0 +1,23 @@
+uuid: ea200811-3298-464a-b9e7-170c023b8057
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_interested_in_free_cle
+    - profile.type.recieve_assignments
+id: profile.recieve_assignments.field_interested_in_free_cle
+field_name: field_interested_in_free_cle
+entity_type: profile
+bundle: recieve_assignments
+label: 'Interested in Free CLE'
+description: "We are working on having free Continuing Legal Education (\"CLE\") for all of our subscribers that practice in a mandatory CLE jurisdiction. Click this box if you are interested. This will give us an idea of what the interest in that is and in which jurisdictions. This field will be invisible to all who view your profile, excepting you and us.\r\n"
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

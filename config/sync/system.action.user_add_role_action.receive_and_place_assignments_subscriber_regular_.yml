@@ -1,0 +1,14 @@
+uuid: 4d1466fa-76b0-4600-8e05-cf9930198234
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.receive_and_place_assignments_subscriber_regular_
+  module:
+    - user
+id: user_add_role_action.receive_and_place_assignments_subscriber_regular_
+label: 'Add the Receive and Place Assignments Subscriber (&quot;Regular&quot;) role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: receive_and_place_assignments_subscriber_regular_

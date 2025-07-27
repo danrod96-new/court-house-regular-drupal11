@@ -1,0 +1,24 @@
+uuid: 9da29bee-3e0f-4e09-8a87-aba8dcf1ecd5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.virtual_law_firm
+  module:
+    - text
+id: node.virtual_law_firm.body
+field_name: body
+entity_type: node
+bundle: virtual_law_firm
+label: Body
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+  allowed_formats: {  }
+field_type: text_with_summary

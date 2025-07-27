@@ -1,0 +1,9 @@
+uuid: adee995e-b483-4039-9ce9-cf28db738f31
+langcode: en
+status: true
+dependencies: {  }
+name: 'Georgia Vocabulary'
+vid: georgia_vocabulary
+description: null
+weight: 0
+new_revision: false

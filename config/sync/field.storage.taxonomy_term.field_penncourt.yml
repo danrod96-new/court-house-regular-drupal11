@@ -1,0 +1,19 @@
+uuid: da84c2f4-e97f-4c8d-bc37-5906bb361c93
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_penncourt
+field_name: field_penncourt
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

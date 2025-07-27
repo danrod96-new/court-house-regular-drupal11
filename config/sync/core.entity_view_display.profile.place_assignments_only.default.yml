@@ -1,0 +1,96 @@
+uuid: 7eaa4b70-e968-42d0-87a5-352d01aae683
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.place_assignments_only.field_about_our_practice
+    - field.field.profile.place_assignments_only.field_city_or_town
+    - field.field.profile.place_assignments_only.field_find_lawyer_by_court_house
+    - field.field.profile.place_assignments_only.field_i_have_read_and_agreed_to_
+    - field.field.profile.place_assignments_only.field_name_of_law_firm
+    - field.field.profile.place_assignments_only.field_name_of_supervising_attorn
+    - field.field.profile.place_assignments_only.field_staff_member
+    - field.field.profile.place_assignments_only.field_state_or_territory
+    - field.field.profile.place_assignments_only.field_street_address
+    - field.field.profile.place_assignments_only.field_website
+    - field.field.profile.place_assignments_only.field_zip_code
+    - profile.type.place_assignments_only
+id: profile.place_assignments_only.default
+targetEntityType: profile
+bundle: place_assignments_only
+mode: default
+content:
+  field_about_our_practice:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_city_or_town:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_name_of_law_firm:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_name_of_supervising_attorn:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_staff_member:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_state_or_territory:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_street_address:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_website:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_zip_code:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 6
+    region: content
+hidden:
+  field_find_lawyer_by_court_house: true
+  field_i_have_read_and_agreed_to_: true

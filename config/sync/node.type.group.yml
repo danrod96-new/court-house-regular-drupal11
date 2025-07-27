@@ -1,0 +1,18 @@
+uuid: 1d421c43-da0b-4929-8310-c8a7649e8c67
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus:
+      - main
+    parent: 'main:'
+name: Group
+type: group
+description: 'The group that will have members and content associated with.'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

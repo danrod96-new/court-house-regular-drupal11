@@ -1,0 +1,11 @@
+uuid: f7dbb8a2-7b7b-4994-98ce-5520fb29fe3e
+langcode: en
+status: true
+dependencies: {  }
+name: 'Recurring Subscription'
+type: uc_recurring_subscription
+description: 'A recurring subscription product used by the recurring subscription ui module to manage your subscription products'
+help: null
+new_revision: false
+preview_mode: 1
+display_submitted: true

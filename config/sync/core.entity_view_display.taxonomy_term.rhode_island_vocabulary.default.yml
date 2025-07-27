@@ -1,0 +1,30 @@
+uuid: 63503d97-91f8-44ee-acc7-a5f224421451
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.rhode_island_vocabulary.field_ricourts
+    - taxonomy.vocabulary.rhode_island_vocabulary
+  module:
+    - text
+id: taxonomy_term.rhode_island_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: rhode_island_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ricourts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

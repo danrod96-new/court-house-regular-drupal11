@@ -1,0 +1,15 @@
+uuid: 5dc3bbe6-e3c3-42df-b750-d9c5c00cc92b
+langcode: en
+status: true
+dependencies:
+  config:
+    - flag.flag.friend
+  module:
+    - flag
+id: flag_action.friend_flag
+label: 'Add this Colleague to your list.'
+type: user
+plugin: 'flag_action:friend_flag'
+configuration:
+  flag_id: friend
+  flag_action: flag

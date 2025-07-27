@@ -1,0 +1,9 @@
+uuid: 88fa3de9-fa36-44d2-9b75-812f7f6b2ecc
+langcode: en
+status: true
+dependencies: {  }
+name: 'Tennessee Vocabulary'
+vid: tennessee_vocabulary
+description: null
+weight: 0
+new_revision: false

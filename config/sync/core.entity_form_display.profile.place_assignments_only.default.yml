@@ -1,0 +1,103 @@
+uuid: 83b0c898-0c4e-4d70-b150-5da7f063b033
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.profile.place_assignments_only.field_about_our_practice
+    - field.field.profile.place_assignments_only.field_city_or_town
+    - field.field.profile.place_assignments_only.field_find_lawyer_by_court_house
+    - field.field.profile.place_assignments_only.field_i_have_read_and_agreed_to_
+    - field.field.profile.place_assignments_only.field_name_of_law_firm
+    - field.field.profile.place_assignments_only.field_name_of_supervising_attorn
+    - field.field.profile.place_assignments_only.field_staff_member
+    - field.field.profile.place_assignments_only.field_state_or_territory
+    - field.field.profile.place_assignments_only.field_street_address
+    - field.field.profile.place_assignments_only.field_website
+    - field.field.profile.place_assignments_only.field_zip_code
+    - profile.type.place_assignments_only
+id: profile.place_assignments_only.default
+targetEntityType: profile
+bundle: place_assignments_only
+mode: default
+content:
+  field_about_our_practice:
+    type: string_textarea
+    weight: 11
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_city_or_town:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_find_lawyer_by_court_house:
+    type: boolean_checkbox
+    weight: 14
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_i_have_read_and_agreed_to_:
+    type: boolean_checkbox
+    weight: 12
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  field_name_of_law_firm:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_name_of_supervising_attorn:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_staff_member:
+    type: string_textfield
+    weight: 2
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_street_address:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_website:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_zip_code:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  field_state_or_territory: true
+  is_default: true

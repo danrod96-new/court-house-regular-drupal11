@@ -1,0 +1,25 @@
+uuid: ca3859de-fc9d-4aba-bcca-64d6946b219e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_tenncourt
+    - taxonomy.vocabulary.tennessee_vocabulary
+id: taxonomy_term.tennessee_vocabulary.field_tenncourt
+field_name: field_tenncourt
+entity_type: taxonomy_term
+bundle: tennessee_vocabulary
+label: Tenncourt
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      tennessee_vocabulary: tennessee_vocabulary
+    sort:
+      field: _none
+field_type: entity_reference

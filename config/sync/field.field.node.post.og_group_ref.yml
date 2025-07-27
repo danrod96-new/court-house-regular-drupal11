@@ -1,0 +1,29 @@
+uuid: 97167371-d697-418c-8c6b-2c74e97a83ac
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.og_group_ref
+    - node.type.post
+id: node.post.og_group_ref
+field_name: og_group_ref
+entity_type: node
+bundle: post
+label: 'Groups audience'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles: null
+    sort:
+      field: _none
+      direction: ASC
+    behaviors:
+      og_behavior:
+        status: true
+    membership_type: og_membership_type_default
+field_type: entity_reference

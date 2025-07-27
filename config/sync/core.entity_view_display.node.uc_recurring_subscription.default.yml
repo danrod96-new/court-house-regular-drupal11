@@ -1,0 +1,31 @@
+uuid: 3bc48dc7-d20c-4ae6-8d0c-2c04ed4eb2bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_display.comment.comment_node_uc_recurring_subs.default
+    - field.field.node.uc_recurring_subscription.comment_node_uc_recurring_subs
+    - node.type.uc_recurring_subscription
+  module:
+    - comment
+    - user
+id: node.uc_recurring_subscription.default
+targetEntityType: node
+bundle: uc_recurring_subscription
+mode: default
+content:
+  comment_node_uc_recurring_subs:
+    type: comment_default
+    label: hidden
+    settings:
+      view_mode: default
+      pager_id: 0
+    third_party_settings: {  }
+    weight: 20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

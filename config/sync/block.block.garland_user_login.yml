@@ -1,0 +1,20 @@
+uuid: 22727212-d089-46b7-afc4-290a80f537e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+  theme:
+    - claro
+id: garland_user_login
+theme: claro
+region: content
+weight: -11
+provider: null
+plugin: user_login_block
+settings:
+  id: user_login_block
+  label: ''
+  label_display: '0'
+  provider: user
+visibility: {  }

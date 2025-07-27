@@ -1,0 +1,30 @@
+uuid: abdc56f0-1994-4871-b30f-09231ab51045
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.eoir.field_eoir
+    - taxonomy.vocabulary.eoir
+  module:
+    - text
+id: taxonomy_term.eoir.default
+targetEntityType: taxonomy_term
+bundle: eoir
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_eoir:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

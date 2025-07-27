@@ -1,0 +1,21 @@
+uuid: 65439c62-463f-437e-a6b8-f87f50d9de03
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_receive_street_address
+field_name: field_receive_street_address
+entity_type: profile
+type: string
+settings:
+  max_length: 57
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

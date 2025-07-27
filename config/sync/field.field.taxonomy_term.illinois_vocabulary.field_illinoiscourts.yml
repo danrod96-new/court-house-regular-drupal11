@@ -1,0 +1,25 @@
+uuid: 9b061bd4-6e81-4c76-93ad-1e34626b58a7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_illinoiscourts
+    - taxonomy.vocabulary.illinois_vocabulary
+id: taxonomy_term.illinois_vocabulary.field_illinoiscourts
+field_name: field_illinoiscourts
+entity_type: taxonomy_term
+bundle: illinois_vocabulary
+label: illinoiscourts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      illinois_vocabulary: illinois_vocabulary
+    sort:
+      field: _none
+field_type: entity_reference

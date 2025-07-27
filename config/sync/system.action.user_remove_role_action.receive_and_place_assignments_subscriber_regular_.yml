@@ -1,0 +1,14 @@
+uuid: 31ccf49b-498a-4a99-b827-0574a9ca4dc1
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.receive_and_place_assignments_subscriber_regular_
+  module:
+    - user
+id: user_remove_role_action.receive_and_place_assignments_subscriber_regular_
+label: 'Remove the Receive and Place Assignments Subscriber (&quot;Regular&quot;) role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: receive_and_place_assignments_subscriber_regular_

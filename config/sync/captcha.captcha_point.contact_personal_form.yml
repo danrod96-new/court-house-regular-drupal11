@@ -1,0 +1,7 @@
+uuid: 37183454-783d-44ab-9096-02e62ed33a03
+langcode: en
+status: true
+dependencies: {  }
+formId: contact_personal_form
+captchaType: riddler/Riddler
+label: contact_personal_form

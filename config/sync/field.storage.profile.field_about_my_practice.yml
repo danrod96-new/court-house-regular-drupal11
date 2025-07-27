@@ -1,0 +1,19 @@
+uuid: 4e7e5840-f6d6-4e1c-be10-e9854f5c39e9
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_about_my_practice
+field_name: field_about_my_practice
+entity_type: profile
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

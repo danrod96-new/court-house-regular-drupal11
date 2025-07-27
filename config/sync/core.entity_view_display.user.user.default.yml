@@ -1,0 +1,49 @@
+uuid: 2d31c89d-84e2-49a9-975f-92166af32ceb
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.commerce_remote_id
+    - field.field.user.user.og_user_node
+    - field.field.user.user.user_picture
+  module:
+    - image
+    - user
+_core:
+  default_config_hash: mZLyuWM9CQx2ZJVqFGSbzgFnHzudVbHBYmdU256A5Wk
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  flag_following:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  masquerade:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 50
+    region: content
+  member_for:
+    weight: 5
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: content
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 51
+    region: content
+hidden:
+  commerce_remote_id: true
+  customer_profiles: true
+  main_profiles: true
+  og_user_node: true
+  place_assignments_only_profiles: true
+  recieve_assignments_profiles: true

@@ -1,0 +1,11 @@
+uuid: bbec0256-d057-4b58-88f5-b9f9b4a29d0e
+langcode: en
+status: true
+dependencies:
+  module:
+    - message
+id: message.message_notify_email_body
+label: message_notify_email_body
+description: null
+targetEntityType: message
+cache: true

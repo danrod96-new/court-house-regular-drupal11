@@ -1,0 +1,30 @@
+uuid: fd10272a-0ff3-411f-ac3f-7d74d2420c13
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:4b80d674-ed2d-4663-8be3-9ec69f5dee49'
+  module:
+    - block_content
+    - system
+  theme:
+    - claro
+id: garland_block_2
+theme: claro
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:4b80d674-ed2d-4663-8be3-9ec69f5dee49'
+settings:
+  id: 'block_content:4b80d674-ed2d-4663-8be3-9ec69f5dee49'
+  label: ''
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

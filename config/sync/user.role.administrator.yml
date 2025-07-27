@@ -1,0 +1,134 @@
+uuid: 2af80319-6b48-43f5-a3f1-e10ce80a956a
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.1
+    - filter.format.2
+    - filter.format.3
+    - node.type.book
+    - node.type.forum
+    - node.type.mass_contact
+    - node.type.page
+    - node.type.product
+    - node.type.profile
+    - node.type.story
+    - node.type.uc_recurring_subscription
+  module:
+    - backup_migrate
+    - block
+    - captcha
+    - comment
+    - contact
+    - filter
+    - flag
+    - forum
+    - group
+    - image
+    - masquerade
+    - node
+    - profile
+    - rules
+    - security_review
+    - system
+    - taxonomy
+    - token_custom
+    - toolbar
+    - views_ui
+_core:
+  default_config_hash: OeKGIkmZA_c-t6QLH81WNQx8gDCc1MRmxaTuQgxBByU
+id: administrator
+label: Administrator
+weight: 1
+is_admin: true
+permissions:
+  - 'access administration pages'
+  - 'access backup files'
+  - 'access content'
+  - 'access content overview'
+  - 'access rules debug'
+  - 'access security review list'
+  - 'access site in maintenance mode'
+  - 'access site reports'
+  - 'access site-wide contact form'
+  - 'access toolbar'
+  - 'access user contact forms'
+  - 'access user profiles'
+  - 'administer CAPTCHA settings'
+  - 'administer actions'
+  - 'administer backup and migrate'
+  - 'administer blocks'
+  - 'administer comments'
+  - 'administer contact forms'
+  - 'administer content types'
+  - 'administer custom tokens'
+  - 'administer filters'
+  - 'administer flags'
+  - 'administer forums'
+  - 'administer group'
+  - 'administer image styles'
+  - 'administer menu'
+  - 'administer modules'
+  - 'administer nodes'
+  - 'administer permissions'
+  - 'administer profile types'
+  - 'administer rules'
+  - 'administer site configuration'
+  - 'administer software updates'
+  - 'administer taxonomy'
+  - 'administer themes'
+  - 'administer users'
+  - 'administer views'
+  - 'bypass node access'
+  - 'change own username'
+  - 'create book content'
+  - 'create forum content'
+  - 'create mass_contact content'
+  - 'create page content'
+  - 'create product content'
+  - 'create profile content'
+  - 'create story content'
+  - 'create uc_recurring_subscription content'
+  - 'delete any book content'
+  - 'delete any forum content'
+  - 'delete any mass_contact content'
+  - 'delete any page content'
+  - 'delete any product content'
+  - 'delete any profile content'
+  - 'delete any story content'
+  - 'delete any uc_recurring_subscription content'
+  - 'delete own book content'
+  - 'delete own forum content'
+  - 'delete own mass_contact content'
+  - 'delete own page content'
+  - 'delete own product content'
+  - 'delete own profile content'
+  - 'delete own story content'
+  - 'delete own uc_recurring_subscription content'
+  - 'edit any book content'
+  - 'edit any forum content'
+  - 'edit any mass_contact content'
+  - 'edit any page content'
+  - 'edit any product content'
+  - 'edit any profile content'
+  - 'edit any story content'
+  - 'edit any uc_recurring_subscription content'
+  - 'edit own book content'
+  - 'edit own comments'
+  - 'edit own forum content'
+  - 'edit own mass_contact content'
+  - 'edit own page content'
+  - 'edit own product content'
+  - 'edit own profile content'
+  - 'edit own story content'
+  - 'edit own uc_recurring_subscription content'
+  - 'masquerade as any user'
+  - 'masquerade as super user'
+  - 'perform backup'
+  - 'restore from backup'
+  - 'run security checks'
+  - 'use text format 1'
+  - 'use text format 2'
+  - 'use text format 3'
+  - 'view own unpublished content'
+  - 'view the administration theme'

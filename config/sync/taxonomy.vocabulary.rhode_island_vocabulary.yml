@@ -1,0 +1,9 @@
+uuid: 1c882354-9a82-45c1-aed7-14ea5066757c
+langcode: en
+status: true
+dependencies: {  }
+name: 'Rhode Island Vocabulary'
+vid: rhode_island_vocabulary
+description: null
+weight: 0
+new_revision: false

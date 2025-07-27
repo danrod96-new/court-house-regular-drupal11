@@ -1,0 +1,14 @@
+uuid: 7081a027-ae3f-4154-b940-ffccda082443
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.charter_subscriber
+  module:
+    - user
+id: user_add_role_action.charter_subscriber
+label: 'Add the Charter Subscriber role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: charter_subscriber

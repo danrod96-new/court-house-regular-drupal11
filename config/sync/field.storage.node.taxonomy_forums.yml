@@ -1,0 +1,22 @@
+uuid: 92833257-e48d-4b4a-b9e2-28ef7d53f96f
+langcode: und
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+_core:
+  default_config_hash: I_XBO3_sTiICkG5jOKu4Sksq1wTIkEDY2LWPbvgZ6w8
+id: node.taxonomy_forums
+field_name: taxonomy_forums
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

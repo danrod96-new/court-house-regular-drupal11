@@ -1,0 +1,29 @@
+uuid: 54b15c79-9420-4c92-9462-48eac2f59020
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_book
+    - field.field.comment.comment_node_book.comment_body
+    - field.field.comment.comment_node_book.og_group_ref
+  module:
+    - text
+id: comment.comment_node_book.default
+targetEntityType: comment
+bundle: comment_node_book
+mode: default
+content:
+  comment_body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  og_group_ref: true

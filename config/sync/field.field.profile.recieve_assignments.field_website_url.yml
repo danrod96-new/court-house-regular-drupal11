@@ -1,0 +1,19 @@
+uuid: b57f6ddb-0f18-4240-9d68-e1eacf168b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_website_url
+    - profile.type.recieve_assignments
+id: profile.recieve_assignments.field_website_url
+field_name: field_website_url
+entity_type: profile
+bundle: recieve_assignments
+label: Website
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,23 @@
+uuid: 78f56e65-9490-4d46-929a-ce9a0a0f8bff
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_find_lawyer_by_court_house
+    - profile.type.place_assignments_only
+id: profile.place_assignments_only.field_find_lawyer_by_court_house
+field_name: field_find_lawyer_by_court_house
+entity_type: profile
+bundle: place_assignments_only
+label: 'Find Lawyer By Court House'
+description: 'We are also working on a website - www.findlawyerbycourthouse.com - where consumers of legal services can search for an attorney by court house along with by specialties. This website will be provided to CHR subscribers at no additional cost. Clients being sued in a particular court house or those just want to sue someone else in a convenient court house would be able to find you that way. Click this box if interested.      '
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: ''
+  off_label: ''
+field_type: boolean

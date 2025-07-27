@@ -1,0 +1,20 @@
+uuid: eb6b11b5-0aa4-481b-bc3d-f5e314acbbb9
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+    - taxonomy
+id: profile.taxonomy_vocabulary_4
+field_name: taxonomy_vocabulary_4
+entity_type: profile
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

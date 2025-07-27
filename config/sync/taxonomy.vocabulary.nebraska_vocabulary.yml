@@ -1,0 +1,9 @@
+uuid: 4ffd9514-0f4d-4948-801b-14a9607b36be
+langcode: en
+status: true
+dependencies: {  }
+name: 'Nebraska vocabulary'
+vid: nebraska_vocabulary
+description: null
+weight: 0
+new_revision: false

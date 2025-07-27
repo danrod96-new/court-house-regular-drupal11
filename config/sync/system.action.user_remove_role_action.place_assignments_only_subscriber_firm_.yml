@@ -1,0 +1,14 @@
+uuid: 7930e3e7-db18-4dea-947a-e78426cd84af
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.place_assignments_only_subscriber_firm_
+  module:
+    - user
+id: user_remove_role_action.place_assignments_only_subscriber_firm_
+label: 'Remove the Place Assignments Only Subscriber (&quot;Firm&quot;) role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: place_assignments_only_subscriber_firm_

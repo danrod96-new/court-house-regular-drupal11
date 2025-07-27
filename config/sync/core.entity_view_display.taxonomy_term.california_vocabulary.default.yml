@@ -1,0 +1,30 @@
+uuid: 3d341cf9-bd9d-4198-a92e-abe9c438419f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.california_vocabulary.field_calicourts
+    - taxonomy.vocabulary.california_vocabulary
+  module:
+    - text
+id: taxonomy_term.california_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: california_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_calicourts:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

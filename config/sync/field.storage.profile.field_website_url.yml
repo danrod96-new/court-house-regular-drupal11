@@ -1,0 +1,21 @@
+uuid: eab05d2a-3905-4f20-8b6f-ea2a83ad9789
+langcode: und
+status: true
+dependencies:
+  module:
+    - profile
+id: profile.field_website_url
+field_name: field_website_url
+entity_type: profile
+type: string
+settings:
+  max_length: 55
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

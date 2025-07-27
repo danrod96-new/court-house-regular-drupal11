@@ -1,0 +1,93 @@
+uuid: 5661bed3-50c8-460c-8917-e7c0924ef553
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.virtual_law_firm.body
+    - field.field.node.virtual_law_firm.comment_node_virtual_law_firm
+    - field.field.node.virtual_law_firm.group_group
+    - node.type.virtual_law_firm
+  module:
+    - comment
+    - path
+    - text
+id: node.virtual_law_firm.default
+targetEntityType: node
+bundle: virtual_law_firm
+mode: default
+content:
+  body:
+    type: text_textarea_with_summary
+    weight: 31
+    region: content
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+      show_summary: false
+    third_party_settings: {  }
+  comment_node_virtual_law_firm:
+    type: comment_default
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  created:
+    type: datetime_timestamp
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  group_group:
+    type: boolean_checkbox
+    weight: 0
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 30
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    weight: 15
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 120
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    weight: 16
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 5
+    region: content
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

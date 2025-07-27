@@ -1,0 +1,25 @@
+uuid: 6594ce1d-cd99-4988-a6e6-005e9749ffe5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_nebraskacourts
+    - taxonomy.vocabulary.nebraska_vocabulary
+id: taxonomy_term.nebraska_vocabulary.field_nebraskacourts
+field_name: field_nebraskacourts
+entity_type: taxonomy_term
+bundle: nebraska_vocabulary
+label: nebraskacourts
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      nebraska_vocabulary: nebraska_vocabulary
+    sort:
+      field: _none
+field_type: entity_reference

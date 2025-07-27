@@ -1,0 +1,25 @@
+uuid: 7938e0f3-9d98-4802-9171-fdab021e1634
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_eoir
+    - taxonomy.vocabulary.eoir
+id: taxonomy_term.eoir.field_eoir
+field_name: field_eoir
+entity_type: taxonomy_term
+bundle: eoir
+label: EOIR
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      eoir: eoir
+    sort:
+      field: _none
+field_type: entity_reference

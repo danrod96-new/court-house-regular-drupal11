@@ -1,0 +1,30 @@
+uuid: d7ad342b-b07f-4e9d-9f6f-bdc371e472a2
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:39fd907e-fbd3-4fa6-b255-0ba0c16cf809'
+  module:
+    - block_content
+    - system
+  theme:
+    - claro
+id: garland_block_5
+theme: claro
+region: content
+weight: 0
+provider: null
+plugin: 'block_content:39fd907e-fbd3-4fa6-b255-0ba0c16cf809'
+settings:
+  id: 'block_content:39fd907e-fbd3-4fa6-b255-0ba0c16cf809'
+  label: 'Registration & Login'
+  label_display: visible
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '<front>'

@@ -1,0 +1,30 @@
+uuid: 86d39605-2000-4a51-bef4-f162b4cc5cbf
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.texas_vocabulary.field_txcourt
+    - taxonomy.vocabulary.texas_vocabulary
+  module:
+    - text
+id: taxonomy_term.texas_vocabulary.default
+targetEntityType: taxonomy_term
+bundle: texas_vocabulary
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_txcourt:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

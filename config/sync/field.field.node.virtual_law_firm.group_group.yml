@@ -1,0 +1,23 @@
+uuid: 9e3940bb-30dd-40a6-9f03-c65f99e232a8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.group_group
+    - node.type.virtual_law_firm
+id: node.virtual_law_firm.group_group
+field_name: group_group
+entity_type: node
+bundle: virtual_law_firm
+label: Group
+description: 'Determine if this is an OG group.'
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: Group
+  off_label: 'Not a group'
+field_type: boolean

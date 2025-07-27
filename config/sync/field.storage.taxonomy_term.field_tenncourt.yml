@@ -1,0 +1,19 @@
+uuid: 8b0a866f-024c-4681-b9f0-da4a554c1ea3
+langcode: und
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: taxonomy_term.field_tenncourt
+field_name: field_tenncourt
+entity_type: taxonomy_term
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 5
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

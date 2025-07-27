@@ -1,0 +1,30 @@
+uuid: 694cfb15-2f2f-4c61-b033-631bdd806a40
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.counties.field_counties
+    - taxonomy.vocabulary.counties
+  module:
+    - text
+id: taxonomy_term.counties.default
+targetEntityType: taxonomy_term
+bundle: counties
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_counties:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

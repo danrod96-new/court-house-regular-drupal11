@@ -1,0 +1,9 @@
+uuid: 32ff2cc1-0a5e-448f-bf50-fd1e7c3251d0
+langcode: en
+status: true
+dependencies: {  }
+id: charter_subscriber
+label: 'Charter Subscriber'
+weight: 3
+is_admin: false
+permissions: {  }

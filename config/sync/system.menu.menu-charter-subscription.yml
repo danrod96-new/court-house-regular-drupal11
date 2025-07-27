@@ -1,0 +1,8 @@
+uuid: afbe97c6-75bb-4db1-816d-d22361cccd1c
+langcode: en
+status: true
+dependencies: {  }
+id: menu-charter-subscription
+label: 'Charter Subscription'
+description: ''
+locked: false

@@ -1,0 +1,8 @@
+uuid: 49deb480-09ea-4dba-b270-0fe0eec50bf3
+langcode: en
+status: true
+dependencies: {  }
+id: comment_node_uc_recurring_subs
+label: 'Recurring Subscription comment'
+target_entity_type_id: node
+description: null

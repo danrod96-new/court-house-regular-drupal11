@@ -1,0 +1,19 @@
+uuid: 65c19cba-de0d-466a-b1a8-b9b7785fd951
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_mass_contact_headers
+    - node.type.mass_contact
+id: node.mass_contact.field_mass_contact_headers
+field_name: field_mass_contact_headers
+entity_type: node
+bundle: mass_contact
+label: Headers
+description: 'Any other headers that were created by the Mass Contact module.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

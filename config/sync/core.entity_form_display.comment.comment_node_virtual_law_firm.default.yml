@@ -1,0 +1,36 @@
+uuid: 628f92b3-8f86-4932-8c47-ffb56e7a04b9
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.comment_node_virtual_law_firm
+    - field.field.comment.comment_node_virtual_law_firm.comment_body
+  module:
+    - text
+id: comment.comment_node_virtual_law_firm.default
+targetEntityType: comment
+bundle: comment_node_virtual_law_firm
+mode: default
+content:
+  author:
+    weight: -2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  comment_body:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  subject:
+    type: string_textfield
+    weight: 10
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden: {  }

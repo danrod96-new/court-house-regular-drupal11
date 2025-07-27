@@ -1,0 +1,30 @@
+uuid: 4e227c3e-1694-41d4-9233-c12d20f65867
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:basic:816d2862-7958-43b7-9841-794bdb63103c'
+  module:
+    - block_content
+    - system
+  theme:
+    - corporateclean
+id: corporateclean_block_7
+theme: corporateclean
+region: ''
+weight: -17
+provider: null
+plugin: 'block_content:816d2862-7958-43b7-9841-794bdb63103c'
+settings:
+  id: 'block_content:816d2862-7958-43b7-9841-794bdb63103c'
+  label: ''
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/charter-search/*'

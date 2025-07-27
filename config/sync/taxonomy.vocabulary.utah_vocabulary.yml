@@ -1,0 +1,9 @@
+uuid: 631a80f0-331b-41f2-8835-53b685da249a
+langcode: en
+status: true
+dependencies: {  }
+name: 'Utah Vocabulary'
+vid: utah_vocabulary
+description: null
+weight: 0
+new_revision: false

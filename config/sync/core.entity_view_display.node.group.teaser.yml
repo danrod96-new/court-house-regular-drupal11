@@ -1,0 +1,36 @@
+uuid: f913864e-c126-40cf-9412-cdf62a2633b7
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.group.body
+    - field.field.node.group.comment_node_group
+    - field.field.node.group.group_group
+    - field.field.node.group.og_group_ref
+    - node.type.group
+  module:
+    - text
+    - user
+id: node.group.teaser
+targetEntityType: node
+bundle: group
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  comment_node_group: true
+  group_group: true
+  og_group_ref: true

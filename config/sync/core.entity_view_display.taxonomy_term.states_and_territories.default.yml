@@ -1,0 +1,30 @@
+uuid: df261e1c-4ce7-410d-8701-1035fda17754
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.states_and_territories.field_states_and_territories
+    - taxonomy.vocabulary.states_and_territories
+  module:
+    - text
+id: taxonomy_term.states_and_territories.default
+targetEntityType: taxonomy_term
+bundle: states_and_territories
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_states_and_territories:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

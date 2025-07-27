@@ -1,0 +1,9 @@
+uuid: eaa09f88-9124-4575-9f42-985e9bd5af1e
+langcode: en
+status: true
+dependencies: {  }
+name: Cities
+vid: cities
+description: 'That city that you will do most of your appearance work'
+weight: 0
+new_revision: false

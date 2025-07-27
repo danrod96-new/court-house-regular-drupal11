@@ -1,0 +1,20 @@
+uuid: 60856852-e531-46ed-9673-e71a4d9e2599
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.forum
+_core:
+  default_config_hash: UeZ24XgnXo-lT7KPfQfyzNVVF1m7AY3dHM0_1UU3UFo
+id: node.forum.title
+field_name: title
+entity_type: node
+bundle: forum
+label: Subject
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

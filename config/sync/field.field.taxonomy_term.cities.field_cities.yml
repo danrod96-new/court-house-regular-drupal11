@@ -1,0 +1,25 @@
+uuid: eacdd20a-3f33-4c9a-a4f7-bcc0c00daf80
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_cities
+    - taxonomy.vocabulary.cities
+id: taxonomy_term.cities.field_cities
+field_name: field_cities
+entity_type: taxonomy_term
+bundle: cities
+label: Cities
+description: "Select the cities that you expect to do most of your appearance work in. Not a required field. Don't see your city? Write us and we will add!"
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:filter_existing_terms'
+  handler_settings:
+    target_bundles:
+      cities: cities
+    sort:
+      field: _none
+field_type: entity_reference

@@ -1,0 +1,12 @@
+uuid: 7fc24a65-bd12-490b-90fb-1e862a022f5e
+langcode: en
+status: true
+dependencies: {  }
+id: main
+label: 'Main profile'
+display_label: null
+multiple: false
+registration: false
+roles: {  }
+allow_revisions: false
+new_revision: false
