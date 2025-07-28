@@ -21,11 +21,11 @@
 %}
   {% block block_content %}
     {%
-      include 'radix:navbar-brand' with {
+      include 'chr_theme:navbar-brand' with {
         text: site_name,
         site_slogan,
         image: site_logo,
-        width: '40px',
+        width: '135px',
         height: 'auto',
         path: path('<front>'),
         alt: elements.content.site_name['#markup'] ~ ' logo',
