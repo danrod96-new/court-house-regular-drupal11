@@ -52,6 +52,26 @@ a {
   }
 
   img {
-    border:none; outline: none; display:block; overflow:hidden;
+    border:none; 
+    display:block;
+    outline: none; 
+    overflow:hidden;
   }
+}
+
+img { 
+  box-sizing: border-box;
+  height: auto; 
+  max-width: 100%; 
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+}
+
+code { 
+  font-family: "Courier New", Courier, monospace; 
+}
+
+blockquote { 
+  background:transparent url('/themes/custom/chr_theme/build/assets/images/blockquote.png') no-repeat top left; 
+  margin: 40px 0; padding: 0 55px; 
 }

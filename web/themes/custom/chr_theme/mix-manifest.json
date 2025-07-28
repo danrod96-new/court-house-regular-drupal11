@@ -1,4 +1,18 @@
 {
     "/build/js/main.script.js": "/build/js/main.script.js",
-    "/build/css/main.style.css": "/build/css/main.style.css"
+    "/build/css/main.style.css": "/build/css/main.style.css",
+    "/build/assets/images/active-slide.png": "/build/assets/images/active-slide.png",
+    "/build/assets/images/blockquote.png": "/build/assets/images/blockquote.png",
+    "/build/assets/images/comments.png": "/build/assets/images/comments.png",
+    "/build/assets/images/inactive-slide.png": "/build/assets/images/inactive-slide.png",
+    "/build/assets/images/menu-collapsed.png": "/build/assets/images/menu-collapsed.png",
+    "/build/assets/images/menu-expanded.png": "/build/assets/images/menu-expanded.png",
+    "/build/assets/images/pattern.png": "/build/assets/images/pattern.png",
+    "/build/assets/images/search-button.png": "/build/assets/images/search-button.png",
+    "/build/assets/images/social-media-delicious.png": "/build/assets/images/social-media-delicious.png",
+    "/build/assets/images/social-media-facebook.png": "/build/assets/images/social-media-facebook.png",
+    "/build/assets/images/social-media-linkedin.png": "/build/assets/images/social-media-linkedin.png",
+    "/build/assets/images/social-media-rss.png": "/build/assets/images/social-media-rss.png",
+    "/build/assets/images/social-media-twitter.png": "/build/assets/images/social-media-twitter.png",
+    "/build/assets/images/testimonial.png": "/build/assets/images/testimonial.png"
 }

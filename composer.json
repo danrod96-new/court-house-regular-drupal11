@@ -79,6 +79,7 @@
         "drupal/eca": "^3.0@RC",
         "drupal/flag": "^4.0@beta",
         "drupal/forum": "^1.0",
+        "drupal/gin": "^5.0",
         "drupal/group": "^3.3",
         "drupal/libraries": "^4.1",
         "drupal/mailsystem": "^4.5",

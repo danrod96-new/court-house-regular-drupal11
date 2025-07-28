@@ -101,4 +101,5 @@ theme:
   basecore: 0
   bootstrap5: 0
   venture: 0
+  gin: 0
 profile: standard
