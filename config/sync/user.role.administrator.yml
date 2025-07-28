@@ -23,7 +23,6 @@ dependencies:
     - filter
     - flag
     - forum
-    - group
     - image
     - masquerade
     - node
@@ -65,7 +64,6 @@ permissions:
   - 'administer filters'
   - 'administer flags'
   - 'administer forums'
-  - 'administer group'
   - 'administer image styles'
   - 'administer menu'
   - 'administer modules'
