@@ -12581,8 +12581,62 @@ textarea.form-control-lg {
   opacity: 0.25;
 }
 
-@font-face {
-  font-family: Droid Sans ", " Helvetica Neue ", " Nimbus Sans L ", sans-serif";
+body {
+  font: 0.8em/165% "Lucida Grande", "Lucida Sans Unicode", Segoe UI, Helvetica, Arial, sans-serif;
+  margin: 0;
+  outline: 0 none;
+  padding: 0;
+  vertical-align: baseline;
+  font-size: 13px;
+  line-height: 1.62em;
+  background: #ccc;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+  margin: 25px 0 20px 0;
+  line-height: 120%;
+  text-shadow: 1px 1px 1px #EAF1EA;
+  font-family: Myriad Pro, "Lucida Grande", "Lucida Sans Unicode", Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+h1, .h1 {
+  font-size: 32px;
+  margin: 0 0 20px 0;
+}
+
+h2, .h2 {
+  font-size: 20px;
+  color: #1487d4 !important;
+  font-weight: normal;
+}
+
+h3, .h3 {
+  font-size: 130%;
+}
+
+h4, .h4 {
+  font-size: 110%;
+}
+
+input, textarea, select {
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Segoe UI, Helvetica, Arial, sans-serif;
+}
+
+p {
+  margin: 0 0 25px 0;
+}
+
+a {
+  text-decoration: none;
+}
+a.active {
+  text-decoration: none;
+}
+a img {
+  border: none;
+  outline: none;
+  display: block;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=main.style.css.map*/
