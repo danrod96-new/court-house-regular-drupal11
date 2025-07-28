@@ -1,8 +1,18 @@
 @import "../../src/scss/init";
 
 .navbar-brand {
+  .navbar-brand__text {
+    margin-left: 15px;
+  }
+
   .page-title {
     font-size: 28px;
     font-weight: bold;
+  }
+
+  .site-slogan {
+    margin-left: 20px;
+    font-size: 12px;
+    font-weight: normal;
   }
 }

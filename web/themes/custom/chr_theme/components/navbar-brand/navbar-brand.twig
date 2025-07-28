@@ -27,13 +27,13 @@
       </div>
 
       {% if text or site_slogan %}
-        <div class="navbar-brand__text d-flex flex-column">
+        <div class="navbar-brand__text d-flex flex-row">
           {% if text %}
             <span class="page-title">{{ text }}</span>
           {% endif %}
 
           {% if site_slogan %}
-            <span class="small text-muted">{{ site_slogan }}</span>
+            <span class="site-slogan small text-muted">{{ site_slogan }}</span>
           {% endif %}
         </div>
       {% endif %}

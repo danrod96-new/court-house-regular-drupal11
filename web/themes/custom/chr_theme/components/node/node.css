@@ -191,17 +191,4 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
-.navbar-brand .navbar-brand__text {
-  margin-left: 15px;
-}
-.navbar-brand .page-title {
-  font-size: 28px;
-  font-weight: bold;
-}
-.navbar-brand .site-slogan {
-  margin-left: 20px;
-  font-size: 12px;
-  font-weight: normal;
-}
-
-/*# sourceMappingURL=navbar-brand.css.map*/
+/*# sourceMappingURL=node.css.map*/
