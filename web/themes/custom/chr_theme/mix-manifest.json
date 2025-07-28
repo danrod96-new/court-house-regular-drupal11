@@ -1,6 +1,11 @@
 {
     "/build/js/main.script.js": "/build/js/main.script.js",
+    "/components/page-footer/page-footer.css": "/components/page-footer/page-footer.css",
+    "/components/page-content/page-content.css": "/components/page-content/page-content.css",
+    "/components/nav/nav.css": "/components/nav/nav.css",
+    "/components/html/html.css": "/components/html/html.css",
     "/build/css/main.style.css": "/build/css/main.style.css",
+    "/components/page/page.css": "/components/page/page.css",
     "/build/assets/images/active-slide.png": "/build/assets/images/active-slide.png",
     "/build/assets/images/blockquote.png": "/build/assets/images/blockquote.png",
     "/build/assets/images/comments.png": "/build/assets/images/comments.png",
