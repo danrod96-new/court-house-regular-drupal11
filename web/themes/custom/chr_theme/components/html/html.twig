@@ -45,24 +45,26 @@
     {% endblock %}
   </head>
   <body {{attributes.addClass(body_classes)}}>
-    {% block body_start %}
-      {{ body_start }}
-    {% endblock %}
-    {#
-      This hyperlink facilitates keyboard navigation, allowing users to
-      easily skip to the main content section defined in 'page.html.twig'.
-    #}
-    <a href="#main-content" class="visually-hidden focusable">
-      {{ 'Skip to main content'|t }}
-    </a>
+    <div id="wrapper">
+      {% block body_start %}
+        {{ body_start }}
+      {% endblock %}
+      {#
+        This hyperlink facilitates keyboard navigation, allowing users to
+        easily skip to the main content section defined in 'page.html.twig'.
+      #}
+      <a href="#main-content" class="visually-hidden focusable">
+        {{ 'Skip to main content'|t }}
+      </a>
 
-    {{ page_top }}
-    {{ page }}
-    {{ page_bottom }}
+      {{ page_top }}
+      {{ page }}
+      {{ page_bottom }}
 
-    <js-bottom-placeholder token="{{ placeholder_token }}">
-    {% block body_end %}
-      {{ body_end }}
-    {% endblock %}
+      <js-bottom-placeholder token="{{ placeholder_token }}">
+      {% block body_end %}
+        {{ body_end }}
+      {% endblock %}
+    </div>
   </body>
 </html>
