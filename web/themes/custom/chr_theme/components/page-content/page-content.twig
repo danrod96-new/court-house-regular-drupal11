@@ -19,7 +19,7 @@
 {% set page_content_container_attributes = page_content_container_attributes ?: create_attribute() %}
 
 {% 
-  set page_main_classes = "py-2" 
+  set page_main_classes = "py-2"
 %}
 
 {% set header_container_class = '' %}
@@ -60,9 +60,24 @@
 	{% if page.content %}
     <div class="page__content" id="main-content">
       <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
-        {% block page_inner_content %}
-          {{ page.content }}
-        {% endblock %}
+        <div class="row">
+          <div class="col-md-3">
+            {% block page_sidebar_first %}
+              First sidebar
+              {{ page.content.sidebar_first }}
+            {% endblock %}
+          </div>
+          <div class="col-md-6">
+            {% block page_inner_content %}
+              {{ page.content }}
+            {% endblock %}
+          </div>
+          <div class="col-md-3">
+            {% block page_sidebar_second %}
+              Second sidebar
+            {% endblock %}
+          </div>
+        </div>
       </div>
     </div>
   {% endif %}
