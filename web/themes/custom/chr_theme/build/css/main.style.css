@@ -12623,7 +12623,7 @@ input, textarea, select {
 }
 
 p {
-  margin: 0 0 25px 0;
+  margin-bottom: 18px;
 }
 
 a {
@@ -12655,6 +12655,16 @@ blockquote {
   background: transparent url("/themes/custom/chr_theme/build/assets/images/blockquote.png") no-repeat top left;
   margin: 40px 0;
   padding: 0 55px;
+}
+
+/* button links */
+.links li a {
+  background-color: #E7E5E3;
+  color: #100100;
+  padding: 4px 5px;
+  border-radius: 4px;
+  text-shadow: 1px 1px #fff;
+  font-weight: normal;
 }
 
 /*# sourceMappingURL=main.style.css.map*/

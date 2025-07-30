@@ -219,7 +219,15 @@
   width: 100%;
   box-shadow: 0 0 3px #999;
   margin-top: 25px;
-  padding: 20px;
+  padding: 15px 20px;
+}
+#main-content-front .front-content h2 {
+  color: #000 !important;
+  font-size: 20px;
+}
+#main-content-front .front-content h2 a {
+  color: #000;
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=page-front.css.map*/
