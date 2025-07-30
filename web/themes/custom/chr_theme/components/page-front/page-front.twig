@@ -71,7 +71,9 @@
           </div>
           <div class="col-md-6">
             {% block page_inner_content %}
-              {{ page.content }}
+              <div class="front-content">
+                {{ page.content }}
+              </div>
             {% endblock %}
           </div>
           <div class="col-md-3">

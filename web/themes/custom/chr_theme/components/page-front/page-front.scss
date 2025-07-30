@@ -24,4 +24,15 @@
       color: $dark-colour !important;
     }
   }
+
+  .front-content {
+    background: $white;
+    display: inline;
+    margin-bottom: 2.7%;
+    float: right;
+    width: 100%;
+    box-shadow: 0 0 3px $light-grey-1;
+    margin-top: 25px;
+    padding: 20px;
+  }
 }

@@ -211,5 +211,15 @@
   letter-spacing: 1px;
   color: #333 !important;
 }
+#main-content-front .front-content {
+  background: #fff;
+  display: inline;
+  margin-bottom: 2.7%;
+  float: right;
+  width: 100%;
+  box-shadow: 0 0 3px #999;
+  margin-top: 25px;
+  padding: 20px;
+}
 
 /*# sourceMappingURL=page-front.css.map*/
