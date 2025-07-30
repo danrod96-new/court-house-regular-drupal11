@@ -14,10 +14,15 @@
   margin-top: 10px;
 
   .nav-item {
-    padding: 0 20px;
-
     a {
       color: $white;
+      padding: 10px 20px;
+
+      &.active,
+      &:hover {
+        background-color: $black;
+        color: $white;
+      }
     }
   }
 }

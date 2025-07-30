@@ -200,10 +200,12 @@
   background: repeating-linear-gradient(#555, #333 40px);
   margin-top: 10px;
 }
-.navbar-nav .nav-item {
-  padding: 0 20px;
-}
 .navbar-nav .nav-item a {
+  color: #fff;
+  padding: 10px 20px;
+}
+.navbar-nav .nav-item a.active, .navbar-nav .nav-item a:hover {
+  background-color: #000;
   color: #fff;
 }
 
