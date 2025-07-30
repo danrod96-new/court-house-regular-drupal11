@@ -1,7 +1,9 @@
 @import "../../src/scss/init";
 
-#main-content {
+#main-content-front {
   #sidebar-first {
+    margin: 25px 15px;
+
     h2 {
       margin: 0;
       font-size: 16px;
@@ -12,6 +14,8 @@
   }
 
   #sidebar-second {
+    margin: 25px 15px;
+
     h2 {
       margin: 0;
       font-size: 16px;

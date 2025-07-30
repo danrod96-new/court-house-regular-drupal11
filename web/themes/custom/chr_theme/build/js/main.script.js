@@ -14,6 +14,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/field-comment/field-comment.scss":
+/*!*****************************************************!*\
+  !*** ./components/field-comment/field-comment.scss ***!
+  \*****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./components/field/field.scss":
 /*!*************************************!*\
   !*** ./components/field/field.scss ***!
@@ -53,6 +66,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./components/nav-item/nav-item.scss":
+/*!*******************************************!*\
+  !*** ./components/nav-item/nav-item.scss ***!
+  \*******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
 /***/ "./components/nav/nav.scss":
 /*!*********************************!*\
   !*** ./components/nav/nav.scss ***!
@@ -70,6 +96,19 @@ __webpack_require__.r(__webpack_exports__);
 /*!***************************************************!*\
   !*** ./components/navbar-brand/navbar-brand.scss ***!
   \***************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./components/navbar/navbar.scss":
+/*!***************************************!*\
+  !*** ./components/navbar/navbar.scss ***!
+  \***************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -109,6 +148,32 @@ __webpack_require__.r(__webpack_exports__);
 /*!*************************************************!*\
   !*** ./components/page-footer/page-footer.scss ***!
   \*************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./components/page-front/page-front.scss":
+/*!***********************************************!*\
+  !*** ./components/page-front/page-front.scss ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./components/page-navigation/page-navigation.scss":
+/*!*********************************************************!*\
+  !*** ./components/page-navigation/page-navigation.scss ***!
+  \*********************************************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8537,18 +8602,23 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
 /******/ 		var installedChunks = {
 /******/ 			"/build/js/main.script": 0,
-/******/ 			"components/html/html": 0,
 /******/ 			"components/heading/heading": 0,
 /******/ 			"components/field/field": 0,
+/******/ 			"components/field-comment/field-comment": 0,
 /******/ 			"components/block/block": 0,
 /******/ 			"build/css/main.style": 0,
 /******/ 			"components/region/region": 0,
 /******/ 			"components/page/page": 0,
+/******/ 			"components/page-navigation/page-navigation": 0,
+/******/ 			"components/page-front/page-front": 0,
 /******/ 			"components/page-footer/page-footer": 0,
 /******/ 			"components/page-content/page-content": 0,
 /******/ 			"components/node/node": 0,
+/******/ 			"components/navbar/navbar": 0,
 /******/ 			"components/navbar-brand/navbar-brand": 0,
-/******/ 			"components/nav/nav": 0
+/******/ 			"components/nav/nav": 0,
+/******/ 			"components/nav-item/nav-item": 0,
+/******/ 			"components/html/html": 0
 /******/ 		};
 /******/ 		
 /******/ 		// no chunk on demand loading
@@ -8600,19 +8670,24 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./src/js/main.script.js"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/block/block.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/field/field.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/heading/heading.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/html/html.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/nav/nav.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/navbar-brand/navbar-brand.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/node/node.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/page-content/page-content.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/page-footer/page-footer.scss"); })
-/******/ 	__webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/page/page.scss"); })
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/html/html","components/heading/heading","components/field/field","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar-brand/navbar-brand","components/nav/nav"], function() { return __webpack_require__("./components/region/region.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./src/js/main.script.js"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./src/scss/main.style.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/block/block.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/field-comment/field-comment.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/field/field.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/heading/heading.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/html/html.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/nav-item/nav-item.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/nav/nav.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/navbar-brand/navbar-brand.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/navbar/navbar.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/node/node.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/page-content/page-content.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/page-footer/page-footer.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/page-front/page-front.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/page-navigation/page-navigation.scss"); })
+/******/ 	__webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/page/page.scss"); })
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["components/heading/heading","components/field/field","components/field-comment/field-comment","components/block/block","build/css/main.style","components/region/region","components/page/page","components/page-navigation/page-navigation","components/page-front/page-front","components/page-footer/page-footer","components/page-content/page-content","components/node/node","components/navbar/navbar","components/navbar-brand/navbar-brand","components/nav/nav","components/nav-item/nav-item","components/html/html"], function() { return __webpack_require__("./components/region/region.scss"); })
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

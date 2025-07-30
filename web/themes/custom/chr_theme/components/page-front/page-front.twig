@@ -19,7 +19,7 @@
 {% set page_content_container_attributes = page_content_container_attributes ?: create_attribute() %}
 
 {% 
-  set page_main_classes = []|merge(page_main_utility_classes ?: []) 
+  set page_main_classes = "py-2"
 %}
 
 {% set header_container_class = '' %}
@@ -58,11 +58,31 @@
 	{% endif %}
 
 	{% if page.content %}
-    <div class="page__content" id="main-content">
+    <div class="page__content" id="main-content-front"
       <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
-        {% block page_inner_content %}
-          {{ page.content }}
-        {% endblock %}
+        <div class="row">
+          <div class="col-md-3">
+            {% block page_sidebar_first %}
+              <div id="sidebar-first">
+                <h2>Registration &amp; Log-in</h2>
+                First sidebar
+              </div>
+            {% endblock %}
+          </div>
+          <div class="col-md-6">
+            {% block page_inner_content %}
+              {{ page.content }}
+            {% endblock %}
+          </div>
+          <div class="col-md-3">
+            {% block page_sidebar_second %}
+              <div id="sidebar-second">
+                <h2>Who's new</h2>
+                Second sidebar
+              </div>
+            {% endblock %}
+          </div>
+        </div>
       </div>
     </div>
   {% endif %}

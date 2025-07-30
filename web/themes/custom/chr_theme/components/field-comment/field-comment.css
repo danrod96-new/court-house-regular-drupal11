@@ -191,19 +191,4 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
-#main-content #sidebar-first h2 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #333 !important;
-}
-#main-content #sidebar-second h2 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #333 !important;
-}
-
-/*# sourceMappingURL=page-content.css.map*/
+/*# sourceMappingURL=field-comment.css.map*/
