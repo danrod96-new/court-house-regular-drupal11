@@ -191,4 +191,47 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
+#main-content #sidebar-first {
+  margin: 25px 15px;
+}
+#main-content #sidebar-first h2 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #333 !important;
+}
+#main-content #sidebar-first a {
+  color: #00008B;
+  padding: 0px;
+}
+#main-content #sidebar-first .logged-in-sidebar-account-menu ul {
+  list-style-type: bullet;
+  margin-left: 15px;
+}
+#main-content #sidebar-first .logged-in-sidebar-account-menu ul li {
+  list-style-image: url(/themes/custom/chr_theme/build/assets/images/menu-leaf.png);
+  list-style-type: square;
+}
+#main-content .front-content {
+  background: #fff;
+  display: inline;
+  margin-bottom: 2.7%;
+  float: right;
+  width: 100%;
+  box-shadow: 0 0 3px #999;
+  margin-top: 25px;
+  padding: 15px 20px;
+  margin: 30px 15px;
+}
+#main-content .front-content h2 {
+  color: #000 !important;
+  font-size: 20px;
+  margin: 10px 0px;
+}
+#main-content .front-content h2 a {
+  color: #000;
+  font-weight: bold;
+}
+
 /*# sourceMappingURL=page-content.css.map*/

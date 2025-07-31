@@ -1,1 +1,55 @@
 @import "../../src/scss/init";
+
+#main-content {
+  #sidebar-first {
+    margin: 25px 15px;
+
+    h2 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      color: $dark-colour !important;
+    }
+
+    a { 
+      color: $links-colour;
+      padding: 0px;
+    }
+
+    .logged-in-sidebar-account-menu {
+      ul {
+        list-style-type: bullet;
+        margin-left: 15px;
+
+        li {
+          list-style-image: url(/themes/custom/chr_theme/build/assets/images/menu-leaf.png);
+          list-style-type: square;
+        }
+      }
+    }
+  }
+
+  .front-content {
+    background: $white;
+    display: inline;
+    margin-bottom: 2.7%;
+    float: right;
+    width: 100%;
+    box-shadow: 0 0 3px $light-grey-1;
+    margin-top: 25px;
+    padding: 15px 20px;
+    margin: 30px 15px;
+
+    h2 {
+      color: $black !important;
+      font-size: 20px;
+      margin: 10px 0px;
+
+      a {
+        color: $black;
+        font-weight: bold;
+      }
+    }
+  }
+}

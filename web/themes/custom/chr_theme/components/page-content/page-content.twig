@@ -60,9 +60,32 @@
 	{% if page.content %}
     <div class="page__content" id="main-content">
       <div {{ page_content_container_attributes.addClass(page_content_container_classes) }}>
-        {% block page_inner_content %}
-          {{ page.content }}
-        {% endblock %}
+        <div class="row">
+          <div class="col-md-3">
+            {% block page_sidebar_first %}
+              <div id="sidebar-first">
+                {# For now, and until I figure it how to include regions here, I have #}
+                {# to embed the blocks I need using the IDs directly #}
+                {% if logged_in %}
+                  <h2>User Menu</h2>
+                  <div class="logged-in-sidebar-account-menu">
+                    {{ drupal_block('system_menu_block:account') }}
+                  </div> 
+                {% else %}
+                  <h2>Registration &amp; Log-in</h2>
+                  {{ drupal_entity('block_content', '4') }}
+                {% endif %}
+              </div>
+            {% endblock %}
+          </div>
+          <div class="col-md-9">
+            {% block page_inner_content %}
+              <div class="front-content">
+                {{ page.content }}
+              </div>
+            {% endblock %}
+          </div>
+        </div>
       </div>
     </div>
   {% endif %}
