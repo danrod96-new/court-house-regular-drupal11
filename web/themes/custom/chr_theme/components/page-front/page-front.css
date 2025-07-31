@@ -201,8 +201,12 @@
   letter-spacing: 1px;
   color: #333 !important;
 }
+#main-content-front #sidebar-first a {
+  color: #00008B;
+}
 #main-content-front #sidebar-second {
   margin: 25px 15px;
+  color: #888;
 }
 #main-content-front #sidebar-second h2 {
   margin: 0;
@@ -224,6 +228,7 @@
 #main-content-front .front-content h2 {
   color: #000 !important;
   font-size: 20px;
+  margin: 10px 0px;
 }
 #main-content-front .front-content h2 a {
   color: #000;

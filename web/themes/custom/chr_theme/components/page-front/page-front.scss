@@ -11,10 +11,16 @@
       letter-spacing: 1px;
       color: $dark-colour !important;
     }
+
+    a { 
+      color: $links-colour;
+    }
+
   }
 
   #sidebar-second {
     margin: 25px 15px;
+    color: $dark-grey-5;
 
     h2 {
       margin: 0;
@@ -38,6 +44,7 @@
     h2 {
       color: $black !important;
       font-size: 20px;
+      margin: 10px 0px;
 
       a {
         color: $black;
