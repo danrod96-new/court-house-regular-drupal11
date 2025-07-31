@@ -84,6 +84,7 @@ module:
   token: 0
   token_custom: 0
   toolbar: 0
+  twig_tweak: 0
   typed_data: 0
   update: 0
   upgrade_status: 0

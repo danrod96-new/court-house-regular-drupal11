@@ -1,0 +1,25 @@
+uuid: b149fe18-cd4d-40bf-876e-e2924577fda1
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:64bf20f5-de31-4915-92cf-a102bdce2545'
+  module:
+    - block_content
+  theme:
+    - chr_theme
+id: chr_theme_registrationlogin_2
+theme: chr_theme
+region: sidebar_first
+weight: -4
+provider: null
+plugin: 'block_content:64bf20f5-de31-4915-92cf-a102bdce2545'
+settings:
+  id: 'block_content:64bf20f5-de31-4915-92cf-a102bdce2545'
+  label: 'Registration & Login'
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
