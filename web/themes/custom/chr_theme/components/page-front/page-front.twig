@@ -47,6 +47,10 @@
 %}
 
 <main{{content_attributes.addClass(page_main_classes)}}>
+	{% block page_navigation %}
+		{% include 'chr_theme:page-navigation' %}
+	{% endblock %}
+  
 	{% if page.header %}
 		<header class="page__header">
 			<div {{ page_header_container_attributes.addClass(page_header_container_classes) }}>
