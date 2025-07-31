@@ -58,25 +58,16 @@
 {% set node_attributes = attributes ?: create_attribute() %}
 
 <article {{ node_attributes.addClass(node_classes) }}>
-  {% block node_title_prefix %}
-    {{ title_prefix }}
-  {% endblock %}
 
   {% block node_title %}
-    {% if not page %}
-      {%
-        include 'chr_theme:heading' with {
-          content: label|default(''),
-          heading_html_tag: heading_html_tag|default('h2'),
-          title_link: title_link|default(url),
-          heading_attributes: title_attributes,
-        }
-      %}
-    {% endif %}
-  {% endblock %}
-
-  {% block node_title_suffix %}
-    {{ title_suffix }}
+    {%
+      include 'chr_theme:heading' with {
+        content: label|default(''),
+        heading_html_tag: heading_html_tag|default('h2'),
+        title_link: title_link|default(url),
+        heading_attributes: title_attributes,
+      }
+    %}
   {% endblock %}
 
   {% block node_metadata %}
