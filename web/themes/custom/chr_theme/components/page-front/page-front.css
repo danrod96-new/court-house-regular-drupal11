@@ -203,6 +203,15 @@
 }
 #main-content-front #sidebar-first a {
   color: #00008B;
+  padding: 0px;
+}
+#main-content-front #sidebar-first .logged-in-sidebar-account-menu ul {
+  list-style-type: bullet;
+  margin-left: 15px;
+}
+#main-content-front #sidebar-first .logged-in-sidebar-account-menu ul li {
+  list-style-image: url(/themes/custom/chr_theme/build/assets/images/menu-leaf.png);
+  list-style-type: square;
 }
 #main-content-front #sidebar-second {
   margin: 25px 15px;
@@ -224,6 +233,7 @@
   box-shadow: 0 0 3px #999;
   margin-top: 25px;
   padding: 15px 20px;
+  margin: 30px 15px;
 }
 #main-content-front .front-content h2 {
   color: #000 !important;
