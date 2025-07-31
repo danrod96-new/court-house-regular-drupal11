@@ -191,7 +191,7 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
-.navbar-nav {
+.block--chr-theme-mainmenu .navbar-nav {
   display: flex;
   flex-direction: row !important;
   min-height: 40px;
@@ -200,11 +200,11 @@
   background: repeating-linear-gradient(#555, #333 40px);
   margin-top: 10px;
 }
-.navbar-nav .nav-item a {
+.block--chr-theme-mainmenu .navbar-nav .nav-item a {
   color: #fff;
   padding: 10px 20px;
 }
-.navbar-nav .nav-item a.active, .navbar-nav .nav-item a:hover {
+.block--chr-theme-mainmenu .navbar-nav .nav-item a.active, .block--chr-theme-mainmenu .navbar-nav .nav-item a:hover {
   background-color: #000;
   color: #fff;
 }

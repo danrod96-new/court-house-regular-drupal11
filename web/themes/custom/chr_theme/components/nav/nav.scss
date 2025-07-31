@@ -1,27 +1,29 @@
 @import "../../src/scss/init";
 
-.navbar-nav {
-  display: flex;
-  flex-direction: row !important;
-  min-height: 40px;
-  box-shadow: 0 0 3px $light-grey-1;
-  background: #444;
-  background: -moz-repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
-  background: -webkit-repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
-  background: -o-repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
-  background: -ms-repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
-  background: repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
-  margin-top: 10px;
+.block--chr-theme-mainmenu {
+  .navbar-nav {
+    display: flex;
+    flex-direction: row !important;
+    min-height: 40px;
+    box-shadow: 0 0 3px $light-grey-1;
+    background: #444;
+    background: -moz-repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
+    background: -webkit-repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
+    background: -o-repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
+    background: -ms-repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
+    background: repeating-linear-gradient($dark-grey-3, $dark-grey-4 40px);
+    margin-top: 10px;
 
-  .nav-item {
-    a {
-      color: $white;
-      padding: 10px 20px;
-
-      &.active,
-      &:hover {
-        background-color: $black;
+    .nav-item {
+      a {
         color: $white;
+        padding: 10px 20px;
+
+        &.active,
+        &:hover {
+          background-color: $black;
+          color: $white;
+        }
       }
     }
   }

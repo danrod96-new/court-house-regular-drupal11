@@ -98,6 +98,7 @@
         "drupal/shs": "^3.0@beta",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/token_custom": "^1.0@beta",
+        "drupal/twig_tweak": "^3.4",
         "drupal/upgrade_status": "^4.3",
         "drupal/views_bulk_operations": "^4.3",
         "drush/drush": "^13.6"

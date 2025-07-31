@@ -64,8 +64,15 @@
           <div class="col-md-3">
             {% block page_sidebar_first %}
               <div id="sidebar-first">
-                <h2>Registration &amp; Log-in</h2>
-                First sidebar
+                {# For now, and until I figure it how to include regions here, I have #}
+                {# to embed the blocks I need using the IDs directly #}
+                {% if logged_in %}
+                  <h2>User Menu</h2>
+                  {{ drupal_block('system_menu_block:account') }}
+                {% else %}
+                  <h2>Registration &amp; Log-in</h2>
+                  {{ drupal_entity('block_content', '4') }}
+                {% endif %}
               </div>
             {% endblock %}
           </div>
@@ -79,8 +86,7 @@
           <div class="col-md-3">
             {% block page_sidebar_second %}
               <div id="sidebar-second">
-                <h2>Who's new</h2>
-                Second sidebar
+                {{ drupal_block('views_block:who_s_new-block_1') }}
               </div>
             {% endblock %}
           </div>

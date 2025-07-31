@@ -1,7 +1,7 @@
-name: chr_theme
-description: "chr_theme theme based on <a href='https://www.drupal.org/project/radix' target='_blank'>Radix 6.x</a> and Bootstrap 5.x"
+name: CHR Theme
+description: "CHR Theme theme based on <a href='https://www.drupal.org/project/radix' target='_blank'>Radix 6.x</a> and Bootstrap 5.x"
 screenshot: screenshot.png
-'alt text': 'chr_theme theme screenshot'
+'alt text': 'CHR Theme theme screenshot'
 core_version_requirement: ^11
 engine: twig
 type: theme
