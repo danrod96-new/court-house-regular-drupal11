@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /**
  * Variables
  * Variables should follow the $component-state-property-size formula for
@@ -236,6 +237,14 @@
 #main-content .page-content .breadcrumb {
   padding-bottom: 6px !important;
   border-bottom: #eee 1px solid;
+}
+#main-content .page-content .breadcrumb .breadcrumb-item + .breadcrumb-item {
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+}
+#main-content .page-content .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+  float: left;
+  padding-right: var(--bs-breadcrumb-item-padding-x);
+  content: "»";
 }
 #main-content .page-content .breadcrumb a {
   color: #00008B;

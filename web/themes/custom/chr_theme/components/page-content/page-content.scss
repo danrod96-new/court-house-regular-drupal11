@@ -56,6 +56,18 @@
       padding-bottom: 6px !important;
       border-bottom:  $light-grey-4 1px solid;
 
+      .breadcrumb-item {
+        + .breadcrumb-item {
+          padding-left: var(--#{$prefix}breadcrumb-item-padding-x);
+
+          &::before {
+            float: left; 
+            padding-right: var(--#{$prefix}breadcrumb-item-padding-x);
+            content: "»";
+          }
+        }
+      }
+
       a {
         color: $links-colour;
       }
