@@ -80,7 +80,10 @@
           </div>
           <div class="col-md-9">
             {% block page_inner_content %}
-              <div class="front-content">
+              <div class="page-content">
+                <div id="breadcrumb">
+                  {{ drupal_breadcrumb() }}
+                </div>
                 {{ page.content }}
               </div>
             {% endblock %}

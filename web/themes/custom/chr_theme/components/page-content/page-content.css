@@ -213,7 +213,7 @@
   list-style-image: url(/themes/custom/chr_theme/build/assets/images/menu-leaf.png);
   list-style-type: square;
 }
-#main-content .front-content {
+#main-content .page-content {
   background: #fff;
   display: inline;
   margin-bottom: 2.7%;
@@ -224,14 +224,21 @@
   padding: 15px 20px;
   margin: 30px 15px;
 }
-#main-content .front-content h2 {
+#main-content .page-content h2 {
   color: #000 !important;
   font-size: 20px;
   margin: 10px 0px;
 }
-#main-content .front-content h2 a {
+#main-content .page-content h2 a {
   color: #000;
   font-weight: bold;
+}
+#main-content .page-content .breadcrumb {
+  padding-bottom: 6px !important;
+  border-bottom: #eee 1px solid;
+}
+#main-content .page-content .breadcrumb a {
+  color: #00008B;
 }
 
 /*# sourceMappingURL=page-content.css.map*/
