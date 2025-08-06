@@ -228,11 +228,13 @@
 #main-content .page-content h2 {
   color: #000 !important;
   font-size: 20px;
-  margin: 10px 0px;
 }
 #main-content .page-content h2 a {
   color: #000;
   font-weight: bold;
+}
+#main-content .page-content a {
+  color: #00008B;
 }
 #main-content .page-content .breadcrumb {
   padding-bottom: 6px !important;
@@ -246,7 +248,7 @@
   padding-right: var(--bs-breadcrumb-item-padding-x);
   content: "»";
 }
-#main-content .page-content .breadcrumb a {
+#main-content .page-content .field-name-body a {
   color: #00008B;
 }
 

@@ -5,7 +5,7 @@ applies_admin_routes: true
 include_invalid_paths: false
 excluded_paths: ''
 replaced_titles: ''
-custom_paths: ''
+custom_paths: '/contact :: Contact Court House Regular'
 include_home_segment: true
 alternative_title_field: field_breadcrumb_title
 home_segment_title: Home

@@ -191,4 +191,36 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
+.node-tabs {
+  border-bottom: 1px solid #bbb;
+  border-collapse: collapse;
+  height: auto;
+  line-height: normal;
+  list-style: none;
+  padding: 0em;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.node-tabs li {
+  display: inline;
+  margin-right: 10px;
+  display: flex;
+  flex-direction: row;
+}
+.node-tabs li a {
+  color: #00008B;
+  padding: 6px 10px;
+}
+.node-tabs li.active {
+  background: #666;
+  border: none;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+.node-tabs li.active a {
+  color: #fff !important;
+}
+
 /*# sourceMappingURL=node.css.map*/

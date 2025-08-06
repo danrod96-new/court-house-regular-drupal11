@@ -1,1 +1,37 @@
 @import "../../src/scss/init";
+
+.node-tabs {
+  border-bottom: 1px solid $light-grey-5;
+  border-collapse: collapse;
+  height: auto;
+  line-height: normal;
+  list-style: none;
+  padding: 0em;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  li {
+    display: inline;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: row;
+
+    a {
+      color: $links-colour;
+      padding: 6px 10px;
+    }
+
+    &.active {
+      background: #666;
+      border: none;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px;
+
+      a {
+        color: $white !important;
+      }
+    }
+  }
+}
