@@ -202,12 +202,22 @@
   line-height: normal;
   list-style: none;
   margin: 5px;
-  padding: 0 0 0 1em;
+  padding: 0 0 0.5em 1em;
   white-space: nowrap;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+}
+#user-profile-chr-menu .tabs li.active {
+  background: #666;
+  border: none;
+  border-radius: 4px 4px 0 0;
+  padding: 3px 0px;
+}
+#user-profile-chr-menu .tabs li.active a {
+  color: #fff;
+  padding: 0 1em;
 }
 
 /*# sourceMappingURL=user.css.map*/

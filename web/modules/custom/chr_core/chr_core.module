@@ -35,5 +35,14 @@ function chr_core_theme($existing, $type, $theme, $path) {
         'bookmarks' => 0,
       ],
     ],
+    'colleagues_page' => [
+      'render element' => 'content',
+      'template' => 'colleagues-page',
+      'variables' => [
+        'user' => NULL,
+        'current_path' => NULL,
+        'title_page' => NULL,
+      ],
+    ],
   ]; 
 }
