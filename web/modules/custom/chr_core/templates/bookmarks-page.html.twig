@@ -1,0 +1,13 @@
+<div class="content">
+  {%
+    include 'chr_theme:user' with {
+      view_mode: 'full',
+      title: "Bookmarks",
+      user: user,
+      current_path: current_path,
+    }
+  %}
+   <div id="bookmarks">
+    This user has not yet bookmarked any content.
+   </div>
+</div>

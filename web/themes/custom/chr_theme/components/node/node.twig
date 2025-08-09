@@ -72,7 +72,7 @@
 
   {# Print Node Link/Edit links #}
   <ul class="node-tabs">
-    {% if url ==  path('entity.node.canonical', {'node': node.id}) %}
+    {% if url == path('entity.node.canonical', {'node': node.id}) %}
       <li class="active"><a href="{{ path('entity.node.canonical', {'node': node.id}) }}" class="active">View</a></li>
     {% endif %}
       <li class=><a href="/node/{{ node.id }}/edit">Edit</a></li>

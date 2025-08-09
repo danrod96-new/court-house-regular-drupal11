@@ -1,0 +1,22 @@
+<div class="content">
+  {%
+    include 'chr_theme:user' with {
+      view_mode: 'full',
+      title: 'Affiliate Center',
+      user: user,
+      current_path: current_path,
+    }
+  %}
+   <div id="affiliate-sales-header">
+      <h2>Commission History</h2>
+      <br>Sales Today: {{ sales_today }} <br>
+      Sales last 7 Days: 0 <br>
+      Last 365 Days: 0 <br><br>
+      <a href="https://www.courthouseregular.com/user/{{ user.id() }}/affiliate/commissions">Click here for more reports.</a>
+   </div>
+   <br>
+   <div id="affiliate-sales-click-count">
+      <h2>Unique Click Count</h2>
+      <br>Today's Clicks: 0 <br>Last 7 Days: 0 <br>Last 365 Days: 0 <br><br><a href="https://www.courthouseregular.com/user/{{ user.id() }}/affiliate/clicks">Click here for customized click reporting.</a>
+   </div>
+</div>

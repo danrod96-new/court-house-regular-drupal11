@@ -14,4 +14,56 @@ chr_core.affiliate_center:
     _controller: '\Drupal\chr_core\Controller\ProfilePage::affiliatePage'
     _title: 'Affiliate Center'
   requirements:
-    _permission: 'access content' # Or a more specific permission
+    _permission: 'access content'
+  options:
+    parameters:
+      user:
+        type: entity:user
+
+chr_core.bookmarks:
+  path: '/user/{user}/bookmarks'
+  defaults:
+    _controller: '\Drupal\chr_core\Controller\ProfilePage::bookmarksPage'
+    _title: 'Bookmarks'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      user:
+        type: entity:user
+
+chr_core.friends:
+  path: '/user/{user}/friends'
+  defaults:
+    _controller: '\Drupal\chr_core\Controller\ProfilePage::friendsPage'
+    _title: 'All Colleagues'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      user:
+        type: entity:user
+
+chr_core.invite:
+  path: '/user/{user}/invite'
+  defaults:
+    _controller: '\Drupal\chr_core\Controller\ProfilePage::invitePage'
+    _title: 'Invite Appearance Attorneys'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      user:
+        type: entity:user
+
+chr_core.invite_by_mail:
+  path: '/user/{user}/invites/invite_by_mail'
+  defaults:
+    _controller: '\Drupal\chr_core\Controller\ProfilePage::inviteByMailPage'
+    _title: 'Invite Law Firms'
+  requirements:
+    _permission: 'access content'
+  options:
+    parameters:
+      user:
+        type: entity:user

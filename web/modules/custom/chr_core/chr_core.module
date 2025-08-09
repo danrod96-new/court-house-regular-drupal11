@@ -1,0 +1,39 @@
+<?php
+
+/**
+ * @file
+ * Hooks for misc functionality for the site.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function chr_core_theme($existing, $type, $theme, $path) {
+  return [
+    'affiliate_center' => [
+      'render element' => 'content',
+      'template' => 'affiliate-center',
+      'variables' => [
+        'user' => NULL,
+        'current_path' => NULL,
+        'title_page' => NULL,
+        'sales_today' => 0,
+        'sales_last_seven_days' => 0,
+        'sales_last_year' => 0,
+        'unique_todays_clicks' => 0,
+        'unique_last_seven_days' => 0,
+        'unique_last_year' => 0,
+      ],
+    ],
+    'bookmarks_page' => [
+      'render element' => 'content',
+      'template' => 'bookmarks-page',
+      'variables' => [
+        'user' => NULL,
+        'current_path' => NULL,
+        'title_page' => NULL,
+        'bookmarks' => 0,
+      ],
+    ],
+  ]; 
+}
