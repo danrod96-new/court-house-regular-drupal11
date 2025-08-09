@@ -16,4 +16,7 @@
  * @see template_preprocess_user()
  */
 #}
-{% include 'radix:user' %}
+{% include 'chr_theme:user' with {
+    user: user,
+  }
+%}

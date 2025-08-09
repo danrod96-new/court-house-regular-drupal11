@@ -1,0 +1,6 @@
+chr_core.admin:
+  title: 'Court House Regular settings'
+  description: 'Configuration settings for the CHR Module.'
+  parent: system.admin_config
+  route_name: chr_core.settings
+  weight: -10

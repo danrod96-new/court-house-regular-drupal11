@@ -1,0 +1,17 @@
+chr_core.settings:
+  path: '/admin/config/courthouseregular'
+  defaults:
+    _form: '\Drupal\chr_core\Form\ChrConfigForm'
+    _title: 'Court House Regular settings'
+  requirements:
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE
+
+chr_core.affiliate_center:
+  path: '/user/{user}/affiliate'
+  defaults:
+    _controller: '\Drupal\chr_core\Controller\ProfilePage::affiliatePage'
+    _title: 'Affiliate Center'
+  requirements:
+    _permission: 'access content' # Or a more specific permission

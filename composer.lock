@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "eec3743a735d3b6ead5e08ddcea9f818",
+    "content-hash": "f3cdfab243d38c2ab7785cee3e447a22",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -5590,6 +5590,113 @@
             }
         },
         {
+            "name": "drupal/webform",
+            "version": "6.3.0-beta4",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/webform.git",
+                "reference": "6.3.0-beta4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/webform-6.3.0-beta4.zip",
+                "reference": "6.3.0-beta4",
+                "shasum": "9f5390f1eb507cdc9b591595c12d91f7f51c7b81"
+            },
+            "require": {
+                "drupal/core": "^10.3 || ^11.0"
+            },
+            "require-dev": {
+                "drupal/address": "^2.0",
+                "drupal/captcha": "^2.0",
+                "drupal/chosen": "^4.0",
+                "drupal/clientside_validation": "*",
+                "drupal/clientside_validation_jquery": "*",
+                "drupal/devel": "*",
+                "drupal/entity": "^1.5",
+                "drupal/entity_print": "*",
+                "drupal/hal": "^2.0",
+                "drupal/jquery_ui": "^1.7",
+                "drupal/jquery_ui_button": "*",
+                "drupal/jquery_ui_checkboxradio": "^2.1",
+                "drupal/jquery_ui_datepicker": "*",
+                "drupal/mailsystem": "^4.5",
+                "drupal/metatag": "^2.0",
+                "drupal/paragraphs": "^1.18",
+                "drupal/select2": "1.x-dev",
+                "drupal/smtp": "^1.4",
+                "drupal/styleguide": "^2.1",
+                "drupal/telephone_validation": "2.x-dev",
+                "drupal/token": "*",
+                "drupal/webform_access": "*",
+                "drupal/webform_attachment": "*",
+                "drupal/webform_clientside_validation": "*",
+                "drupal/webform_devel": "*",
+                "drupal/webform_entity_print": "*",
+                "drupal/webform_node": "*",
+                "drupal/webform_options_limit": "*",
+                "drupal/webform_scheduled_email": "*",
+                "drupal/webform_share": "*",
+                "drupal/webform_ui": "*"
+            },
+            "suggest": {
+                "drupal/jquery_ui_buttons": "Provides jQuery UI Checkboxradio library. Required by the Webform jQueryUI Buttons module. The Webform jQueryUI Buttons module is deprecated because jQueryUI is no longer maintained.",
+                "drupal/jquery_ui_datepicker": "Provides jQuery UI Datepicker library. Required to support datepickers. The Webform jQueryUI Datepicker module is deprecated because jQueryUI is no longer maintained."
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "6.3.0-beta4",
+                    "datestamp": "1753796919",
+                    "security-coverage": {
+                        "status": "not-covered",
+                        "message": "Beta releases are not covered by Drupal security advisories."
+                    }
+                },
+                "drush": {
+                    "services": {
+                        "drush.services.yml": ">=11"
+                    }
+                }
+            },
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Rockowitz (jrockowitz)",
+                    "homepage": "https://www.drupal.org/u/jrockowitz",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://www.drupal.org/node/7404/committers",
+                    "role": "Contributor"
+                },
+                {
+                    "name": "liam morland",
+                    "homepage": "https://www.drupal.org/user/493050"
+                },
+                {
+                    "name": "mandclu",
+                    "homepage": "https://www.drupal.org/user/52136"
+                },
+                {
+                    "name": "quicksketch",
+                    "homepage": "https://www.drupal.org/user/35821"
+                }
+            ],
+            "description": "Enables the creation of webforms and questionnaires.",
+            "homepage": "https://drupal.org/project/webform",
+            "support": {
+                "source": "https://git.drupalcode.org/project/webform",
+                "issues": "https://www.drupal.org/project/issues/webform?version=8.x",
+                "docs": "https://www.drupal.org/docs/8/modules/webform",
+                "forum": "https://drupal.stackexchange.com/questions/tagged/webform"
+            }
+        },
+        {
             "name": "drush/drush",
             "version": "13.6.1",
             "source": {
@@ -10793,7 +10900,8 @@
         "drupal/og": 15,
         "drupal/page_manager": 5,
         "drupal/shs": 10,
-        "drupal/token_custom": 10
+        "drupal/token_custom": 10,
+        "drupal/webform": 10
     },
     "prefer-stable": true,
     "prefer-lowest": false,

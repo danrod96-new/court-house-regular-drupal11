@@ -1,0 +1,23 @@
+@import "../../src/scss/init";
+
+#user-profile-chr-menu {
+  h1 {
+    font-size: 20px !important;
+    font-weight: bold !important;
+  }
+
+  .tabs {
+    border-bottom: 1px solid #bbb;
+    border-collapse: collapse;
+    height: auto;
+    line-height: normal;
+    list-style: none;
+    margin: 5px;
+    padding: 0 0 0 1em;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

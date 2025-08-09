@@ -1,0 +1,35 @@
+{#
+/**
+ * @file
+ * Template for rendering a user profile.
+ *
+ * Available variables:
+ * - view_mode: View mode; for example, "full", "teaser".
+ * - content: All content renderable arrays for the user.
+ * - user_utility_classes: (optional) An array of additional classes for design or styling requirements.
+ *
+ * @see template_preprocess_user()
+ */
+#}
+{%
+  set classes = [
+    'user',
+    'user--' ~ view_mode|clean_class,
+  ]|merge(user_utility_classes ?: [])
+%}
+<article{{attributes.addClass(classes)}}>
+  <div id="user-profile-chr-menu">
+    <h1>{{ user.label() }}</h1>
+    <ul class="tabs primary clearfix"><li><a href="/users/{{ user.label() }}">View</a></li>
+      <li><a href="/user/{{ user.id() }}/affiliate">Affiliate Center</a></li>
+      <li><a href="/user/{{ user.id() }}/bookmarks">Bookmarks</a></li>
+      <li><a href="/user/{{ user.id() }}/friends">Colleagues</a></li>
+      <li><a href="/user/{{ user.id() }}/edit">Edit</a></li>
+      <li><a href="/user/{{ user.id() }}/orders">Orders</a></li>
+      <li class="active"><a href="/user/{{ user.id() }}//contact">Contact</a></li>
+      <li><a href="/user/{{ user.id() }}/invite">Invite Appearance Attorneys</a></li>
+      <li><a href="/user/{{ user.id() }}/invites/invite_by_email">Invite Law Firms</a></li>
+    </ul>
+    {{- content|without('summary') -}}
+  </div>
+</article>

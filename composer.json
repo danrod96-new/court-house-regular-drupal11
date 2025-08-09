@@ -102,6 +102,7 @@
         "drupal/twig_tweak": "^3.4",
         "drupal/upgrade_status": "^4.3",
         "drupal/views_bulk_operations": "^4.3",
+        "drupal/webform": "^6.3@beta",
         "drush/drush": "^13.6"
     },
     "conflict": {

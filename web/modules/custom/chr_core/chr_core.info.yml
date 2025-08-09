@@ -1,0 +1,8 @@
+name: CHR Core
+type: module
+description: 'Custom Hooks and functions for the site.'
+package: CHR Custom
+core_version_requirement: ^10 || ^11
+configure: chr_core.settings
+dependencies:
+  - drupal:webform

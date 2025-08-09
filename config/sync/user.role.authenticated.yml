@@ -3,10 +3,12 @@ langcode: en
 status: true
 dependencies:
   config:
+    - filter.format.webform_default
     - node.type.profile
     - node.type.virtual_law_firm
   module:
     - comment
+    - filter
     - node
     - search
     - system
@@ -29,4 +31,5 @@ permissions:
   - 'search content'
   - 'skip comment approval'
   - 'use advanced search'
+  - 'use text format webform_default'
   - 'view own unpublished content'
