@@ -42,6 +42,8 @@
 {% set views_pager_attributes = views_pager_attributes ?: create_attribute() %}
 {% set views_more_attributes = views_more_attributes ?: create_attribute() %}
 {% set views_feed_icons_attributes = views_feed_icons_attributes ?: create_attribute() %}
+{% set current_path = path('<current>') %}
+
 
 {%
   set views_classes = [
@@ -156,6 +158,18 @@
       {% endif %}
     {% endblock %}
 
+    {% if current_path == "/user/" ~ user.id() ~ "/orders" %}
+      {%
+        include 'chr_theme:user' with {
+          view_mode: 'full',
+          title: 'Orders',
+          user: user,
+          current_path: current_path,
+          title_page: 'Orders',
+        }
+      %}
+    {% endif %}
+
     {% block views_rows %}
       {% if rows %}
         <div {{ views_rows_attributes.addClass(views_rows_classes) }}>
@@ -194,6 +208,14 @@
       {% if footer %}
         <div {{ views_footer_attributes.addClass(views_footer_classes) }}>
           {{ footer }}
+        </div>
+      {% endif %}
+    {% endblock %}
+
+    {% block views_feed_icons %}
+      {% if feed_icons %}
+        <div {{ views_feed_icons_attributes.addClass(views_feed_icons_classes) }}>
+          {{ feed_icons }}
         </div>
       {% endif %}
     {% endblock %}

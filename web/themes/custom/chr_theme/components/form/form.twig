@@ -23,10 +23,22 @@
   |merge(form_utility_classes ?: [])
 %}
 
-<form {{ form_attributes.addClass(form_classes) }}>
-  {{ title_prefix }}
-  {% block form_children %}
-    {{ children }}
-  {% endblock %}
-  {{ title_suffix }}
-</form>
+{% set current_path = path('<current>') %}
+
+<div class="content">
+  {%
+    include 'chr_theme:user' with {
+      view_mode: 'full',
+      title: 'Contact',
+      current_path: current_path,
+      title_page: 'Contact',
+    }
+  %}
+  <form {{ form_attributes.addClass(form_classes) }}>
+    {{ title_prefix }}
+    {% block form_children %}
+      {{ children }}
+    {% endblock %}
+    {{ title_suffix }}
+  </form>
+</div>

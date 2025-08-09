@@ -1,0 +1,13 @@
+<div class="content">
+  {%
+    include 'chr_theme:user' with {
+      view_mode: 'full',
+      title: "All Colleagues",
+      user: user,
+      current_path: current_path,
+    }
+  %}
+   <div id="colleagues">
+    This user does not have any friends yet.
+   </div>
+</div>

@@ -10,10 +10,10 @@ use Drupal\Core\Controller\ControllerBase;
 class ProfilePage extends ControllerBase {
 
   /**
-   * Returns a simple page.
+   * Returns the affiliate page.
    *
    * @return array
-   *   A simple renderable array.
+   *   The render array.
    */
   public function affiliatePage() {
     return [
@@ -31,10 +31,10 @@ class ProfilePage extends ControllerBase {
   }
 
   /**
-   * Returns a simple page.
+   * Returns the bookmarks page.
    *
    * @return array
-   *   A simple renderable array.
+   *   The render array.
    */
   public function bookmarksPage() {
     return [
@@ -47,14 +47,18 @@ class ProfilePage extends ControllerBase {
   }
 
   /**
-   * Returns a simple page.
+   * Returns the friends/colleagues page.
    *
    * @return array
    *   A simple renderable array.
    */
   public function friendsPage() {
     return [
-      '#markup' => $this->t('Hello, world from my custom controller!'),
+      '#theme' => 'colleagues_page',
+      '#user' => \Drupal::currentUser(),
+      '#current_path' => \Drupal::request()->getPathInfo(),
+      '#title_page' => "All Colleagues",
+      '#friends' => [],
     ];
   }
 
