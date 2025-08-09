@@ -15,7 +15,7 @@ class ChrConfigForm extends ConfigFormBase {
    */
   protected function getEditableConfigNames() {
     return [
-      'chrcore.adminsettings',
+      'chr_core.adminsettings',
     ];
   }
 
@@ -23,14 +23,14 @@ class ChrConfigForm extends ConfigFormBase {
    * {@inheritdoc}
    */
   public function getFormId() {
-    return 'chrcore_settings_form';
+    return 'chr_core_settings_form';
   }
 
   /**
    * {@inheritdoc}
    */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('chrcore.adminsettings');
+    $config = $this->config('chr_core.adminsettings');
 
     $form['title'] = [
       '#type' => 'textfield',
@@ -58,11 +58,11 @@ class ChrConfigForm extends ConfigFormBase {
   public function submitForm(array &$form, FormStateInterface $form_state) {
     parent::submitForm($form, $form_state);
 
-    $this->config('chrcore.adminsettings')
+    $this->config('chr_core.adminsettings')
       ->set('invite_subject', $form_state->getValue('title'))
       ->save();
 
-    $this->config('chrcore.adminsettings')
+    $this->config('chr_core.adminsettings')
       ->set('message_body', $form_state->getValue('message_body'))
       ->save();
   }
