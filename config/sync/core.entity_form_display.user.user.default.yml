@@ -4,6 +4,7 @@ status: true
 dependencies:
   config:
     - field.field.user.user.commerce_remote_id
+    - field.field.user.user.field_domain_admin
     - field.field.user.user.og_user_node
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -24,6 +25,12 @@ content:
   contact:
     weight: 5
     region: content
+  field_domain_admin:
+    type: options_buttons
+    weight: 50
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   language:
     weight: 0
     region: content
