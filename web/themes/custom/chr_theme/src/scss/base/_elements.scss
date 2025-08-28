@@ -12,15 +12,16 @@ body { font: 0.8em/165% "Lucida Grande","Lucida Sans Unicode",Segoe UI,Helvetica
 
 
 h1, h2, h3, h4, h5, h6 { 
-  margin:25px 0 20px 0; 
-  line-height:120%; 
+  margin-bottom: 6px;
+  font-weight: bold;
+  line-height: 1.62em;
   text-shadow: 1px 1px 1px #EAF1EA; 
-  font-family: Myriad Pro,"Lucida Grande","Lucida Sans Unicode", Segoe UI, Helvetica,Arial, sans-serif; }
+  font-family: Myriad Pro,"Lucida Grande","Lucida Sans Unicode", Segoe UI, Helvetica,Arial, sans-serif; 
+}
 
 
 h1 { 
   font-size: 32px; 
-  margin:0 0 20px 0;
 }
 
 h2 { 
@@ -30,11 +31,11 @@ h2 {
 }
 
 h3 { 
-  font-size: 130%; 
+  font-size: 18px;
 }
 
 h4 { 
-  font-size: 110%; 
+  font-size: 16px; 
 }
 
 input, textarea, select { 

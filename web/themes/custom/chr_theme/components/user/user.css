@@ -220,4 +220,21 @@
   padding: 0 1em;
 }
 
+.user--full #profile-user-page {
+  margin: 1.5385em 0;
+}
+.user--full #profile-user-page .affiliate-section {
+  margin-bottom: 1.5385em;
+}
+.user--full #profile-user-page .affiliate-section h3 {
+  font-weight: bold;
+}
+.user--full #profile-user-page .order-history-section {
+  margin-bottom: 1.5385em;
+}
+.user--full #profile-user-page .form-group h4 {
+  font-weight: bold;
+  margin: 0px 0px 5px 0px;
+}
+
 /*# sourceMappingURL=user.css.map*/
