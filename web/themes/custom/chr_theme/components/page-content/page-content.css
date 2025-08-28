@@ -251,6 +251,9 @@
 #main-content .page-content .field-name-body a {
   color: #00008B;
 }
+#main-content .page-content .webform-submission-invite-law-firms-form #edit-actions-submit {
+  margin-top: 1.5em;
+}
 #main-content .page-content .webform-submission-invite-appearance-attorneys-form #edit-submit {
   margin-top: 1.5em;
 }

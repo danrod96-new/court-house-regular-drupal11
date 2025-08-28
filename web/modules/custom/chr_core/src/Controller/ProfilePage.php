@@ -3,6 +3,7 @@
 namespace Drupal\chr_core\Controller;
 
 use Drupal\Core\Controller\ControllerBase;
+use Drupal\Core\Cache\Cache;
 
 /**
  * Provides route responses for page profiles.
@@ -86,8 +87,25 @@ class ProfilePage extends ControllerBase {
    */
   public function inviteByMailPage() {
     return [
-      '#markup' => $this->t('Hello, world from my custom controller!'),
+      '#theme' => 'invite_law_firms_page',
+      '#user' => \Drupal::currentUser(),
+      '#current_path' => \Drupal::request()->getPathInfo(),
+      '#title_page' => "Invite Law Firms",
+      '#webform_id' => "invite_law_firms",
     ];
   }
 
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheContexts() {
+    return Cache::mergeContexts(parent::getCacheContexts(), ['ip']);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheTags() {
+    return Cache::mergeTags(parent::getCacheTags(), ["node_list"]);
+  }
 }

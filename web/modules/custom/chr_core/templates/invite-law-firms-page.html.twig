@@ -1,0 +1,13 @@
+<div class="content">
+  {%
+    include 'chr_theme:user' with {
+      view_mode: 'full',
+      title: title_page,
+      user: user,
+      current_path: current_path,
+    }
+  %}
+   <div id="webform-invite-law-firms-page">
+    {{ drupal_entity('webform', 'invite_law_firms') }}
+   </div>
+</div>

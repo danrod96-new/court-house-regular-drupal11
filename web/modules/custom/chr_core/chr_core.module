@@ -54,5 +54,15 @@ function chr_core_theme($existing, $type, $theme, $path) {
         'webform_id' => NULL,
       ],
     ],
+    'invite_law_firms_page' => [
+      'render element' => 'content',
+      'template' => 'invite-law-firms-page',
+      'variables' => [
+        'user' => NULL,
+        'current_path' => NULL,
+        'title_page' => NULL,
+        'webform_id' => NULL,
+      ],
+    ],
   ]; 
 }

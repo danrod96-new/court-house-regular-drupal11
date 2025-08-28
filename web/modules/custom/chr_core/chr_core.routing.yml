@@ -57,7 +57,7 @@ chr_core.invite:
         type: entity:user
 
 chr_core.invite_by_mail:
-  path: '/user/{user}/invites/invite_by_mail'
+  path: '/user/{user}/invites/invite_by_email'
   defaults:
     _controller: '\Drupal\chr_core\Controller\ProfilePage::inviteByMailPage'
     _title: 'Invite Law Firms'
