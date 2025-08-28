@@ -24,6 +24,10 @@ input[type="button"] {
   padding: 8px 1em 9px 1em;
 }
 
+input[type="text"] {
+  border-radius: 0px;
+  border: 1px solid $background-site-color;
+}
 
 button {
   &:hover {

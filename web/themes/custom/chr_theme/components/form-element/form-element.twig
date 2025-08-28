@@ -1,7 +1,7 @@
 {#
 /**
  * @file
- * Theme override for a form element.
+ * Default theme implementation for a form element.
  *
  * Available variables:
  * - attributes: HTML attributes for the containing element.
@@ -42,17 +42,78 @@
  * - title_display: Title display setting.
  *
  * @see template_preprocess_form_element()
+ *
+ * @ingroup themeable
  */
 #}
 {%
-  include "chr_theme:form-element" with {
-    errors,
-    prefix,
-    suffix,
-    type,
-    name,
-    label,
-    label_display,
-    description_display,
-  }
+  set form_element_classes = [
+    'js-form-item',
+    'form-item',
+    'form-type-' ~ type|clean_class,
+    'js-form-type-' ~ type|clean_class,
+    'form-item-' ~ name|clean_class,
+    'js-form-item-' ~ name|clean_class,
+    title_display not in ['after', 'before'] ? 'form-no-label',
+    disabled == 'disabled' ? 'form-disabled disabled',
+    errors ? 'form-item--error has-error',
+    'form-group',
+  ]|merge(form_element_utility_classes ?: [])
 %}
+
+{%
+  set description_classes = [
+    'description',
+    'form-text',
+    'text-muted',
+    description_display == 'invisible' ? 'visually-hidden',
+  ]
+%}
+
+{% set form_element_attributes = attributes ?: create_attribute() %}
+
+<div{{form_element_attributes.addClass(form_element_classes)}}>
+  {% if label_display in ['before', 'invisible'] %}
+    {{ label }}
+  {% endif %}
+
+  {% if (prefix is not empty) or (suffix is not empty) %}
+    <div class="input-group">
+    {% endif %}
+
+    {% if prefix is not empty %}
+      <span class="field-prefix input-group-text">{{ prefix }}</span>
+    {% endif %}
+
+    {% if description_display == 'before' and description.content %}
+      <div{{description.attributes}}>
+        {{ description.content }}
+      </div>
+    {% endif %}
+
+    {{ children }}
+
+    {% if suffix is not empty %}
+      <span class="field-suffix input-group-text">{{ suffix }}</span>
+    {% endif %}
+
+    {% if (prefix is not empty) or (suffix is not empty) %}
+    </div>
+  {% endif %}
+
+  {% if label_display == 'after' %}
+    {{ label }}
+  {% endif %}
+
+  {% if errors %}
+    <div class="invalid-feedback">
+      {{ errors }}
+    </div>
+  {% endif %}
+
+  {% if description_display in ['after', 'invisible'] and description.content %}
+    <small{{description.attributes.addClass(description_classes)}}>
+      {{ description.content }}
+    </small>
+  {% endif %}
+</div>
