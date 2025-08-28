@@ -44,5 +44,15 @@ function chr_core_theme($existing, $type, $theme, $path) {
         'title_page' => NULL,
       ],
     ],
+    'invite_attorneys_page' => [
+      'render element' => 'content',
+      'template' => 'attorneys-page',
+      'variables' => [
+        'user' => NULL,
+        'current_path' => NULL,
+        'title_page' => NULL,
+        'webform_id' => NULL,
+      ],
+    ],
   ]; 
 }

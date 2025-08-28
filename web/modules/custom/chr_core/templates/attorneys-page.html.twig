@@ -1,0 +1,20 @@
+<div class="content">
+  {%
+    include 'chr_theme:user' with {
+      view_mode: 'full',
+      title: title_page,
+      user: user,
+      current_path: current_path,
+    }
+  %}
+   <div id="webform-attorneys-page">
+    {{ drupal_entity('webform', 'invite_appearance_attorneys') }}
+    <div class="tokens">
+      <br />
+      <label>Replacement tokens</label>
+      <div>[yourname] - </div>
+      <div>[registration_link] - Your affiliate link to registration page (https://www.courthouseregular.com/affiliate/{{ user.id() }}/receive/register)</div>
+      <div>[home_link] - Your affiliate link home page (https://www.courthouseregular.com/affiliate/{{ user.id() }}/)</div>
+    </div>
+   </div>
+</div>

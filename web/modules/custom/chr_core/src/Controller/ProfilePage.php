@@ -63,14 +63,18 @@ class ProfilePage extends ControllerBase {
   }
 
   /**
-   * This might be a form.
+   * Invite Appearance Attorneys form
    *
    * @return array
    *   A simple renderable array.
    */
   public function invitePage() {
     return [
-      '#markup' => $this->t('Hello, world from my custom controller!'),
+      '#theme' => 'invite_attorneys_page',
+      '#user' => \Drupal::currentUser(),
+      '#current_path' => \Drupal::request()->getPathInfo(),
+      '#title_page' => "Invite Appearance Attorneys",
+      '#webform_id' => "invite_appearance_attorneys",
     ];
   }
 
