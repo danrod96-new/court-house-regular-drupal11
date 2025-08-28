@@ -251,5 +251,8 @@
 #main-content .page-content .field-name-body a {
   color: #00008B;
 }
+#main-content .page-content .webform-submission-invite-appearance-attorneys-form #edit-submit {
+  margin-top: 1.5em;
+}
 
 /*# sourceMappingURL=page-content.css.map*/
