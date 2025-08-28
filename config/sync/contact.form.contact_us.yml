@@ -8,5 +8,5 @@ recipients:
   - webmaster@courthouseregular.com
 reply: "Hello, \r\n\r\nGot your email, thanks. Going to get to it as soon as possible.\r\n\r\nThanks again,\r\n\r\nAl Wolfson"
 weight: 0
-message: null
-redirect: null
+message: "Hello, \r\n\r\nGot your email, thanks. Going to get to it as soon as possible.\r\n\r\nThanks again,\r\n\r\nAl Wolfson"
+redirect: /contact

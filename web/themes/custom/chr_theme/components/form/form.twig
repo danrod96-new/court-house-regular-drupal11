@@ -24,16 +24,17 @@
 %}
 
 {% set current_path = path('<current>') %}
-
 <div class="content">
-  {%
-    include 'chr_theme:user' with {
-      view_mode: 'full',
-      title: 'Contact',
-      current_path: current_path,
-      title_page: 'Contact',
-    }
-  %}
+  {%if current_path == "/contact" %}
+    {%
+      include 'chr_theme:user' with {
+        view_mode: 'full',
+        title: 'Contact',
+        current_path: current_path,
+        title_page: 'Contact',
+      }
+    %}
+  {% endif %}
   <form {{ form_attributes.addClass(form_classes) }}>
     {{ title_prefix }}
     {% block form_children %}
