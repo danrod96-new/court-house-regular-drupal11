@@ -30,7 +30,8 @@
     }
   }
 
-  #sidebar-second {
+  #sidebar-second,
+  #sidebar-second-logged-in {
     margin: 25px 15px;
     color: $dark-grey-5;
 
@@ -43,6 +44,16 @@
     }
   }
 
+  #sidebar-second-logged-in {
+    ul {
+      li {
+        a {  
+          color: $links-colour;
+        }
+      }
+    }
+  }
+
   .front-content {
     background: $white;
     display: inline;
@@ -52,7 +63,7 @@
     box-shadow: 0 0 3px $light-grey-1;
     margin-top: 25px;
     padding: 15px 20px;
-    margin: 30px 15px;
+    margin: 30px 0px;
 
     h2 {
       color: $black !important;

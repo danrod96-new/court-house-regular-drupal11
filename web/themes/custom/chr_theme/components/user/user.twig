@@ -17,14 +17,15 @@
     'user--' ~ view_mode|clean_class,
   ]|merge(user_utility_classes ?: [])
 %}
-{% set current_path2 = path('<current>') %}
+{% set current_path = path('<current>') %}
+{% set user_url_alias = path('entity.user.canonical', {'user': user.id}) %}
 <article{{attributes.addClass(classes)}}>
   {% if logged_in %}
     <div id="user-profile-chr-menu">
       <h1>{{ user.label() }}</h1>
       <h1>{{ title }}</h1>
       <ul class="tabs primary clearfix">
-        <li class={{ user.label() in current_path2 ? 'active' : '' }}><a href="/user/{{ user.id() }}">View</a></li>
+        <li class={{ user_url_alias == current_path ? 'active' : '' }}><a href="/user/{{ user.id() }}">View</a></li>
         <li class={{ title_page == "Affiliate Center" ? 'active' : '' }}><a href="/user/{{ user.id() }}/affiliate">Affiliate Center</a></li>
         <li class={{ title_page == "Bookmarks" ? 'active' : '' }}><a href="/user/{{ user.id() }}/bookmarks">Bookmarks</a></li>
         <li class={{ title_page == "All Colleagues" ? 'active' : '' }}><a href="/user/{{ user.id() }}/friends">Colleagues</a></li>
@@ -38,7 +39,7 @@
   {% endif %}
   {# We are in user's main profile page #}
   <div id="profile-user-page">
-    {% if user.label() in current_path2 %}
+    {% if user_url_alias == current_path %}
       <div class="affiliate-section">
         <h3>Affiliate</h3>
         <dl>

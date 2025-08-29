@@ -82,7 +82,7 @@
               </div>
             {% endblock %}
           </div>
-          {% if not logged_in %}
+          {% if is_front %}
           <div class="col-md-6">
           {% else %}
           <div class="col-md-9">
@@ -93,12 +93,16 @@
               </div>
             {% endblock %}
           </div>
-          {% if not logged_in %}
+          {% if is_front %}
             <div class="col-md-3">
               {% block page_sidebar_second %}
-                <div id="sidebar-second">
-                  {{ drupal_block('views_block:who_s_new-block_1') }}
-                </div>
+                {% if logged_in %}
+                  <div id="sidebar-second-logged-in">
+                {% else %}
+                  <div id="sidebar-second">
+                {% endif %}
+                    {{ drupal_block('views_block:who_s_new-block_1') }}
+                  </div>
               {% endblock %}
             </div>
           {% endif %}

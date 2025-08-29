@@ -213,16 +213,21 @@
   list-style-image: url(/themes/custom/chr_theme/build/assets/images/menu-leaf.png);
   list-style-type: square;
 }
-#main-content-front #sidebar-second {
+#main-content-front #sidebar-second,
+#main-content-front #sidebar-second-logged-in {
   margin: 25px 15px;
   color: #888;
 }
-#main-content-front #sidebar-second h2 {
+#main-content-front #sidebar-second h2,
+#main-content-front #sidebar-second-logged-in h2 {
   margin: 0;
   font-size: 16px;
   font-weight: bold;
   letter-spacing: 1px;
   color: #333 !important;
+}
+#main-content-front #sidebar-second-logged-in ul li a {
+  color: #00008B;
 }
 #main-content-front .front-content {
   background: #fff;
@@ -233,7 +238,7 @@
   box-shadow: 0 0 3px #999;
   margin-top: 25px;
   padding: 15px 20px;
-  margin: 30px 15px;
+  margin: 30px 0px;
 }
 #main-content-front .front-content h2 {
   color: #000 !important;
