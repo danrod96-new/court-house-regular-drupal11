@@ -43,6 +43,28 @@ function chr_theme_preprocess_user(&$variables) {
       foreach ($list as $key => $value) {
         $variables["name_firm"] = $list[$key]->get('field_receive_name_of_law_firm')->value;
         $variables["name_attorney"] = $list[$key]->get('field_receive_supervising_attorn')->value;
+        $variables["willing_local_counsel"] = $list[$key]->get('field_willing_to_act_as_local_co')->value;
+        $variables["willing_handle_depositions"] = $list[$key]->get('field_willing_to_handle_depositi')->value;
+        $variables["street_address"] = $list[$key]->get('field_receive_street_address')->value;
+        $variables["city_town"] = $list[$key]->get('field_receive_city_or_town')->value;
+        $variables["zip_code"] = $list[$key]->get('field_zip_code_receive')->value;
+        $variables["linkedin_profile"] = $list[$key]->get('field_link_to_linkedin_profile')->value;
+
+        $field = $list[$key]->get('field_states_and_territories');
+
+        if (!$field->isEmpty()) {
+          $termEntity = $list[$key]->get('field_states_and_territories')->entity;
+
+          if ($termEntity instanceof \Drupal\taxonomy\TermInterface) {
+            $aliasManager = \Drupal::service('path_alias.manager');
+            $term_alias = $aliasManager->getAliasByPath('/taxonomy/term/' . $term_id);
+            $state_territory = $termEntity->label();
+            $list["state_territory"] = "<a href='" . $term_alias . "'>" . $state_territory . "</a>";
+          }
+        }
+        else {
+          $list["state_territory"] = "";
+        }
       }
     }
   }

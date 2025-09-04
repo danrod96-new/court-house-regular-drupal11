@@ -26,14 +26,18 @@
       <h1>{{ title }}</h1>
       <ul class="tabs primary clearfix">
         <li class={{ user_url_alias == current_path ? 'active' : '' }}><a href="/user/{{ user.id() }}">View</a></li>
-        <li class={{ title_page == "Affiliate Center" ? 'active' : '' }}><a href="/user/{{ user.id() }}/affiliate">Affiliate Center</a></li>
-        <li class={{ title_page == "Bookmarks" ? 'active' : '' }}><a href="/user/{{ user.id() }}/bookmarks">Bookmarks</a></li>
+        {% if user.hasRole('administrator') %}
+          <li class={{ title_page == "Affiliate Center" ? 'active' : '' }}><a href="/user/{{ user.id() }}/affiliate">Affiliate Center</a></li>
+          <li class={{ title_page == "Bookmarks" ? 'active' : '' }}><a href="/user/{{ user.id() }}/bookmarks">Bookmarks</a></li>
+        {% endif %}
         <li class={{ title_page == "All Colleagues" ? 'active' : '' }}><a href="/user/{{ user.id() }}/friends">Colleagues</a></li>
         <li><a href="/user/{{ user.id() }}/edit">Edit</a></li>
         <li class={{ title_page == "Orders" ? 'active' : '' }}><a href="/user/{{ user.id() }}/orders">Orders</a></li>
-        <li class={{ title_page == "Contact" ? 'active' : '' }}><a href="/contact">Contact</a></li>
-        <li class={{ title_page == "Invite Appearance Attorneys" ? 'active' : '' }}><a href="/user/{{ user.id() }}/invite">Invite Appearance Attorneys</a></li>
-        <li class={{ title_page == "Invite Law Firm" ? 'active' : '' }}><a href="/user/{{ user.id() }}/invites/invite_by_email">Invite Law Firms</a></li>
+        {% if user.hasRole('administrator') %}
+          <li class={{ title_page == "Contact" ? 'active' : '' }}><a href="/contact">Contact</a></li>
+          <li class={{ title_page == "Invite Appearance Attorneys" ? 'active' : '' }}><a href="/user/{{ user.id() }}/invite">Invite Appearance Attorneys</a></li>
+          <li class={{ title_page == "Invite Law Firm" ? 'active' : '' }}><a href="/user/{{ user.id() }}/invites/invite_by_email">Invite Law Firms</a></li>
+        {% endif %}
       </ul>
     </div>
   {% endif %}
@@ -55,6 +59,20 @@
           <div class="value">{{ name_firm }}</div>
           <div class="label">Name of Attorney</div>
           <div class="value">{{ name_attorney }}</div>
+          <div class="label">Willing to act as Local Counsel:</div>
+          <div class="value">{{ willing_local_counsel }}</div>
+          <div class="label">Willing to handle Depositions:</div>
+          <div class="value">{{ willing_handle_depositions }}</div>
+          <div class="label">Street Address:</div>
+          <div class="value">{{ street_address }}</div>
+          <div class="label">City or Town:</div>
+          <div class="value">{{ city_town }}</div>
+          <div class="label">State or Territory:</div>
+          <div class="value">{{ state_territory }}</div>
+          <div class="label">Zip Code:</div>
+          <div class="value">{{ zip_code }}</div>
+          <div class="label">Link to LinkedIn Profile:</div>
+          <div class="value"><a href="{{ linkedin_profile }}">{{ linkedin_profile }}</a></div>
         </div>
       </div>
       <div class="order-history-section">
