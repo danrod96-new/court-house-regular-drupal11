@@ -232,6 +232,9 @@
 .user--full #profile-user-page .order-history-section {
   margin-bottom: 1.5385em;
 }
+.user--full #profile-user-page .receive-assignments-section {
+  margin-bottom: 1.5385em;
+}
 .user--full #profile-user-page .form-group h4 {
   font-weight: bold;
   margin: 0px 0px 5px 0px;

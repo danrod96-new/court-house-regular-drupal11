@@ -65,6 +65,31 @@ function chr_theme_preprocess_user(&$variables) {
         else {
           $list["state_territory"] = "";
         }
+
+        $counties_courthouses_courts = $list[$key]->get('taxonomy_vocabulary_4')->referencedEntities();
+
+        if (count($counties_courthouses_courts)) {
+          $terms_profile = "<p>";
+
+          foreach ($counties_courthouses_courts as $term) {
+            $tid = $term->id();
+            $name = $term->getName();
+            $parents = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
+
+            foreach ($parents as $parent_tid => $parent_term_object) {
+              //file_put_contents("/tmp/parents".$tid, $parent_term_object->getName());
+            }
+
+            $terms_profile .= $name . "<br />";
+          }
+
+          $terms_profile .= "</p>";
+
+          $variables["counties_courthouses_courts"] = $terms_profile;
+        }
+        else {
+          $variables["counties_courthouses_courts"] = "";
+        } 
       }
     }
   }
