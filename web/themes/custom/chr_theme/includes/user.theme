@@ -4,3 +4,46 @@
  * @file
  * Theme and preprocess functions for users.
  */
+
+ use Drupal\user\Entity\User;
+
+/**
+ * Implements hook_preprocess_user().
+ */
+function chr_theme_preprocess_user(&$variables) {
+  $path_alias_manager = \Drupal::service('path_alias.manager');
+
+  // Add a custom variable for the user's full name.
+  $user = $variables['elements']['#user'];
+  //$variables['full_name'] = $user->get('field_first_name')->value . ' ' . $user->get('field_last_name')->value;
+
+  // get URL alias, example: http://courthouseregular-d11.ddev.site/users/mary-mcneill
+  // get path: /users/mary-mcneill
+  // find UID that belongs to that URL
+  // Load user
+  // get the "Receive Assignment" data, ex: /user/7025/recieve_assignments
+  // $variables["assignments"] = "Test";
+  $url = \Drupal\Core\Url::fromRoute('<current>');
+  $user_path = $url->toString(); 
+  $internal_path = $url->getInternalPath();
+
+  $user_path = explode("/", $internal_path);
+
+  if (($user_path[0] == "user") && is_numeric($user_path[1])) {
+    $user = User::load($user_path[1]);
+
+  $list = \Drupal::entityTypeManager()
+    ->getStorage('profile')
+    ->loadByProperties([
+      'uid' => $user->id(),
+      'type' => 'recieve_assignments',
+    ]);
+
+    if (!is_null($list)) {
+      foreach ($list as $key => $value) {
+        $variables["name_firm"] = $list[$key]->get('field_receive_name_of_law_firm')->value;
+        $variables["name_attorney"] = $list[$key]->get('field_receive_supervising_attorn')->value;
+      }
+    }
+  }
+}
