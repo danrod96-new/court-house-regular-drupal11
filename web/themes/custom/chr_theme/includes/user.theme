@@ -49,6 +49,8 @@ function chr_theme_preprocess_user(&$variables) {
         $variables["city_town"] = $list[$key]->get('field_receive_city_or_town')->value;
         $variables["zip_code"] = $list[$key]->get('field_zip_code_receive')->value;
         $variables["linkedin_profile"] = $list[$key]->get('field_link_to_linkedin_profile')->value;
+        $variables["website"] = $list[$key]->get('field_website_url')->value;
+        $variables["my_legal_work"] = $list[$key]->get('field_about_my_practice')->value;
 
         $field = $list[$key]->get('field_states_and_territories');
 

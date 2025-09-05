@@ -60,9 +60,17 @@
           <div class="label">Name of Attorney</div>
           <div class="value">{{ name_attorney }}</div>
           <div class="label">Willing to act as Local Counsel:</div>
-          <div class="value">{{ willing_local_counsel }}</div>
+          {% if willing_local_counsel == 1 %}
+            <div class="value">Yes</div>
+          {% else %}
+            <div class="value">No</div>
+          {% endif %}
           <div class="label">Willing to handle Depositions:</div>
-          <div class="value">{{ willing_handle_depositions }}</div>
+          {% if willing_handle_depositions == 1 %}
+            <div class="value">Yes</div>
+          {% else %}
+            <div class="value">No</div>
+          {% endif %}
           <div class="label">Street Address:</div>
           <div class="value">{{ street_address }}</div>
           <div class="label">City or Town:</div>
@@ -71,10 +79,17 @@
           <div class="value">{{ state_territory }}</div>
           <div class="label">Zip Code:</div>
           <div class="value">{{ zip_code }}</div>
-          <div class="label">Link to LinkedIn Profile:</div>
-          <div class="value"><a href="{{ linkedin_profile }}">{{ linkedin_profile }}</a></div>
+          <div class="label">Mobile Number:</div>
+          <div class="label">Landline:</div>
+          <div class="label">Facsimile Number:</div>
+          <div class="label">Website:</div>
+          <div class="value">{{ website }}</div>
           <div class="label">Counties, Courthouses and Courts:</div>
           <div class="value">{{ counties_courthouses_courts|raw }}</div>
+          <div class="label">My Appearance Practice/Other Legal Work:</div>
+          <div class="value">{{ my_legal_work }}</div>
+          <div class="label">Link to LinkedIn Profile:</div>
+          <div class="value"><a href="{{ linkedin_profile }}">{{ linkedin_profile }}</a></div>
         </div>
       </div>
       <div class="order-history-section">
