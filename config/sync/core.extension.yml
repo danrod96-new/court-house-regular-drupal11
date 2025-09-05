@@ -61,6 +61,7 @@ module:
   migrate: 0
   migrate_drupal: 0
   migrate_drupal_ui: 0
+  mimemail: 0
   mysql: 0
   node: 0
   og: 0

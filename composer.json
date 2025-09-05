@@ -88,6 +88,7 @@
         "drupal/masquerade": "^2.0",
         "drupal/message": "^1.8",
         "drupal/message_notify": "^1.5",
+        "drupal/mimemail": "^2.0@alpha",
         "drupal/og": "^2.0@alpha",
         "drupal/page_manager": "^4.0@RC",
         "drupal/panels": "^4.9",
