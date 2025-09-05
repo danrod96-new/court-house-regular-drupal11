@@ -12,7 +12,7 @@ dependencies:
 id: chr_theme_chartersearchheader
 theme: chr_theme
 region: content
-weight: -2
+weight: -4
 provider: null
 plugin: 'block_content:816d2862-7958-43b7-9841-794bdb63103c'
 settings:
