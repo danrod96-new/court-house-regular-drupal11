@@ -60,13 +60,13 @@
           <div class="label">Name of Attorney</div>
           <div class="value">{{ name_attorney }}</div>
           <div class="label">Willing to act as Local Counsel:</div>
-          {% if willing_local_counsel == 1 %}
+          {% if willing_local_counsel == 0 %}
             <div class="value">Yes</div>
           {% else %}
             <div class="value">No</div>
           {% endif %}
           <div class="label">Willing to handle Depositions:</div>
-          {% if willing_handle_depositions == 1 %}
+          {% if willing_handle_depositions == 0 %}
             <div class="value">Yes</div>
           {% else %}
             <div class="value">No</div>
@@ -76,7 +76,7 @@
           <div class="label">City or Town:</div>
           <div class="value">{{ city_town }}</div>
           <div class="label">State or Territory:</div>
-          <div class="value">{{ state_territory }}</div>
+          <div class="value">{{ state_territory|raw }}</div>
           <div class="label">Zip Code:</div>
           <div class="value">{{ zip_code }}</div>
           <div class="label">Mobile Number:</div>

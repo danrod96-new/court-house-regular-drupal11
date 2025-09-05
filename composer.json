@@ -57,6 +57,10 @@
                 "type": "zip"
               }
             }
+        },
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
         }
     ],
     "require": {
@@ -93,6 +97,7 @@
         "drupal/page_manager": "^4.0@RC",
         "drupal/panels": "^4.9",
         "drupal/pathauto": "^1.13",
+        "drupal/phone_international": "^4.0",
         "drupal/radix": "^6.0",
         "drupal/riddler": "^3.0",
         "drupal/rules": "^4.0",
@@ -105,7 +110,8 @@
         "drupal/upgrade_status": "^4.3",
         "drupal/views_bulk_operations": "^4.3",
         "drupal/webform": "^6.3@beta",
-        "drush/drush": "^13.6"
+        "drush/drush": "^13.6",
+        "npm-asset/intl-tel-input": "^25.3"
     },
     "conflict": {
         "drupal/drupal": "*"
@@ -126,6 +132,10 @@
         "sort-packages": true
     },
     "extra": {
+        "installer-types": [
+            "npm-asset",
+            "bower-asset"
+        ],
         "drupal-scaffold": {
             "locations": {
                 "web-root": "web/"
@@ -136,7 +146,9 @@
                 "type:drupal-core"
             ],
             "web/libraries/{$name}": [
-                "type:drupal-library"
+                "type:drupal-library",
+                "type:npm-asset",
+                "type:bower-asset"
             ],
             "web/modules/contrib/{$name}": [
                 "type:drupal-module"

@@ -59,13 +59,13 @@ function chr_theme_preprocess_user(&$variables) {
 
           if ($termEntity instanceof \Drupal\taxonomy\TermInterface) {
             $aliasManager = \Drupal::service('path_alias.manager');
-            $term_alias = $aliasManager->getAliasByPath('/taxonomy/term/' . $term_id);
+            $term_alias = $aliasManager->getAliasByPath('/taxonomy/term/' . $termEntity->id());
             $state_territory = $termEntity->label();
-            $list["state_territory"] = "<a href='" . $term_alias . "'>" . $state_territory . "</a>";
+            $variables["state_territory"] = "<a href='" . $term_alias . "'>" . $state_territory . "</a>";
           }
         }
         else {
-          $list["state_territory"] = "";
+          $variables["state_territory"] = "";
         }
 
         $counties_courthouses_courts = $list[$key]->get('taxonomy_vocabulary_4')->referencedEntities();
