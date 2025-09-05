@@ -75,17 +75,24 @@ function chr_theme_preprocess_user(&$variables) {
             $tid = $term->id();
             $name = $term->getName();
             $parents = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($tid);
+            $terms_profile_line = [];
+            $terms_profile_line[] = $name;
 
-            foreach ($parents as $parent_tid => $parent_term_object) {
-              //file_put_contents("/tmp/parents".$tid, $parent_term_object->getName());
+            while (count($parents)) {
+              foreach ($parents as $parent_tid => $parent_term_object) {
+                $terms_profile_line[] = $parent_term_object->getName();
+                
+                $ptid = $parent_term_object->id();
+                $parents = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->loadParents($ptid);
+              }
             }
 
-            $terms_profile .= $name . "<br />";
+            $terms_profile_line = array_reverse($terms_profile_line);
+            $terms_profile_line[count($terms_profile_line) - 1] = "<strong>" . $terms_profile_line[count($terms_profile_line) - 1] . "</strong>";
+            $terms_profile .=  implode(" > ", $terms_profile_line) . "<br />";
           }
 
-          $terms_profile .= "</p>";
-
-          $variables["counties_courthouses_courts"] = $terms_profile;
+          $variables["counties_courthouses_courts"] = $terms_profile ;
         }
         else {
           $variables["counties_courthouses_courts"] = "";
