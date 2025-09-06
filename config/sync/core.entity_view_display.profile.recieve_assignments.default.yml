@@ -4,9 +4,12 @@ status: true
 dependencies:
   config:
     - field.field.profile.recieve_assignments.field_about_my_practice
+    - field.field.profile.recieve_assignments.field_facsimile_number
     - field.field.profile.recieve_assignments.field_find_lawyer_by_court_house
     - field.field.profile.recieve_assignments.field_interested_in_free_cle
+    - field.field.profile.recieve_assignments.field_landline
     - field.field.profile.recieve_assignments.field_link_to_linkedin_profile
+    - field.field.profile.recieve_assignments.field_mobile_number
     - field.field.profile.recieve_assignments.field_receiv_read_and_agreed_to_
     - field.field.profile.recieve_assignments.field_receive_city_or_town
     - field.field.profile.recieve_assignments.field_receive_name_of_law_firm
@@ -20,7 +23,7 @@ dependencies:
     - field.field.profile.recieve_assignments.taxonomy_vocabulary_4
     - profile.type.recieve_assignments
   module:
-    - options
+    - phone_international
 id: profile.recieve_assignments.default
 targetEntityType: profile
 bundle: recieve_assignments
@@ -31,7 +34,21 @@ content:
     label: above
     settings: {  }
     third_party_settings: {  }
-    weight: 16
+    weight: 12
+    region: content
+  field_facsimile_number:
+    type: phone_international_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_landline:
+    type: phone_international_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 10
     region: content
   field_link_to_linkedin_profile:
     type: string
@@ -39,7 +56,14 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 19
+    weight: 13
+    region: content
+  field_mobile_number:
+    type: phone_international_formatter
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 9
     region: content
   field_receive_city_or_town:
     type: string
@@ -87,19 +111,25 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
-    weight: 14
+    weight: 8
     region: content
   field_willing_to_act_as_local_co:
-    type: list_default
+    type: boolean
     label: above
-    settings: {  }
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     weight: 2
     region: content
   field_willing_to_handle_depositi:
-    type: list_default
+    type: boolean
     label: above
-    settings: {  }
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
     third_party_settings: {  }
     weight: 3
     region: content
@@ -111,8 +141,15 @@ content:
     third_party_settings: {  }
     weight: 7
     region: content
+  taxonomy_vocabulary_4:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
 hidden:
   field_find_lawyer_by_court_house: true
   field_interested_in_free_cle: true
   field_receiv_read_and_agreed_to_: true
-  taxonomy_vocabulary_4: true

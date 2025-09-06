@@ -1,0 +1,21 @@
+uuid: 5b774c1a-e349-487e-9bde-78a42332c32a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_mobile_number
+    - profile.type.recieve_assignments
+  module:
+    - phone_international
+id: profile.recieve_assignments.field_mobile_number
+field_name: field_mobile_number
+entity_type: profile
+bundle: recieve_assignments
+label: 'Mobile Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: phone_international

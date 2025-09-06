@@ -1,0 +1,19 @@
+uuid: a7f86c45-f027-49f9-ad30-434217f26666
+langcode: en
+status: true
+dependencies:
+  module:
+    - phone_international
+    - profile
+id: profile.field_facsimile_number
+field_name: field_facsimile_number
+entity_type: profile
+type: phone_international
+settings: {  }
+module: phone_international
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

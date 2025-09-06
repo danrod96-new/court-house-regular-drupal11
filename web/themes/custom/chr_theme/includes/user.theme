@@ -41,16 +41,19 @@ function chr_theme_preprocess_user(&$variables) {
 
     if (!is_null($list)) {
       foreach ($list as $key => $value) {
-        $variables["name_firm"] = $list[$key]->get('field_receive_name_of_law_firm')->value;
-        $variables["name_attorney"] = $list[$key]->get('field_receive_supervising_attorn')->value;
-        $variables["willing_local_counsel"] = $list[$key]->get('field_willing_to_act_as_local_co')->value;
-        $variables["willing_handle_depositions"] = $list[$key]->get('field_willing_to_handle_depositi')->value;
-        $variables["street_address"] = $list[$key]->get('field_receive_street_address')->value;
-        $variables["city_town"] = $list[$key]->get('field_receive_city_or_town')->value;
-        $variables["zip_code"] = $list[$key]->get('field_zip_code_receive')->value;
-        $variables["linkedin_profile"] = $list[$key]->get('field_link_to_linkedin_profile')->value;
-        $variables["website"] = $list[$key]->get('field_website_url')->value;
-        $variables["my_legal_work"] = $list[$key]->get('field_about_my_practice')->value;
+        $variables["name_firm"] = $list[$key]->get('field_receive_name_of_law_firm')->value ?? "";
+        $variables["name_attorney"] = $list[$key]->get('field_receive_supervising_attorn')->value ?? "";
+        $variables["willing_local_counsel"] = $list[$key]->get('field_willing_to_act_as_local_co')->value ?? "";
+        $variables["willing_handle_depositions"] = $list[$key]->get('field_willing_to_handle_depositi')->value ?? "";
+        $variables["street_address"] = $list[$key]->get('field_receive_street_address')->value ?? "";
+        $variables["city_town"] = $list[$key]->get('field_receive_city_or_town')->value ?? "";
+        $variables["zip_code"] = $list[$key]->get('field_zip_code_receive')->value ?? "";
+        $variables["linkedin_profile"] = $list[$key]->get('field_link_to_linkedin_profile')->value ?? "";
+        $variables["website"] = $list[$key]->get('field_website_url')->value ?? "";
+        $variables["my_legal_work"] = $list[$key]->get('field_about_my_practice')->value ?? "";
+        $variables["mobile_number"] = $list[$key]->get('field_mobile_number')->value ?? "";
+        $variables["landline"] = $list[$key]->get('field_landline')->value ?? "";
+        $variables["facsimile_number"] = $list[$key]->get('field_facsimile_number')->value ?? ""  ;
 
         $field = $list[$key]->get('field_states_and_territories');
 

@@ -1,0 +1,21 @@
+uuid: a95ac245-5b0f-4512-802a-384585e8edc9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_facsimile_number
+    - profile.type.recieve_assignments
+  module:
+    - phone_international
+id: profile.recieve_assignments.field_facsimile_number
+field_name: field_facsimile_number
+entity_type: profile
+bundle: recieve_assignments
+label: 'Facsimile Number'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: phone_international

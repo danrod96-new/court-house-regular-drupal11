@@ -1,0 +1,21 @@
+uuid: b8b8da1d-c359-4e77-bce5-ec2bc6e6fe95
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.profile.field_landline
+    - profile.type.recieve_assignments
+  module:
+    - phone_international
+id: profile.recieve_assignments.field_landline
+field_name: field_landline
+entity_type: profile
+bundle: recieve_assignments
+label: Landline
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: phone_international
