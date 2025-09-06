@@ -1,20 +1,18 @@
-uuid: cd10104d-9f00-4c39-aa0c-fdfc47f5f034
+uuid: 24e371b8-b6ce-4cf3-bd34-245bd6c17e69
 langcode: en
 status: true
 dependencies:
   config:
     - field.storage.profile.field_receive_name_of_law_firm
     - profile.type.recieve_assignments
-    - user.role.administrator
-    - user.role.place_assignments_only_subscriber_firm_
-    - user.role.receive_and_place_assignments_subscriber_regular_
   module:
     - profile
+    - taxonomy_entity_index
     - user
-id: charter_search
-label: 'Charter Search'
+id: receive_search
+label: 'Receive Search'
 module: views
-description: 'Used in charter search'
+description: 'Used in receive search'
 tag: ''
 base_table: profile
 base_field: profile_id
@@ -25,74 +23,8 @@ display:
     display_plugin: default
     position: 0
     display_options:
-      title: 'Charter Search'
+      title: 'Search for all Receive Assignment Subscribers'
       fields:
-        uid:
-          id: uid
-          table: users_field_data
-          field: uid
-          relationship: revision_user
-          group_type: group
-          admin_label: ''
-          entity_type: user
-          entity_field: uid
-          plugin_id: field
-          label: ''
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
         field_receive_name_of_law_firm:
           id: field_receive_name_of_law_firm
           table: profile__field_receive_name_of_law_firm
@@ -168,8 +100,8 @@ display:
           label: 'Link to Profile'
           exclude: false
           alter:
-            alter_text: true
-            text: '<a href="/user/{{ uid }}">Click Here</a>'
+            alter_text: false
+            text: ''
             make_link: false
             path: ''
             absolute: false
@@ -209,6 +141,70 @@ display:
           text: 'Click Here'
           output_url_as_text: false
           absolute: false
+        mail:
+          id: mail
+          table: users_field_data
+          field: mail
+          relationship: uid
+          group_type: group
+          admin_label: ''
+          entity_type: user
+          entity_field: mail
+          plugin_id: field
+          label: ''
+          exclude: true
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: email_mailto
+          settings: {  }
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
       pager:
         type: mini
         options:
@@ -239,55 +235,23 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       access:
-        type: role
-        options:
-          role:
-            place_assignments_only_subscriber_firm_: place_assignments_only_subscriber_firm_
-            receive_and_place_assignments_subscriber_regular_: receive_and_place_assignments_subscriber_regular_
-            administrator: administrator
+        type: none
+        options: {  }
       cache:
         type: tag
         options: {  }
-      empty:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: true
-          content: 'No Charter Subscriber profile was found for that particular county/courthouse/court. Please try <a href=/receive-search/!1>searching</a> for all Paid and Associate Receive Assignment Subscribers'
-          tokenize: true
-      sorts:
-        created:
-          id: created
+      empty: {  }
+      sorts: {  }
+      arguments:
+        taxonomy_entity_index_tid_depth:
+          id: taxonomy_entity_index_tid_depth
           table: profile
-          field: created
+          field: taxonomy_entity_index_tid_depth
           relationship: none
           group_type: group
           admin_label: ''
           entity_type: profile
-          entity_field: created
-          plugin_id: date
-          order: ASC
-          expose:
-            label: ''
-            field_identifier: ''
-          exposed: false
-          granularity: second
-      arguments:
-        uid:
-          id: uid
-          table: users_field_data
-          field: uid
-          relationship: revision_user
-          group_type: group
-          admin_label: ''
-          entity_type: user
-          entity_field: uid
-          plugin_id: user_uid
+          plugin_id: taxonomy_entity_index_tid_depth
           default_action: default
           exception:
             value: all
@@ -314,7 +278,8 @@ display:
             fail: 'not found'
           validate_options: {  }
           break_phrase: false
-          not: false
+          depth: 0
+          use_taxonomy_term_path: false
       filters:
         type:
           id: type
@@ -338,31 +303,19 @@ display:
           replica: false
           query_tags: {  }
       relationships:
-        revision_user:
-          id: revision_user
-          table: profile_revision
-          field: revision_user
+        uid:
+          id: uid
+          table: profile
+          field: uid
           relationship: none
           group_type: group
           admin_label: User
           entity_type: profile
-          entity_field: revision_user
+          entity_field: uid
           plugin_id: standard
           required: false
-      use_ajax: true
       header: {  }
-      footer:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: false
-          content: '<a href=/receive-search/!1>Search</a> All Receive Assignment Subscribers, Paid and Associate'
-          tokenize: true
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -371,7 +324,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.roles
       tags:
         - 'config:field.storage.profile.field_receive_name_of_law_firm'
   page_1:
@@ -380,9 +332,8 @@ display:
     display_plugin: page
     position: 1
     display_options:
-      exposed_block: true
       display_extenders: {  }
-      path: charter-search/%
+      path: receive-search/%
     cache_metadata:
       max-age: -1
       contexts:
@@ -390,6 +341,5 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
-        - user.roles
       tags:
         - 'config:field.storage.profile.field_receive_name_of_law_firm'
