@@ -8,6 +8,16 @@ chr_core.settings:
   options:  
     _admin_route: TRUE
 
+chr_core.sync_missing_profile_information:
+  path: '/admin/config/courthouseregular/sync-missing-profile-info'
+  defaults:
+    _form: '\Drupal\chr_core\Form\SyncProfileInfoForm'
+    _title: 'Sync Missing Profile Information'
+  requirements:
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE
+
 chr_core.affiliate_center:
   path: '/user/{user}/affiliate'
   defaults:
