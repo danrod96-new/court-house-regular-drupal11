@@ -28,6 +28,8 @@ class DataSyncOperations {
     $context['results'][] = "PID: " . $item["pid"] . " - UID: " . $item["uid"] . " processed.";
 
     self::updateFieldFacsimileNumberNumber($item["pid"], $item["uid"]);
+    self::updateFieldLandLine($item["pid"], $item["uid"]);
+    self::updateFieldMobileNumber($item["pid"], $item["uid"]);
   }
 
   /**
@@ -50,6 +52,17 @@ class DataSyncOperations {
     }
   }
 
+  /**
+   * Callback to update the field field_facsimile_number.
+   *
+   * @param int $pid
+   *   Profile ID of the profile.
+   * @param int $uid
+   *   Used ID of the user owner of the profile.
+   *
+   * @return bool
+   *   Returns TRUE if success, FALSE if error.
+   */
   public static function updateFieldFacsimileNumberNumber(int $pid, int $uid): bool {
     $user = \Drupal\user\Entity\User::load($uid);
     $profile = \Drupal::entityTypeManager()
@@ -82,7 +95,109 @@ class DataSyncOperations {
       try {
         $profile->save();
       } catch (Exception $e) {
-        \Drupal::logger('chr_core')->error('Error when saving the field: @error_message', ['@error_message' => $e->getMessage()]);
+        \Drupal::logger('chr_core')->error('Error when saving the data @dataerror, error message: @error_message', ['@data_error' => $row["field_facsimile_number_number"], '@error_message' => $e->getMessage()]);
+        return FALSE;
+      }
+
+      return TRUE;
+    }
+  }
+
+  /**
+   * Callback to update the field field_landline.
+   *
+   * @param int $pid
+   *   Profile ID of the profile.
+   * @param int $uid
+   *   Used ID of the user owner of the profile.
+   *
+   * @return bool
+   *   Returns TRUE if success, FALSE if error.
+   */
+  public static function updateFieldLandLine(int $pid, int $uid): bool {
+    $user = \Drupal\user\Entity\User::load($uid);
+    $profile = \Drupal::entityTypeManager()
+      ->getStorage('profile')
+      ->loadByUser($user, 'recieve_assignments');
+
+    Database::setActiveConnection('migrate');
+
+    if (!$profile) {
+      return FALSE;
+    } else {
+      $query = Database::getConnection()->select('dr_field_revision_field_landline', 't')
+      ->fields('t', ['field_landline_number', 'field_landline_country_codes'])
+      ->condition('t.entity_id', $pid, "=")
+      ->execute();
+
+      $results = $query->fetchAll(\PDO::FETCH_ASSOC);
+
+      if (count($results)) {
+        foreach ($results as $row) {
+          if (isset($row["field_landline_number"]) && !empty(($row["field_landline_number"]))) {
+            // All numbers seem to be US numbers, so I'll add this as default
+            $profile->set('field_landline', "+1" . $row["field_landline_number"]);
+          } else {
+            $profile->set('field_landline', "");
+          }
+        }
+      }
+
+      try {
+        $profile->save();
+      } catch (Exception $e) {
+        \Drupal::logger('chr_core')->error('Error when saving the data @dataerror, error message: @error_message', ['@data_error' => $row["field_landline_number"], '@error_message' => $e->getMessage()]);
+        return FALSE;
+      }
+
+      return TRUE;
+    }
+  }
+
+  /**
+   * Callback to update the field field_mobile_number.
+   *
+   * @param int $pid
+   *   Profile ID of the profile.
+   * @param int $uid
+   *   Used ID of the user owner of the profile.
+   *
+   * @return bool
+   *   Returns TRUE if success, FALSE if error.
+   */
+  public static function updateFieldMobileNumber(int $pid, int $uid): bool {
+    $user = \Drupal\user\Entity\User::load($uid);
+    $profile = \Drupal::entityTypeManager()
+      ->getStorage('profile')
+      ->loadByUser($user, 'recieve_assignments');
+
+    Database::setActiveConnection('migrate');
+
+    if (!$profile) {
+      return FALSE;
+    } else {
+      $query = Database::getConnection()->select('dr_field_revision_field_mobile_number', 't')
+      ->fields('t', ['field_mobile_number_number', 'field_mobile_number_country_codes'])
+      ->condition('t.entity_id', $pid, "=")
+      ->execute();
+
+      $results = $query->fetchAll(\PDO::FETCH_ASSOC);
+
+      if (count($results)) {
+        foreach ($results as $row) {
+          if (isset($row["field_mobile_number_number"]) && !empty(($row["field_mobile_number_number"]))) {
+            // All numbers seem to be US numbers, so I'll add this as default
+            $profile->set('field_mobile_number', "+1" . $row["field_mobile_number_number"]);
+          } else {
+            $profile->set('field_mobile_number', "");
+          }
+        }
+      }
+
+      try {
+        $profile->save();
+      } catch (Exception $e) {
+        \Drupal::logger('chr_core')->error('Error when saving the data @dataerror, error message: @error_message', ['@data_error' => $row["field_mobile_number_number"], '@error_message' => $e->getMessage()]);
         return FALSE;
       }
 
