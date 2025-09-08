@@ -45,11 +45,18 @@
   <div id="profile-user-page">
     {% if user_url_alias == current_path %}
       <div class="affiliate-section">
-        <h3>Affiliate</h3>
-        <dl>
-          <dt></dt>
-          <dd>Manage your business <a href="/user/{{ user.id() }}/affiliate">here</a></dd>
-        </dl>
+        <div class="link-affiliate">
+          <h3>Affiliate</h3>
+          <dl>
+            <dt></dt>
+            <dd>Manage your business <a href="/user/{{ user.id() }}/affiliate">here</a></dd>
+          </dl>
+        </div>
+        <div class="user-picture">
+          {% if user_profile %}
+            <a href="{{ user_profile }}" title="View user profile." class="active" target="_blank"><img src="{{ user_profile }}" alt="Photo of {{ name_attorney }}"></a>  
+          {% endif%}
+        </div>
       </div>
       <div class="receive-assignments-section">
         <a id="profile-recieve_assignments"></a>
@@ -103,6 +110,6 @@
         </dl>
       </div>
     {% endif %}
-    {{- content|without('summary') -}}
+    {{- content|without('summary', 'user_picture') -}}
   </div>
 </article>

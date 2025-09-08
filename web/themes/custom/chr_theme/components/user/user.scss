@@ -41,7 +41,22 @@
     margin: 1.5385em 0;
 
     .affiliate-section {
-      margin-bottom: 1.5385em;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+      .user-picture {
+        a {
+          img {
+            padding: 5px;
+            box-shadow: 0 0 3px $light-grey-4;
+            background: #FFF;
+            border: $light-grey-4 1px solid;
+            max-width: 67px;
+          }
+        }
+      }
       
       h3 {
         font-weight: bold;

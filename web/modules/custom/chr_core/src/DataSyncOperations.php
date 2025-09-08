@@ -7,6 +7,9 @@ use Drupal\chr_core\DataSyncOperations;
 use Drupal\Core\Database\Database;
 use Drupal\user\Entity\User;
 use Drupal\profile\Entity\Profile;
+use Drupal\Core\File\FileSystemInterface;
+use Drupal\file\FileRepositoryInterface;
+use Drupal\file\Entity\File;
 
 
 /**
@@ -27,9 +30,10 @@ class DataSyncOperations {
     // You can store results in $context['results'].
     $context['results'][] = "PID: " . $item["pid"] . " - UID: " . $item["uid"] . " processed.";
 
-    self::updateFieldFacsimileNumberNumber($item["pid"], $item["uid"]);
-    self::updateFieldLandLine($item["pid"], $item["uid"]);
-    self::updateFieldMobileNumber($item["pid"], $item["uid"]);
+    //self::updateFieldFacsimileNumberNumber($item["pid"], $item["uid"]);
+    //self::updateFieldLandLine($item["pid"], $item["uid"]);
+    //self::updateFieldMobileNumber($item["pid"], $item["uid"]);
+    self::updateUseerProfileImage($item["pid"], $item["uid"]);
   }
 
   /**
@@ -204,5 +208,70 @@ class DataSyncOperations {
       return TRUE;
     }
   }
+
+  /**
+   * Callback to update the profile picture.
+   *
+   * @param int $pid
+   *   Profile ID of the profile.
+   * @param int $uid
+   *   Used ID of the user owner of the profile.
+   *
+   * @return bool
+   *   Returns TRUE if success, FALSE if error.
+   */
+  public static function updateUseerProfileImage(int $pid, int $uid): bool {
+    $user = \Drupal\user\Entity\User::load($uid);
+    $profile = \Drupal::entityTypeManager()
+      ->getStorage('profile')
+      ->loadByUser($user, 'recieve_assignments');
+
+    Database::setActiveConnection('migrate');
+
+    if (!$profile) {
+      return FALSE;
+    } else {
+      $query = Database::getConnection()->select('dr_file_managed', 't')
+      ->fields('t', ['fid', 'uid', 'filename', 'uri'])
+      ->condition('t.uid', $uid, "=")
+      ->execute();
+
+      $results = $query->fetchAll(\PDO::FETCH_ASSOC);
+
+      if (count($results)) {
+        foreach ($results as $row) {
+          if (isset($row["uri"]) && !empty(($row["uri"]))) {
+            // Create a new managed file entity.
+            $file = File::create([
+              'uri' => $row["uri"], // Adjust the URI as needed.
+              'uid' => $row["uid"],
+            ]);
+            $file->setPermanent();
+            $file->save();
+
+            // Get the file ID.
+            $fid = $file->id();
+
+            try {
+              $user->set('user_picture', $fid);
+              $user->save();
+            } catch (Exception $e) {
+              \Drupal::logger('chr_core')->error('Error when saving the picture @userpicture, error message: @error_message', ['@userpicture' => $row["uid"], '@error_message' => $e->getMessage()]);
+            }
+          }
+        }
+      }
+
+      try {
+        $profile->save();
+      } catch (Exception $e) {
+        \Drupal::logger('chr_core')->error('Error when saving the data @phonenumber, error message: @error_message', ['@phonenumber' => $row["field_mobile_number_number"], '@error_message' => $e->getMessage()]);
+        return FALSE;
+      }
+
+      return TRUE;
+    }
+  }
+
 
 }

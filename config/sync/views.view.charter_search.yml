@@ -364,7 +364,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: false
-          content: '<a href=/receive-search/!1>Search</a> All Receive Assignment Subscribers, Paid and Associate'
+          content: '<a href=/receive-search/all>Search</a> All Receive Assignment Subscribers, Paid and Associate'
           tokenize: true
       display_extenders: {  }
     cache_metadata:

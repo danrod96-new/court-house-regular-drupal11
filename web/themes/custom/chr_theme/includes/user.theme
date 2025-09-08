@@ -6,6 +6,7 @@
  */
 
  use Drupal\user\Entity\User;
+ use Drupal\Core\File\FileUrlGeneratorInterface;
 
 /**
  * Implements hook_preprocess_user().
@@ -53,7 +54,7 @@ function chr_theme_preprocess_user(&$variables) {
         $variables["my_legal_work"] = $list[$key]->get('field_about_my_practice')->value ?? "";
         $variables["mobile_number"] = $list[$key]->get('field_mobile_number')->value ?? "";
         $variables["landline"] = $list[$key]->get('field_landline')->value ?? "";
-        $variables["facsimile_number"] = $list[$key]->get('field_facsimile_number')->value ?? ""  ;
+        $variables["facsimile_number"] = $list[$key]->get('field_facsimile_number')->value ?? "";
 
         $field = $list[$key]->get('field_states_and_territories');
 
@@ -69,6 +70,21 @@ function chr_theme_preprocess_user(&$variables) {
         }
         else {
           $variables["state_territory"] = "";
+        }
+
+        $user_picture_field = $user->get('user_picture');
+
+        if (!$user_picture_field->isEmpty()) {
+          $image_url = $user_picture_field->entity->getFileUri();
+          $fileUrlGenerator = \Drupal::service('file_url_generator'); 
+          $public_url = $fileUrlGenerator->generateAbsoluteString($image_url );
+        }
+        else {
+          $public_url = "";
+        }
+
+        if (!$user_picture_field->isEmpty()) {
+          $variables["user_profile"] = $public_url;
         }
 
         $counties_courthouses_courts = $list[$key]->get('taxonomy_vocabulary_4')->referencedEntities();
@@ -97,7 +113,7 @@ function chr_theme_preprocess_user(&$variables) {
             $terms_profile .=  implode(" > ", $terms_profile_line) . "<br />";
           }
 
-          $variables["counties_courthouses_courts"] = $terms_profile ;
+          $variables["counties_courthouses_courts"] = $terms_profile;
         }
         else {
           $variables["counties_courthouses_courts"] = "";
