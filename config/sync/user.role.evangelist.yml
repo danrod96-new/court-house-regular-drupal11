@@ -1,9 +1,20 @@
 uuid: 447c7eae-d6a0-4a4d-902a-5e163d1eef3d
 langcode: en
 status: true
-dependencies: {  }
+dependencies:
+  module:
+    - profile
 id: evangelist
 label: Evangelist
 weight: 4
 is_admin: false
-permissions: {  }
+permissions:
+  - 'create recieve_assignments profile'
+  - 'update own place_assignments_only profile'
+  - 'view any place_assignments_only profile'
+  - 'view any profile'
+  - 'view any recieve_assignments profile'
+  - 'view own place_assignments_only profile'
+  - 'view own profile'
+  - 'view own recieve_assignments profile'
+  - 'view own unpublished profile'

@@ -9,6 +9,7 @@ dependencies:
     - comment
     - contact
     - node
+    - profile
     - search
     - system
 id: receive_and_place_assignments_subscriber_regular_
@@ -24,8 +25,17 @@ permissions:
   - 'change own username'
   - 'create forum content'
   - 'create profile content'
+  - 'create recieve_assignments profile'
   - 'delete own forum content'
   - 'edit own comments'
   - 'edit own forum content'
   - 'search content'
+  - 'update own place_assignments_only profile'
   - 'use advanced search'
+  - 'view any place_assignments_only profile'
+  - 'view any profile'
+  - 'view any recieve_assignments profile'
+  - 'view own place_assignments_only profile'
+  - 'view own profile'
+  - 'view own recieve_assignments profile'
+  - 'view own unpublished profile'
