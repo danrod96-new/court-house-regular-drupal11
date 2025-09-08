@@ -258,7 +258,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'No Charter Subscriber profile was found for that particular county/courthouse/court. Please try <a href=/receive-search/!1>searching</a> for all Paid and Associate Receive Assignment Subscribers'
+          content: 'No Charter Subscriber profile was found for that particular county/courthouse/court. Please try <a href=/receive-search/all>searching</a> for all Paid and Associate Receive Assignment Subscribers'
           tokenize: true
       sorts:
         created:

@@ -19,6 +19,7 @@
 %}
 {% set current_path = path('<current>') %}
 {% set user_url_alias = path('entity.user.canonical', {'user': user.id}) %}
+{% set roles = user.getroles(TRUE) %}
 <article{{attributes.addClass(classes)}}>
   {% if logged_in %}
     <div id="user-profile-chr-menu">
@@ -26,14 +27,14 @@
       <h1>{{ title }}</h1>
       <ul class="tabs primary clearfix">
         <li class={{ user_url_alias == current_path ? 'active' : '' }}><a href="/user/{{ user.id() }}">View</a></li>
-        {% if user.hasRole('administrator') %}
+        {%  if 'evangelist' in user.getroles(TRUE) or 'administrator' in user.getroles(TRUE) %}
           <li class={{ title_page == "Affiliate Center" ? 'active' : '' }}><a href="/user/{{ user.id() }}/affiliate">Affiliate Center</a></li>
           <li class={{ title_page == "Bookmarks" ? 'active' : '' }}><a href="/user/{{ user.id() }}/bookmarks">Bookmarks</a></li>
         {% endif %}
         <li class={{ title_page == "All Colleagues" ? 'active' : '' }}><a href="/user/{{ user.id() }}/friends">Colleagues</a></li>
         <li><a href="/user/{{ user.id() }}/edit">Edit</a></li>
         <li class={{ title_page == "Orders" ? 'active' : '' }}><a href="/user/{{ user.id() }}/orders">Orders</a></li>
-        {% if user.hasRole('administrator') %}
+        {%  if 'evangelist' in user.getroles(TRUE) or 'administrator' in user.getroles(TRUE) %}
           <li class={{ title_page == "Contact" ? 'active' : '' }}><a href="/contact">Contact</a></li>
           <li class={{ title_page == "Invite Appearance Attorneys" ? 'active' : '' }}><a href="/user/{{ user.id() }}/invite">Invite Appearance Attorneys</a></li>
           <li class={{ title_page == "Invite Law Firm" ? 'active' : '' }}><a href="/user/{{ user.id() }}/invites/invite_by_email">Invite Law Firms</a></li>
