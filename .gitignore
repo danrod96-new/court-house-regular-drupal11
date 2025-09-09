@@ -28,6 +28,7 @@
 # Ignore files development dirs
 /.ddev/
 /.idea/
+.lando/
 
 # Ignore .env files as they are personal
 /.env
