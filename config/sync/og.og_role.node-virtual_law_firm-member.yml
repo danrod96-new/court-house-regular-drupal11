@@ -1,0 +1,15 @@
+uuid: 3e0972b8-e926-4cc4-864e-22cab95a1e2b
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.virtual_law_firm
+id: node-virtual_law_firm-member
+label: Member
+weight: 0
+group_id: null
+group_type: node
+group_bundle: virtual_law_firm
+is_admin: false
+permissions: {  }
+role_type: required

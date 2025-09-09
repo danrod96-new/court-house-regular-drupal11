@@ -10,6 +10,7 @@ dependencies:
     - node.type.virtual_law_firm
   module:
     - comment
+    - og
     - text
     - user
 id: node.virtual_law_firm.default
@@ -31,12 +32,19 @@ content:
       view_mode: default
       pager_id: 0
     third_party_settings: {  }
-    weight: 20
+    weight: 2
     region: content
   links:
     settings: {  }
     third_party_settings: {  }
-    weight: 100
+    weight: 3
+    region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
     region: content
 hidden:
   group_group: true

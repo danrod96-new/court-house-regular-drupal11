@@ -1,0 +1,15 @@
+uuid: 9e9e966d-30a3-4f2b-98d9-97f239f5b8da
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.page
+id: node-page-member
+label: Member
+weight: 0
+group_id: null
+group_type: node
+group_bundle: page
+is_admin: false
+permissions: {  }
+role_type: required
