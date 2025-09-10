@@ -9,6 +9,7 @@ dependencies:
   module:
     - comment
     - filter
+    - media
     - node
     - search
     - system
@@ -32,4 +33,5 @@ permissions:
   - 'skip comment approval'
   - 'use advanced search'
   - 'use text format webform_default'
+  - 'view media'
   - 'view own unpublished content'

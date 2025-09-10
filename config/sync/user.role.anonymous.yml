@@ -6,6 +6,7 @@ dependencies:
     - node.type.page
   module:
     - contact
+    - media
     - node
     - system
 _core:
@@ -19,3 +20,4 @@ permissions:
   - 'access site-wide contact form'
   - 'delete own page content'
   - 'edit own page content'
+  - 'view media'
