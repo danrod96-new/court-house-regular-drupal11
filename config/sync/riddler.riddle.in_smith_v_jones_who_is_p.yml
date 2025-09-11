@@ -1,0 +1,8 @@
+uuid: bebe1d04-2a7b-4cc7-b868-e9f6b214e6bc
+langcode: en
+status: true
+dependencies: {  }
+id: in_smith_v_jones_who_is_p
+question: 'In Smith v. Jones; who is π?'
+solution: Smith
+hint: ''

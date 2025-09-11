@@ -5,5 +5,5 @@ dependencies: {  }
 _core:
   default_config_hash: 2iz3cMg7T1eSKXtNIB9WyaRptfg7wosDDPBSBhXFXl0
 formId: user_register_form
-captchaType: captcha/default
+captchaType: riddler/Riddler
 label: user_register_form

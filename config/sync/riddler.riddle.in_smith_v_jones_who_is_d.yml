@@ -1,0 +1,8 @@
+uuid: d12cedda-609b-43f3-8720-a6c7708764b1
+langcode: en
+status: true
+dependencies: {  }
+id: in_smith_v_jones_who_is_d
+question: 'In Smith v. Jones; who is Δ?'
+solution: Jones
+hint: ''

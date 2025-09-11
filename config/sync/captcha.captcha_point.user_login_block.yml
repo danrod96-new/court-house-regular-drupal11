@@ -3,5 +3,5 @@ langcode: en
 status: true
 dependencies: {  }
 formId: user_login_block
-captchaType: captcha/
+captchaType: riddler/Riddler
 label: user_login_block

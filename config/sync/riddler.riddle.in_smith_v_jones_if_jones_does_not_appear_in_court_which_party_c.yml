@@ -1,0 +1,8 @@
+uuid: f93d2c80-8c8f-4d43-a8fd-53e9a33ccc8c
+langcode: en
+status: true
+dependencies: {  }
+id: in_smith_v_jones_if_jones_does_not_appear_in_court_which_party_c
+question: 'In Smith v. Jones, if Jones does not appear in court, which party can ask for a default judgment?'
+solution: Smith
+hint: ''
