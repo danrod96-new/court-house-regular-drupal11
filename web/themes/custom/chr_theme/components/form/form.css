@@ -197,4 +197,37 @@
   margin-bottom: 1em;
 }
 
+fieldset {
+  background: #fff;
+  border: 1px solid #ccc !important;
+  margin-top: 10px !important;
+  margin-bottom: 32px !important;
+  padding: 10px 12px !important;
+  position: relative;
+  top: 12px;
+  border-radius: 4px;
+}
+fieldset legend {
+  background: #dbdbdb;
+  border: 1px solid #ccc !important;
+  border-bottom: none;
+  display: block;
+  height: 2em;
+  left: -1px;
+  line-height: 2;
+  padding: 0 !important;
+  position: absolute;
+  text-indent: 10px;
+  text-shadow: 0 1px 0 #fff;
+  top: -12px;
+  width: 100%;
+  font-size: 12px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  width: 100.3%;
+}
+fieldset .captcha__description {
+  font-style: italic;
+}
+
 /*# sourceMappingURL=form.css.map*/
