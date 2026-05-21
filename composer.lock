@@ -1657,17 +1657,17 @@
         },
         {
             "name": "drupal/backup_migrate",
-            "version": "5.1.0",
+            "version": "5.1.4",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/backup_migrate.git",
-                "reference": "5.1.0"
+                "reference": "5.1.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/backup_migrate-5.1.0.zip",
-                "reference": "5.1.0",
-                "shasum": "bfc523c4d01f2f5dcbb2a612455b8f0a84d651b2"
+                "url": "https://ftp.drupal.org/files/projects/backup_migrate-5.1.4.zip",
+                "reference": "5.1.4",
+                "shasum": "4d2c90e89bb376f07aea23bcfb5d9467ffb7d09c"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
@@ -1678,8 +1678,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.1.0",
-                    "datestamp": "1732034636",
+                    "version": "5.1.4",
+                    "datestamp": "1771081280",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1701,12 +1701,20 @@
                     "homepage": "https://www.drupal.org/user/108450"
                 },
                 {
+                    "name": "danrod",
+                    "homepage": "https://www.drupal.org/user/19150"
+                },
+                {
                     "name": "dgorton",
                     "homepage": "https://www.drupal.org/user/19044"
                 },
                 {
                     "name": "ikit-claw",
                     "homepage": "https://www.drupal.org/user/3285813"
+                },
+                {
+                    "name": "ivnish",
+                    "homepage": "https://www.drupal.org/user/3547706"
                 },
                 {
                     "name": "ronan",
