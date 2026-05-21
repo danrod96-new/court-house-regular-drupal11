@@ -109,6 +109,7 @@
         "drupal/scheduler": "^2.2",
         "drupal/security_review": "^3.1",
         "drupal/shs": "^3.0@beta",
+        "drupal/state_machine": "^1.14",
         "drupal/taxonomy_entity_index": "^1.20",
         "drupal/taxonomy_manager": "^2.0",
         "drupal/token": "^1.17",
