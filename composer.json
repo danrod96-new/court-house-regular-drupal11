@@ -98,7 +98,7 @@
         "drupal/og": "^2.0@alpha",
         "drupal/page_manager": "^4.0@RC",
         "drupal/panels": "^4.9",
-        "drupal/pathauto": "^1.13",
+        "drupal/pathauto": "^1.15",
         "drupal/phone_international": "^4.0",
         "drupal/radix": "^6.0",
         "drupal/riddler": "^3.0",
