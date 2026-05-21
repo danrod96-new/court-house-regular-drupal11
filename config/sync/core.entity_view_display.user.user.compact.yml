@@ -4,7 +4,6 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.user.compact
-    - field.field.user.user.commerce_remote_id
     - field.field.user.user.field_domain_admin
     - field.field.user.user.og_user_node
     - field.field.user.user.user_picture
@@ -41,7 +40,6 @@ content:
     weight: 0
     region: content
 hidden:
-  commerce_remote_id: true
   customer_profiles: true
   field_domain_admin: true
   main_profiles: true
