@@ -88,6 +88,7 @@
         "drupal/forum": "^1.0",
         "drupal/gin": "^5.0",
         "drupal/group": "^3.3",
+        "drupal/jquery_ui": "^1.8",
         "drupal/libraries": "^4.1",
         "drupal/mailsystem": "^4.5",
         "drupal/masquerade": "^2.0",
