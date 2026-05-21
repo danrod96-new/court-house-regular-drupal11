@@ -91,7 +91,7 @@
         "drupal/jquery_ui": "^1.8",
         "drupal/libraries": "^4.1",
         "drupal/mailsystem": "^4.5",
-        "drupal/masquerade": "^2.0",
+        "drupal/masquerade": "^2.2",
         "drupal/message": "^1.8",
         "drupal/message_notify": "^1.5",
         "drupal/migrate_plus": "^6.0",
