@@ -109,6 +109,7 @@
         "drupal/shs": "^3.0@beta",
         "drupal/taxonomy_entity_index": "^1.20",
         "drupal/taxonomy_manager": "^2.0",
+        "drupal/token": "^1.17",
         "drupal/token_custom": "^1.0",
         "drupal/twig_tweak": "^3.4",
         "drupal/upgrade_status": "^4.3",
