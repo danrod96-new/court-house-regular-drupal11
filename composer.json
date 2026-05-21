@@ -83,6 +83,7 @@
         "drupal/domain": "^2.0",
         "drupal/easy_breadcrumb": "^2.0",
         "drupal/eca": "^3.0@RC",
+        "drupal/entity_reference_revisions": "^1.14",
         "drupal/flag": "^5.0",
         "drupal/forum": "^1.0",
         "drupal/gin": "^5.0",
