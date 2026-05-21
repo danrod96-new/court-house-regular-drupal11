@@ -5550,17 +5550,17 @@
         },
         {
             "name": "drupal/taxonomy_manager",
-            "version": "2.0.22",
+            "version": "2.0.23",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/taxonomy_manager.git",
-                "reference": "2.0.22"
+                "reference": "2.0.23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/taxonomy_manager-2.0.22.zip",
-                "reference": "2.0.22",
-                "shasum": "45b69b6ab71d7072092505d315e2b9b7a9ed168e"
+                "url": "https://ftp.drupal.org/files/projects/taxonomy_manager-2.0.23.zip",
+                "reference": "2.0.23",
+                "shasum": "d70fbab2e28347179d138ede1806b449d35b0685"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11.0",
@@ -5576,8 +5576,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.22",
-                    "datestamp": "1751032949",
+                    "version": "2.0.23",
+                    "datestamp": "1768460629",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -5606,7 +5606,7 @@
                     "homepage": "https://www.drupal.org/user/3578037"
                 },
                 {
-                    "name": "JacobSanford",
+                    "name": "jacobsanford",
                     "homepage": "https://www.drupal.org/user/806538"
                 },
                 {
