@@ -96,7 +96,7 @@
         "drupal/message_notify": "^1.5",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.1",
-        "drupal/mimemail": "^2.0@alpha",
+        "drupal/mimemail": "^2.0",
         "drupal/og": "^2.0@alpha",
         "drupal/page_manager": "^4.0@RC",
         "drupal/panels": "^4.9",
