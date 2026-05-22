@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c24dda3b1fe7312d5e9e6d12c5a27300",
+    "content-hash": "ef56820c10e61fe4c732b1550ac795ba",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -4444,34 +4444,34 @@
         },
         {
             "name": "drupal/og",
-            "version": "2.0.0-alpha1",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/og.git",
-                "reference": "2.0.0-alpha1"
+                "reference": "2.0.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/og-2.0.0-alpha1.zip",
-                "reference": "2.0.0-alpha1",
-                "shasum": "8716eaad445b1a909047afe6ff98cc1c1494237f"
+                "url": "https://ftp.drupal.org/files/projects/og-2.0.1.zip",
+                "reference": "2.0.1",
+                "shasum": "f8ac369a7a53ffff505d882dc6799aac4ffe0d52"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11"
             },
             "require-dev": {
                 "drupal/coder": "^8.3.16",
-                "drush/drush": "^12.5 || ^13.3",
-                "phpunit/phpunit": "^7 || ^8 || ^9 || ^10.5"
+                "drupal/quick_node_clone": "^1.20",
+                "drush/drush": "^12.5 || ^13.3"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.0-alpha1",
-                    "datestamp": "1744224067",
+                    "version": "2.0.1",
+                    "datestamp": "1771239994",
                     "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
                     }
                 }
             },
@@ -4525,7 +4525,7 @@
                     "homepage": "https://www.drupal.org/user/382067"
                 },
                 {
-                    "name": "RoySegall",
+                    "name": "roysegall",
                     "homepage": "https://www.drupal.org/user/1812910"
                 },
                 {
@@ -11623,7 +11623,6 @@
     "stability-flags": {
         "drupal/color": 15,
         "drupal/eca": 5,
-        "drupal/og": 15,
         "drupal/page_manager": 5,
         "drupal/shs": 10,
         "drupal/webform": 10
