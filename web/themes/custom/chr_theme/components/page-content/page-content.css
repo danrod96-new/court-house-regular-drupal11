@@ -258,4 +258,40 @@
   margin-top: 1.5em;
 }
 
+.path-forum .action-links {
+  padding-left: 0px;
+}
+.path-forum table th {
+  background: #434343 !important;
+  text-shadow: none;
+  color: #fff;
+  padding: 5px 4px;
+  border-right: 1px solid #c8c7c7;
+}
+.path-forum table th a {
+  color: #fff !important;
+}
+.path-forum table tr.even, .path-forum table tr.odd {
+  background-color: #eee;
+  border-bottom: 1px solid #ccc;
+  padding: 0.1em 0.6em;
+}
+.path-forum table td {
+  background: #ebebeb;
+  color: #747474;
+  text-align: left;
+  padding-left: 10px;
+  border-right: 1px solid #c8c7c7;
+  border-bottom: 1px solid #c8c7c7;
+}
+.path-forum table td a {
+  font-size: 16px;
+}
+
+/* I had to add these classes here, I couldn't override the buttons */
+.btn-primary {
+  color: #fff !important;
+  background-color: #00008B !important;
+}
+
 /*# sourceMappingURL=page-content.css.map*/
