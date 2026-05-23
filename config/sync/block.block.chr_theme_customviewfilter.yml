@@ -1,0 +1,25 @@
+uuid: 14e57526-f3e6-4a6c-aa88-f4e8cbbf61fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - chr_core
+    - system
+  theme:
+    - chr_theme
+id: chr_theme_customviewfilter
+theme: chr_theme
+region: content
+weight: -4
+provider: null
+plugin: custom_views_filter
+settings:
+  id: custom_views_filter
+  label: 'Custom View Filter'
+  label_display: '0'
+  provider: chr_core
+visibility:
+  request_path:
+    id: request_path
+    negate: false
+    pages: '/charter-search/*'

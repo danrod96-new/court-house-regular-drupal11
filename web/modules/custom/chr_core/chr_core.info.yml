@@ -6,3 +6,6 @@ core_version_requirement: ^10 || ^11.2
 configure: chr_core.settings
 dependencies:
   - drupal:webform
+  - drupal:taxonomy
+  - drupal:views
+  - shs:shs
