@@ -98,6 +98,7 @@ permissions:
   - 'edit own story content'
   - 'notify of path changes'
   - 'perform backup'
+  - 'rebuild node access permissions'
   - 'restore from backup'
   - 'run security checks'
   - 'skip CAPTCHA'

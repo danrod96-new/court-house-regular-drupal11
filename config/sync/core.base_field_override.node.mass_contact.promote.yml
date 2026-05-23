@@ -1,0 +1,22 @@
+uuid: 91e3e6bd-334b-4269-a096-138a4696fd7f
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.mass_contact
+id: node.mass_contact.promote
+field_name: promote
+entity_type: node
+bundle: mass_contact
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean
