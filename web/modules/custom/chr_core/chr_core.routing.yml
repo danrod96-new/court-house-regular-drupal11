@@ -8,6 +8,16 @@ chr_core.settings:
   options:  
     _admin_route: TRUE
 
+chr_core.settingsinvite:
+  path: '/admin/config/courthouseregular/config'
+  defaults:
+    _form: '\Drupal\chr_core\Form\ChrConfigFormInvite'
+    _title: 'Court House Regular settings'
+  requirements:
+    _permission: 'access administration pages'  
+  options:  
+    _admin_route: TRUE
+
 chr_core.sync_missing_profile_information:
   path: '/admin/config/courthouseregular/sync-missing-profile-info'
   defaults:
@@ -24,7 +34,7 @@ chr_core.affiliate_center:
     _controller: '\Drupal\chr_core\Controller\ProfilePage::affiliatePage'
     _title: 'Affiliate Center'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
   options:
     parameters:
       user:
@@ -36,7 +46,7 @@ chr_core.bookmarks:
     _controller: '\Drupal\chr_core\Controller\ProfilePage::bookmarksPage'
     _title: 'Bookmarks'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
   options:
     parameters:
       user:
@@ -48,7 +58,7 @@ chr_core.friends:
     _controller: '\Drupal\chr_core\Controller\ProfilePage::friendsPage'
     _title: 'All Colleagues'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
   options:
     parameters:
       user:
@@ -60,7 +70,7 @@ chr_core.invite:
     _controller: '\Drupal\chr_core\Controller\ProfilePage::invitePage'
     _title: 'Invite Appearance Attorneys'
   requirements:
-    _permission: 'access content'
+    _role: 'authenticated'
   options:
     parameters:
       user:

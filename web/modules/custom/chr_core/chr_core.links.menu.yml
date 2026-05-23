@@ -4,3 +4,10 @@ chr_core.admin:
   parent: system.admin_config
   route_name: chr_core.settings
   weight: -10
+
+chr_core.admininvite:
+  title: 'Court House Regular Invite'
+  description: 'Configuration settings for the invite message.'
+  parent: chr_core.admin
+  route_name: chr_core.settingsinvite
+  weight: 1
