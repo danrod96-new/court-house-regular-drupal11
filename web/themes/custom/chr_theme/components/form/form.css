@@ -191,13 +191,18 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
-.form-actions, .form-item {
-  padding-top: 10px;
+.node-page-edit-form .form-actions, .node-page-edit-form .form-item {
   margin-top: 1em;
   margin-bottom: 1em;
+  margin-left: 10px;
 }
-
-fieldset {
+.node-page-edit-form .form-item-status-value {
+  margin-left: 2em;
+}
+.node-page-edit-form #edit-delete {
+  margin-left: 10px;
+}
+.node-page-edit-form fieldset {
   background: #fff;
   border: 1px solid #ccc !important;
   margin-top: 10px !important;
@@ -207,7 +212,7 @@ fieldset {
   top: 12px;
   border-radius: 4px;
 }
-fieldset legend {
+.node-page-edit-form fieldset legend {
   background: #dbdbdb;
   border: 1px solid #ccc !important;
   border-bottom: none;
@@ -226,7 +231,7 @@ fieldset legend {
   border-top-left-radius: 4px;
   width: 100.3%;
 }
-fieldset .captcha__description {
+.node-page-edit-form fieldset .captcha__description {
   font-style: italic;
 }
 
