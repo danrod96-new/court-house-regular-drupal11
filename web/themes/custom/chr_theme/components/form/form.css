@@ -239,4 +239,11 @@
   margin: 1em 0px;
 }
 
+#custom-views-filter-form input[type=submit] {
+  margin: 15px 0px;
+}
+#custom-views-filter-form select {
+  margin-bottom: 10px;
+}
+
 /*# sourceMappingURL=form.css.map*/
