@@ -11,56 +11,58 @@ permissions:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate --strict
+      - name: Validate composer.json and composer.lock
+        run: composer validate --strict
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v3
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress
+
   deploy:
     name: Deploy to A2 Hosting
     runs-on: ubuntu-latest
+    needs: build  # ← waits for build to pass first
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # ← skip on PRs
 
     steps:
       - name: Checkout the files
         uses: actions/checkout@v4
 
-      - name: Deploy to Test Server
-        uses: easingthemes/ssh-deploy@main
+      - name: Deploy files to server
+        uses: easingthemes/ssh-deploy@v5.1.0  # ← pinned version, not @main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.TARGET_DIR }}
-      
-      - name: Build Drupal App
+          EXCLUDES: >-  # ← protect Drupal runtime files from being overwritten
+            /sites/default/files/,
+            /sites/default/settings.php,
+            /sites/default/services.yml,
+            /.env,
+            /vendor/
+
+      - name: Run post-deploy Drupal commands
         uses: appleboy/ssh-action@v0.1.6
         with:
-          host: ${{ secrets.HOST_DNS }}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.EC2_SSH_KEY }}
-          port: ${{ secrets.PORT }}
+          host: ${{ secrets.REMOTE_HOST }}      # ← unified secret name
+          username: ${{ secrets.REMOTE_USER }}  # ← unified secret name
+          key: ${{ secrets.SSH_PRIVATE_KEY }}   # ← unified secret name
           script: |
             cd ${{ secrets.TARGET_DIR }}
-            drush cr
-            echo "** Finished D11 Building **"
-
-    # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
-    # Docs: https://getcomposer.org/doc/articles/scripts.md
-
-    # - name: Run test suite
-    #   run: composer run-script test
+            composer install --no-dev --optimize-autoloader
+            drush cr  # runs updatedb, config:import, cache:rebuild in one
+            echo "** Finished D11 Deployment **"
