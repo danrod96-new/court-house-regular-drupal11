@@ -48,12 +48,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
           TARGET: ${{ secrets.TARGET_DIR }}
-          EXCLUDES: >-  # ← protect Drupal runtime files from being overwritten
-            /sites/default/files/,
-            /sites/default/settings.php,
-            /sites/default/services.yml,
-            /.env,
-            /vendor/
+          EXCLUDE: "/sites/default/files/, /sites/default/settings.php, /sites/default/services.yml, /.env, /vendor/"
 
       - name: Run post-deploy Drupal commands
         uses: appleboy/ssh-action@v0.1.6
