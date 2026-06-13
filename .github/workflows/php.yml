@@ -43,7 +43,7 @@ jobs:
 
       - name: Deploy files to server
         uses: easingthemes/ssh-deploy@v5.1.0  # ← pinned version, not @main
-        env:
+        with:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
