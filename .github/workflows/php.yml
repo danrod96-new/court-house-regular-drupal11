@@ -38,13 +38,6 @@ jobs:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'  # ← skip on PRs
 
     steps:
-      - name: Debug secrets
-        run: |
-          echo "SSH_PRIVATE_KEY is set: ${{ secrets.SSH_PRIVATE_KEY != '' }}"
-          echo "REMOTE_HOST is set: ${{ secrets.REMOTE_HOST != '' }}"
-          echo "REMOTE_USER is set: ${{ secrets.REMOTE_USER != '' }}"
-          echo "TARGET_DIR is set: ${{ secrets.TARGET_DIR != '' }}"
-
       - name: Checkout the files
         uses: actions/checkout@v4
 
