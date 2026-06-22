@@ -9,6 +9,7 @@ dependencies:
     - field.field.node.virtual_law_firm.group_group
     - node.type.virtual_law_firm
   module:
+    - og
     - text
     - user
 id: node.virtual_law_firm.teaser
@@ -29,6 +30,14 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   comment_node_virtual_law_firm: true
   group_group: true
+  langcode: true

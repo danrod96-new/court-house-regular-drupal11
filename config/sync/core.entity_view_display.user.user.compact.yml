@@ -42,6 +42,7 @@ content:
 hidden:
   customer_profiles: true
   field_domain_admin: true
+  langcode: true
   main_profiles: true
   member_for: true
   og_user_node: true

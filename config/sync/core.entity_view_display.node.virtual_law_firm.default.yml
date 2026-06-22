@@ -48,3 +48,4 @@ content:
     region: content
 hidden:
   group_group: true
+  langcode: true

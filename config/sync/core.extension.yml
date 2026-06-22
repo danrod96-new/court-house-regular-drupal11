@@ -24,6 +24,8 @@ module:
   datetime: 0
   dblog: 0
   domain: 0
+  domain_config: 0
+  domain_config_ui: 0
   dynamic_page_cache: 0
   easy_breadcrumb: 0
   editor: 0
@@ -44,6 +46,7 @@ module:
   image_captcha: 0
   inline_entity_form: 0
   jquery_ui: 0
+  language: 0
   libraries: 0
   link: 0
   mailsystem: 0

@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.page.group_group
     - node.type.page
   module:
+    - og
     - text
     - user
 _core:
@@ -35,7 +36,15 @@ content:
   links:
     weight: 101
     region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   comment_node_page: true
   field_link: true
   group_group: true
+  langcode: true

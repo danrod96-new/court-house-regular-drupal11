@@ -31,4 +31,5 @@ content:
     region: content
 hidden:
   comment_node_post: true
+  langcode: true
   og_group_ref: true

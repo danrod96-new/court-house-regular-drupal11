@@ -57,3 +57,4 @@ content:
     region: content
 hidden:
   comment_node_profile: true
+  langcode: true

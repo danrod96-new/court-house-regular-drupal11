@@ -26,4 +26,5 @@ content:
     weight: 100
     region: content
 hidden:
+  langcode: true
   og_group_ref: true

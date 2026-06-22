@@ -10,6 +10,7 @@ dependencies:
     - field.field.node.group.og_group_ref
     - node.type.group
   module:
+    - og
     - text
     - user
 id: node.group.teaser
@@ -30,7 +31,15 @@ content:
     third_party_settings: {  }
     weight: 100
     region: content
+  og_group:
+    type: og_group_subscribe
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
 hidden:
   comment_node_group: true
   group_group: true
+  langcode: true
   og_group_ref: true

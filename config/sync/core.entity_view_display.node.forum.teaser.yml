@@ -39,3 +39,4 @@ content:
     region: content
 hidden:
   comment_forum: true
+  langcode: true

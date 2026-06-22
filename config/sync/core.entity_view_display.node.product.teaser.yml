@@ -31,4 +31,5 @@ content:
     region: content
 hidden:
   comment_node_product: true
+  langcode: true
   uc_product_image: true

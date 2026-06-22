@@ -52,6 +52,7 @@ content:
     third_party_settings: {  }
 hidden:
   customer_profiles: true
+  langcode: true
   main_profiles: true
   og_user_node: true
   place_assignments_only_profiles: true
