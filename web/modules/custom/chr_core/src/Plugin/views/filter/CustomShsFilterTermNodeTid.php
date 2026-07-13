@@ -1,234 +1,156 @@
 <?php
 
-namespace Drupal\chr_core\Plugin\views\filter;
+namespace Drupal\chr_core\Form;
 
+use Drupal\Core\Form\FormBase;
 use Drupal\Core\Form\FormStateInterface;
-use Drupal\Core\Language\LanguageManagerInterface;
-use Drupal\taxonomy\Plugin\views\filter\TaxonomyIndexTid;
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Url;
 use Drupal\taxonomy\TermStorageInterface;
 use Drupal\taxonomy\VocabularyStorageInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
- * Extends the core taxonomy filter with a Simple Hierarchical Select widget.
+ * Provides the custom Views filter form rendered in a block.
  *
- * @ingroup views_filter_handlers
+ * Renders four cascading select lists (Jurisdiction / Courthouse / Court /
+ * Division) instead of one mixed-level dropdown. Submitting redirects to
+ * /<base>/<tid> using whichever level is deepest, same as before.
  *
- * @ViewsFilter("chr_core_filter_term_node_tid")
+ * D7 equivalent: custom_views_filter_form() + custom_views_filter_form_submit()
  */
-class CustomShsFilterTermNodeTid extends TaxonomyIndexTid {
+class CustomViewsFilterForm extends FormBase {
+
+  // Vocabulary machine name replaces the hard-coded vid=4 from D7.
+  const VOCABULARY_ID = 'vocabulary_4';
 
   /**
-   * The language manager.
-   *
-   * @var \Drupal\Core\Language\LanguageManagerInterface
+   * Ordered hierarchy levels, keyed by depth (0 = top of the vocabulary).
    */
-  protected $languageManager;
+  protected const LEVELS = [
+    0 => ['key' => 'jurisdiction', 'label' => 'Jurisdiction'],
+    1 => ['key' => 'courthouse', 'label' => 'Courthouse'],
+    2 => ['key' => 'court', 'label' => 'Court'],
+    3 => ['key' => 'division', 'label' => 'Division'],
+  ];
 
-  /**
-   * The term storage.
-   *
-   * @var \Drupal\taxonomy\TermStorageInterface
-   */
-  protected $termStorage;
-
-  /**
-   * The vocabulary storage.
-   *
-   * @var \Drupal\taxonomy\VocabularyStorageInterface
-   */
-  protected $vocabularyStorage;
-
-  /**
-   * Constructs the filter handler.
-   */
   public function __construct(
-    array $configuration,
-    string $plugin_id,
-    mixed $plugin_definition,
-    LanguageManagerInterface $language_manager,
-    TermStorageInterface $term_storage,
-    VocabularyStorageInterface $vocabulary_storage,
-  ) {
-    parent::__construct($configuration, $plugin_id, $plugin_definition);
-    $this->languageManager = $language_manager;
-    $this->termStorage = $term_storage;
-    $this->vocabularyStorage = $vocabulary_storage;
-  }
+    protected VocabularyStorageInterface $vocabularyStorage,
+    protected TermStorageInterface $termStorage,
+    protected RouteMatchInterface $currentRouteMatch,
+  ) {}
 
-  /**
-   * {@inheritdoc}
-   */
-  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition): static {
+  public static function create(ContainerInterface $container): static {
+    $entityTypeManager = $container->get('entity_type.manager');
     return new static(
-      $configuration,
-      $plugin_id,
-      $plugin_definition,
-      $container->get('language_manager'),
-      $container->get('entity_type.manager')->getStorage('taxonomy_term'),
-      $container->get('entity_type.manager')->getStorage('taxonomy_vocabulary'),
+      $entityTypeManager->getStorage('taxonomy_vocabulary'),
+      $entityTypeManager->getStorage('taxonomy_term'),
+      $container->get('current_route_match'),
     );
   }
 
   /**
    * {@inheritdoc}
    */
-  protected function defineOptions(): array {
-    $options = parent::defineOptions();
-    $options['type']['default'] = 'chr_shs';
-    return $options;
+  public function getFormId(): string {
+    return 'custom_views_filter_form';
   }
 
   /**
    * {@inheritdoc}
    */
-  public function extraOptionsForm(&$form, FormStateInterface $form_state): void {
-    parent::extraOptionsForm($form, $form_state);
+  public function buildForm(array $form, FormStateInterface $form_state): array {
+    $vocabulary = $this->vocabularyStorage->load(self::VOCABULARY_ID);
+    $vid = $vocabulary->id();
+    $wrapper_id = 'chr-cascade-block-filter-wrapper';
 
-    $form['type']['#options'] += [
-      'chr_shs' => $this->t('CHR Simple hierarchical select'),
+    $selected = $this->getSelectedLevelValues($form_state);
+
+    $form['mc'] = [
+      '#type' => 'container',
+      '#attributes' => [
+        'id' => $wrapper_id,
+        'class' => ['field-widget-taxonomy-shs', 'chr-cascading-select-filter'],
+      ],
+      '#tree' => TRUE,
     ];
+
+    $form['mc']['help'] = [
+      '#markup' => '<div class="description">' . $this->t('Choose jurisdiction, plus courthouse, court and division if listed.') . '</div>',
+    ];
+
+    // Walk the hierarchy top-down. Each level's options are the children of
+    // whatever was selected at the level above; once a level has no
+    // selection (or no children), every level beneath it renders disabled
+    // with a placeholder, since there's nothing valid to choose yet.
+    $parent_tid = 0;
+    foreach (self::LEVELS as $level) {
+      $key = $level['key'];
+      $options = $parent_tid !== NULL ? $this->loadLevelOptions($vid, $parent_tid) : [];
+      $current_value = $selected[$key] ?? '';
+
+      // A stale selection whose parent no longer has it as a child (e.g. the
+      // taxonomy changed) shouldn't be kept.
+      if ($current_value !== '' && !isset($options[$current_value])) {
+        $current_value = '';
+      }
+
+      $form['mc'][$key] = [
+        '#type' => 'select',
+        '#title' => $this->t('@label', ['@label' => $level['label']]),
+        '#options' => $options
+          ? ['' => $this->t('- Any -')] + $options
+          : ['' => $this->t('- N/A -')],
+        '#default_value' => $current_value,
+        '#disabled' => empty($options),
+        '#attributes' => ['class' => ['chr-cascade-level', 'chr-cascade-level--' . $key]],
+        '#ajax' => [
+          'callback' => [$this, 'ajaxCascadeCallback'],
+          'wrapper' => $wrapper_id,
+          'event' => 'change',
+        ],
+      ];
+
+      $parent_tid = $current_value !== '' ? (int) $current_value : NULL;
+    }
+
+    $form['submit'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Apply'),
+    ];
+
+    return $form;
+  }
+
+  /**
+   * AJAX callback: re-renders the four selects after any level changes.
+   */
+  public function ajaxCascadeCallback(array $form, FormStateInterface $form_state): array {
+    return $form['mc'];
   }
 
   /**
    * {@inheritdoc}
+   *
+   * D7 equivalent: custom_views_filter_form_submit()
+   * Redirects to /<base-path>/<selected-tid>, using whichever of the four
+   * levels is deepest, instead of using drupal_goto().
    */
-  public function valueForm(&$form, FormStateInterface $form_state): void {
-    $vocabulary = $this->vocabularyStorage->load($this->options['vocabulary']);
+  public function submitForm(array &$form, FormStateInterface $form_state): void {
+    $values = $form_state->getValue('mc') ?? [];
+    $tid = 0;
 
-    if (empty($vocabulary) && $this->options['limit']) {
-      $form['markup'] = [
-        '#markup' => '<div class="form-item">' . $this->t('An invalid vocabulary is selected. Please change it in the options.') . '</div>',
-      ];
-      return;
-    }
-
-    // Fall back to standard widget when not using SHS or not exposed.
-    if ($this->options['type'] !== 'chr_shs' || empty($this->options['exposed'])) {
-      parent::valueForm($form, $form_state);
-      return;
-    }
-
-    $multiple = $this->options['expose']['multiple'] ?? FALSE;
-    $identifier = $this->options['expose']['identifier'];
-    $language = $this->languageManager->getCurrentLanguage();
-
-    // Resolve the default/current value.
-    $default_value = !empty($this->value) ? $this->value : 0;
-    $input = $form_state->getUserInput();
-
-    if (!empty($input[$identifier])) {
-      $default_value = $input[$identifier];
-      if ($multiple && !is_array($default_value)) {
-        $default_value = [$default_value];
+    foreach (array_reverse(self::LEVELS) as $level) {
+      $key = $level['key'];
+      if (!empty($values[$key])) {
+        $tid = $values[$key];
+        break;
       }
     }
 
-    // Build the parent-chain that SHS needs to pre-select dropdowns.
-    $parents = $this->buildShsParents($default_value, $multiple, $identifier, $form_state);
+    $base = $this->currentRouteMatch->getRawParameter('base') ?? 'charter-search';
 
-    // Always append a blank slot for the next (unselected) level.
-    $parents[] = ['tid' => 0];
-
-    $element_settings = [
-      'create_new_terms'  => FALSE,
-      'create_new_levels' => FALSE,
-      'required'          => !empty($this->options['exposed']) && !empty($this->options['expose']['required']),
-      'language'          => $language,
-    ];
-
-    // Build JS settings for the SHS library.
-    // A unique hash prevents attachments from merging multiple instances of
-    // this filter on the same page.
-    $js_hash = _shs_create_hash();
-    $field_key = $identifier . ($multiple ? '[]' : '');
-
-    $settings_js = [
-      'shs' => [
-        $field_key => [
-          $js_hash => [
-            'vid'           => $vocabulary->id(),
-            'settings'      => $element_settings,
-            'default_value' => $default_value,
-            'parents'       => $parents,
-            'multiple'      => $multiple,
-            'any_label'     => $this->t('- Any -'),
-            'any_value'     => 'All',
-          ],
-        ],
-      ],
-    ];
-
-    // Allow other modules to alter the SHS JS settings.
-    \Drupal::moduleHandler()->alter(
-      ['shs_js_settings', "shs_{$identifier}_js_settings"],
-      $settings_js,
-      $identifier,
-      $vocabulary->id()
-    );
-
-    // Attach the SHS library and pass settings via drupalSettings.
-    $form['#attached']['library'][] = 'shs/shs';
-    $form['#attached']['drupalSettings'] = array_merge_recursive(
-      $form['#attached']['drupalSettings'] ?? [],
-      $settings_js
-    );
-
-    // Wrapper container that the SHS JS targets.
-    $form['mc'] = [
-      '#type'       => 'container',
-      '#attributes' => ['class' => ['field-widget-taxonomy-shs']],
-      '#tree'       => TRUE,
-    ];
-
-    $form['mc']['value'] = [
-      '#type'             => 'select',
-      '#title'            => $this->t('Choose Jurisdiction and Court'),
-      '#options'          => ['1' => $this->t('One')],
-      '#attributes'       => ['class' => ['element-invisible', 'shs-enabled']],
-      //'#element_validate' => ['shs_field_widget_validate'],
-      //'#after_build'      => ['shs_field_widget_afterbuild'],
-      '#shs_settings'     => [
-        'create_new_levels' => 0,
-        'create_new_terms'  => 0,
-        'force_deepest'     => 0,
-        'node_count'        => 0,
-        'required'          => TRUE,
-      ],
-      '#language'         => NULL,
-      '#field_name'       => 'value',
-      '#field_parents'    => NULL,
-      '#shs_vocabularies' => [$vocabulary],
-      '#suffix'           => $this->t('Choose the appropriate court system, geographical location, plus courthouse and court, if listed'),
-    ];
-
-    // Hidden fallback so Views always has something to work with.
-    $form['value'] = ['#type' => 'value', '#value' => 0];
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function adminSummary(): string {
-    $this->value_options = [];
-
-    if ($this->value === 'All') {
-      $this->value = NULL;
-    }
-
-    return parent::adminSummary();
-  }
-
-  /**
-   * {@inheritdoc}
-   *
-   * Bridges the SHS widget's non-standard input key back to the field name
-   * that the parent validator expects.
-   */
-  public function validateExposed(&$form, FormStateInterface $form_state): void {
-    $mc_value = $form_state->getValue(['mc', 'value']);
-    $form_state->setValue('chr_core_term_node_tid', $mc_value);
-    parent::validateExposed($form, $form_state);
+    $form_state->setRedirectUrl(Url::fromUserInput("/{$base}/{$tid}"));
   }
 
   // ---------------------------------------------------------------------------
@@ -236,64 +158,77 @@ class CustomShsFilterTermNodeTid extends TaxonomyIndexTid {
   // ---------------------------------------------------------------------------
 
   /**
-   * Builds the SHS parent-chain array from the current default value.
+   * Loads the immediate child terms of $parent_tid as select options.
    *
-   * SHS needs every ancestor tid so it can pre-select each level's dropdown
-   * on page load.
-   *
-   * @param mixed $default_value
-   *   The currently selected tid(s), or 0 / 'All' when nothing is selected.
-   * @param bool $multiple
-   *   Whether this is a multi-value filter.
-   * @param string $identifier
-   *   The exposed filter identifier (used to rewrite combined values back into
-   *   the form input).
-   * @param \Drupal\Core\Form\FormStateInterface $form_state
-   *   The form state (may be mutated when splitting comma/plus-separated tids).
+   * @param string $vid
+   *   The vocabulary machine name.
+   * @param int $parent_tid
+   *   The parent term id (0 for top-level terms).
    *
    * @return array
-   *   Array of ['tid' => …] entries from root to the selected term, without
-   *   the trailing zero-slot (the caller appends that).
+   *   An array of term name keyed by tid.
    */
-  protected function buildShsParents(mixed &$default_value, bool $multiple, string $identifier, FormStateInterface $form_state): array {
-    $parents = [];
-
-    if (empty($default_value) || $default_value === 'All') {
-      return $parents;
+  protected function loadLevelOptions(string $vid, int $parent_tid): array {
+    $options = [];
+    foreach ($this->termStorage->loadTree($vid, $parent_tid, 1, FALSE) as $term) {
+      $options[$term->tid] = $term->name;
     }
+    return $options;
+  }
 
-    // Multiple selection: values may arrive comma- or plus-separated from the
-    // URL; split and normalise them first.
-    if (is_array($default_value) && $default_value[0] !== 'All') {
-      $needs_split = array_filter($default_value, static fn($v) => strpbrk((string) $v, ',+') !== FALSE);
+  /**
+   * Determines the currently selected tid for each of the four levels.
+   *
+   * On an AJAX request this comes from the raw submitted input. On a fresh
+   * page load it's derived from the {tid} route parameter (mirrors the
+   * original D7 arg(1) behaviour) by walking that term's ancestor chain.
+   *
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   *
+   * @return array
+   *   Level key => tid, only for levels that have a selection. The chain
+   *   always starts at 'jurisdiction'; it stops at the first unselected
+   *   level.
+   */
+  protected function getSelectedLevelValues(FormStateInterface $form_state): array {
+    $input = $form_state->getUserInput();
+    $submitted = $input['mc'] ?? NULL;
 
-      if (!empty($needs_split)) {
-        $flat = [];
-        foreach ($default_value as $v) {
-          array_push($flat, ...preg_split('/[,+]+/', (string) $v, -1, PREG_SPLIT_NO_EMPTY));
+    if (is_array($submitted)) {
+      $selected = [];
+      foreach (self::LEVELS as $level) {
+        $key = $level['key'];
+        if (empty($submitted[$key])) {
+          break;
         }
-        $default_value = empty($flat) ? 'All' : $flat;
-        $form_state->setValueForElement(['#parents' => [$identifier]], $default_value);
+        $selected[$key] = $submitted[$key];
       }
-
-      $parents[] = ['tid' => array_values((array) $default_value)];
-      return $parents;
+      return $selected;
     }
 
-    // Single selection: walk the term's ancestor chain so SHS can open each
-    // parent dropdown in sequence.
-    if (is_string($default_value) || is_numeric($default_value)) {
-      $term_parents = $this->termStorage->loadAllParents((int) $default_value);
-      // loadAllParents() returns the term itself first; remove it.
-      array_shift($term_parents);
-
-      foreach (array_reverse($term_parents) as $term) {
-        $parents[] = ['tid' => $term->id()];
-      }
-      $parents[] = ['tid' => $default_value];
+    // Fresh load: derive the chain from the {tid} route parameter, root
+    // first.
+    $tid = $this->currentRouteMatch->getRawParameter('tid');
+    if (empty($tid) || $tid === 'all' || !is_numeric($tid)) {
+      return [];
     }
 
-    return $parents;
+    // loadAllParents() returns the term itself first, then ancestors up to
+    // the root; reverse it so index 0 is the root (jurisdiction).
+    $chain = array_reverse($this->termStorage->loadAllParents((int) $tid));
+
+    $selected = [];
+    $depth = 0;
+    foreach ($chain as $term) {
+      if (!isset(self::LEVELS[$depth])) {
+        break;
+      }
+      $selected[self::LEVELS[$depth]['key']] = $term->id();
+      $depth++;
+    }
+
+    return $selected;
   }
 
 }

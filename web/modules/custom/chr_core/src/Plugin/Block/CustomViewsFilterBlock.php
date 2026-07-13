@@ -41,7 +41,20 @@ class CustomViewsFilterBlock extends BlockBase implements ContainerFactoryPlugin
    * {@inheritdoc}
    */
   public function build(): array {
-    return $this->formBuilder->getForm(CustomViewsFilterForm::class);
+    $form = $this->formBuilder->getForm(CustomViewsFilterForm::class);
+    // Forms are inherently uncacheable (form_build_id must always be fresh),
+    // but make it explicit at the block level too so a cached block render
+    // never serves a stale form_build_id that no longer matches any cached
+    // form state -- that produces silent AJAX failures.
+    $form['#cache']['max-age'] = 0;
+    return $form;
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getCacheMaxAge(): int {
+    return 0;
   }
 
 }
