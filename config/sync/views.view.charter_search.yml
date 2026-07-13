@@ -249,7 +249,7 @@ display:
             receive_and_place_assignments_subscriber_regular_: receive_and_place_assignments_subscriber_regular_
             administrator: administrator
       cache:
-        type: none
+        type: tag
         options: {  }
       empty:
         area_text_custom:
@@ -337,7 +337,7 @@ display:
         options:
           query_comment: ''
           disable_sql_rewrite: false
-          distinct: false
+          distinct: true
           replica: false
           query_tags: {  }
       relationships:
@@ -353,7 +353,7 @@ display:
           plugin_id: standard
           required: false
       use_ajax: true
-      group_by: true
+      group_by: false
       header: {  }
       footer:
         area_text_custom:
