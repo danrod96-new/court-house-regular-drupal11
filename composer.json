@@ -118,7 +118,7 @@
         "drupal/twig_tweak": "^3.4",
         "drupal/upgrade_status": "^4.3",
         "drupal/views_bulk_operations": "^4.4",
-        "drupal/webform": "^6.3@beta",
+        "drupal/webform": "^6.3",
         "drush/drush": "^13.6",
         "npm-asset/intl-tel-input": "^25.3"
     },
