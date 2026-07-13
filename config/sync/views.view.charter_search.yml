@@ -249,7 +249,7 @@ display:
             receive_and_place_assignments_subscriber_regular_: receive_and_place_assignments_subscriber_regular_
             administrator: administrator
       cache:
-        type: tag
+        type: none
         options: {  }
       empty:
         area_text_custom:
@@ -353,6 +353,7 @@ display:
           plugin_id: standard
           required: false
       use_ajax: true
+      group_by: true
       header: {  }
       footer:
         area_text_custom:
