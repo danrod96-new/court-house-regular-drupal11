@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "968033d0265435e2a948ae1e666c5020",
+    "content-hash": "4152fe669349b1426e41edc7cd94e34a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3421,27 +3421,27 @@
         },
         {
             "name": "drupal/forum",
-            "version": "1.0.6",
+            "version": "1.1.3",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/forum.git",
-                "reference": "1.0.6"
+                "reference": "1.1.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/forum-1.0.6.zip",
-                "reference": "1.0.6",
-                "shasum": "2a90c003d0966b9833c4ab0370008f3d0c5cf6fd"
+                "url": "https://ftp.drupal.org/files/projects/forum-1.1.3.zip",
+                "reference": "1.1.3",
+                "shasum": "0f43e4d3e4136228df478ce07bff7bba6e52cfff"
             },
             "require": {
-                "drupal/core": "^10 || ^11",
-                "drupal/history": "*"
+                "drupal/core": "~11.3 || ~12",
+                "drupal/history": "~1"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "1.0.6",
-                    "datestamp": "1773954131",
+                    "version": "1.1.3",
+                    "datestamp": "1783561797",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3469,7 +3469,8 @@
             "description": "Provides discussion forums.",
             "homepage": "https://www.drupal.org/project/forum",
             "support": {
-                "source": "https://git.drupalcode.org/project/forum"
+                "source": "https://git.drupalcode.org/project/forum",
+                "issues": "http://drupal.org/project/issues/forum"
             }
         },
         {

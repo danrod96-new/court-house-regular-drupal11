@@ -86,7 +86,7 @@
         "drupal/eca": "^3.0@RC",
         "drupal/entity_reference_revisions": "^1.14",
         "drupal/flag": "^5.0",
-        "drupal/forum": "^1.0",
+        "drupal/forum": "^1.1",
         "drupal/gin": "^5.0",
         "drupal/group": "^3.3",
         "drupal/jquery_ui": "^1.8",
