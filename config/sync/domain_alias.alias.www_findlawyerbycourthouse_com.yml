@@ -1,0 +1,12 @@
+uuid: ae33a304-4f40-4b87-814d-f6e9f5c5bf36
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.findlawyerbycourthouse_com
+id: www_findlawyerbycourthouse_com
+domain_id: findlawyerbycourthouse_com
+pattern: www.findlawyerbycourthouse.com
+redirect: 301
+environment: default
+weight: 0

@@ -1,0 +1,12 @@
+uuid: a450b285-97b9-4470-91bd-7c0190c3bb4f
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.www_courthouseregular_com
+id: chr_ddev_local
+domain_id: www_courthouseregular_com
+pattern: court-house-regular-drupal11.ddev.site
+redirect: 0
+environment: local
+weight: 0

@@ -1,0 +1,12 @@
+uuid: e40b7ca7-086a-4c63-856c-96ddf9075a1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.www_courthouseregular_com
+id: courthouseregular_com
+domain_id: www_courthouseregular_com
+pattern: courthouseregular.com
+redirect: 301
+environment: default
+weight: 0

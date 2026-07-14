@@ -1,0 +1,12 @@
+uuid: 32ae88f6-520a-469d-91a4-d48f8d756944
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.findlawyerbycourthouse_com
+id: flbc_ddev_local
+domain_id: findlawyerbycourthouse_com
+pattern: findlawyer.court-house-regular-drupal11.ddev.site
+redirect: 0
+environment: local
+weight: 0
