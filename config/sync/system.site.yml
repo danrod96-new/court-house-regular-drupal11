@@ -6,7 +6,7 @@ name: 'Court House Regular'
 mail: webmaster@courthouseregular.com
 slogan: 'Appearances Are Everything In This Business! ℠'
 page:
-  403: /toboggan/denied
+  403: ''
   404: ''
   front: /node
 admin_compact_mode: false
