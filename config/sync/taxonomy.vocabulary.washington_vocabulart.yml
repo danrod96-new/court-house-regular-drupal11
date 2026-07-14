@@ -2,7 +2,7 @@ uuid: 72b8e853-0585-4f42-9e7d-dd13fe584e13
 langcode: en
 status: true
 dependencies: {  }
-name: 'Washington Vocabulart'
+name: 'Washington Vocabulary'
 vid: washington_vocabulart
 description: null
 weight: 0

@@ -1,0 +1,11 @@
+uuid: 2b58d7ea-16cf-4395-a445-dcb7483d501b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.washington_vocabulart
+id: taxonomy_term.washington_vocabulart
+target_entity_type_id: taxonomy_term
+target_bundle: washington_vocabulart
+default_langcode: site_default
+language_alterable: false
