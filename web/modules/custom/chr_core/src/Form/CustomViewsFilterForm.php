@@ -34,6 +34,18 @@ class CustomViewsFilterForm extends FormBase {
     3 => ['key' => 'division', 'label' => 'Division'],
   ];
 
+  /**
+   * The only terms allowed to appear in the Jurisdiction select, in the
+   * exact order they should be listed. Any other top-level term in the
+   * vocabulary is excluded from this level entirely.
+   */
+  protected const JURISDICTION_OPTIONS = [
+    'State Courts',
+    'Federal Courts',
+    'District of Columbia Courts',
+    'Territorial Courts',
+  ];
+
   public function __construct(
     protected VocabularyStorageInterface $vocabularyStorage,
     protected TermStorageInterface $termStorage,
@@ -87,6 +99,9 @@ class CustomViewsFilterForm extends FormBase {
     foreach (self::LEVELS as $level) {
       $key = $level['key'];
       $options = $parent_tid !== NULL ? $this->loadLevelOptions($vid, $parent_tid) : [];
+      if ($key === 'jurisdiction') {
+        $options = $this->restrictJurisdictionOptions($options);
+      }
       $current_value = $selected[$key] ?? '';
 
       // A stale selection whose parent no longer has it as a child (e.g. the
@@ -156,6 +171,28 @@ class CustomViewsFilterForm extends FormBase {
   // ---------------------------------------------------------------------------
   // Helpers
   // ---------------------------------------------------------------------------
+
+  /**
+   * Filters and reorders top-level terms to just the allowed jurisdictions.
+   *
+   * @param array $options
+   *   Tid => name pairs, as returned by loadLevelOptions().
+   *
+   * @return array
+   *   The subset of $options whose name appears in
+   *   self::JURISDICTION_OPTIONS, reordered to match that list's order
+   *   (rather than whatever order/weight the taxonomy itself has).
+   */
+  protected function restrictJurisdictionOptions(array $options): array {
+    $tids_by_name = array_flip($options);
+    $ordered = [];
+    foreach (self::JURISDICTION_OPTIONS as $name) {
+      if (isset($tids_by_name[$name])) {
+        $ordered[$tids_by_name[$name]] = $name;
+      }
+    }
+    return $ordered;
+  }
 
   /**
    * Loads the immediate child terms of $parent_tid as select options.
