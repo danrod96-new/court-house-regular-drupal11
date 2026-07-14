@@ -1,0 +1,15 @@
+uuid: afe96a3c-fea9-4c97-a56b-54478b03e230
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.court_house_regular_drupal11_ddev_site
+  module:
+    - domain_access
+id: domain_access_add_action_court_house_regular_drupal11_ddev_site
+label: 'Add selected content to the Court House Regular domain'
+type: node
+plugin: domain_access_add_action
+configuration:
+  domain_id:
+    - court_house_regular_drupal11_ddev_site

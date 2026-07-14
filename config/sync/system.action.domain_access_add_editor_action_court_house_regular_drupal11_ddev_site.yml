@@ -1,0 +1,15 @@
+uuid: 3a038544-b021-4aa6-8c61-6cb5ebb3be23
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.court_house_regular_drupal11_ddev_site
+  module:
+    - domain_access
+id: domain_access_add_editor_action_court_house_regular_drupal11_ddev_site
+label: 'Add editors to the Court House Regular domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id:
+    - court_house_regular_drupal11_ddev_site

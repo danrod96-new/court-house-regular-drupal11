@@ -5,6 +5,8 @@ dependencies:
   config:
     - core.entity_view_display.comment.comment_node_panel.default
     - field.field.node.panel.comment_node_panel
+    - field.field.node.panel.field_domain_access
+    - field.field.node.panel.field_domain_all_affiliates
     - node.type.panel
   module:
     - comment
@@ -29,4 +31,6 @@ content:
     weight: 100
     region: content
 hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
   langcode: true

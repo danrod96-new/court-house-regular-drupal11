@@ -1,0 +1,21 @@
+uuid: 168a54e5-9a5a-478f-a44d-6198254df2e3
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domain_all_affiliates
+    - node.type.uc_recurring_subscription
+id: node.uc_recurring_subscription.field_domain_all_affiliates
+field_name: field_domain_all_affiliates
+entity_type: node
+bundle: uc_recurring_subscription
+label: 'Send to all affiliates'
+description: 'Make this content available on all domains.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

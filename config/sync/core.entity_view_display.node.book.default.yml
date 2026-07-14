@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_display.comment.comment_node_book.default
     - field.field.node.book.body
     - field.field.node.book.comment_node_book
+    - field.field.node.book.field_domain_access
+    - field.field.node.book.field_domain_all_affiliates
     - node.type.book
   module:
     - comment
@@ -38,4 +40,6 @@ content:
     weight: 100
     region: content
 hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
   langcode: true

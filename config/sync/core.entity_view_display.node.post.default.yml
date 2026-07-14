@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_display.comment.comment_node_post.default
     - field.field.node.post.body
     - field.field.node.post.comment_node_post
+    - field.field.node.post.field_domain_access
+    - field.field.node.post.field_domain_all_affiliates
     - field.field.node.post.og_group_ref
     - node.type.post
   module:
@@ -39,5 +41,7 @@ content:
     weight: 100
     region: content
 hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
   langcode: true
   og_group_ref: true

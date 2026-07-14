@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_display.comment.comment_forum.default
     - field.field.node.forum.body
     - field.field.node.forum.comment_forum
+    - field.field.node.forum.field_domain_access
+    - field.field.node.forum.field_domain_all_affiliates
     - field.field.node.forum.taxonomy_forums
     - node.type.forum
   module:
@@ -47,4 +49,6 @@ content:
     weight: 10
     region: content
 hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
   langcode: true

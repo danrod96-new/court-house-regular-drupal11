@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.book.body
     - field.field.node.book.comment_node_book
+    - field.field.node.book.field_domain_access
+    - field.field.node.book.field_domain_all_affiliates
     - node.type.book
   module:
     - text
@@ -30,4 +32,6 @@ content:
     region: content
 hidden:
   comment_node_book: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
   langcode: true

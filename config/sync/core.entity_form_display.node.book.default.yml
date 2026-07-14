@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.book.body
     - field.field.node.book.comment_node_book
+    - field.field.node.book.field_domain_access
+    - field.field.node.book.field_domain_all_affiliates
     - node.type.book
   module:
     - comment
@@ -36,6 +38,19 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_domain_access:
+    type: options_buttons
+    weight: 40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_domain_all_affiliates:
+    type: boolean_checkbox
+    weight: 41
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   langcode:
     type: language_select

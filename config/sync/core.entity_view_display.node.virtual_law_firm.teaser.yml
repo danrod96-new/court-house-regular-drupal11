@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.virtual_law_firm.body
     - field.field.node.virtual_law_firm.comment_node_virtual_law_firm
+    - field.field.node.virtual_law_firm.field_domain_access
+    - field.field.node.virtual_law_firm.field_domain_all_affiliates
     - field.field.node.virtual_law_firm.group_group
     - node.type.virtual_law_firm
   module:
@@ -39,5 +41,7 @@ content:
     region: content
 hidden:
   comment_node_virtual_law_firm: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
   group_group: true
   langcode: true

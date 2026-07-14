@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_display.comment.comment_node_profile.default
     - field.field.node.profile.body
     - field.field.node.profile.comment_node_profile
+    - field.field.node.profile.field_domain_access
+    - field.field.node.profile.field_domain_all_affiliates
     - field.field.node.profile.taxonomy_vocabulary_2
     - field.field.node.profile.taxonomy_vocabulary_3
     - field.field.node.profile.taxonomy_vocabulary_4
@@ -65,4 +67,6 @@ content:
     weight: 3
     region: content
 hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
   langcode: true

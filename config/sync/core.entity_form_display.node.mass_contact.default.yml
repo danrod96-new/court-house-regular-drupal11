@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.mass_contact.body
     - field.field.node.mass_contact.comment_node_mass_contact
+    - field.field.node.mass_contact.field_domain_access
+    - field.field.node.mass_contact.field_domain_all_affiliates
     - field.field.node.mass_contact.field_mass_contact_attachments
     - field.field.node.mass_contact.field_mass_contact_bcc
     - field.field.node.mass_contact.field_mass_contact_category
@@ -43,6 +45,19 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_domain_access:
+    type: options_buttons
+    weight: 40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_domain_all_affiliates:
+    type: boolean_checkbox
+    weight: 41
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   field_mass_contact_bcc:
     type: string_textfield

@@ -24,6 +24,7 @@ module:
   datetime: 0
   dblog: 0
   domain: 0
+  domain_alias: 0
   domain_config: 0
   domain_config_ui: 0
   easy_breadcrumb: 0
@@ -104,6 +105,7 @@ module:
   forum: 1
   pathauto: 1
   views: 10
+  domain_access: 20
   standard: 1000
 theme:
   olivero: 0

@@ -1,0 +1,12 @@
+uuid: 94a0b2d4-a674-4ce4-b645-572e6b0b7365
+langcode: en
+status: true
+dependencies: {  }
+id: court_house_regular_drupal11_ddev_site
+domain_id: 9336701
+hostname: court-house-regular-drupal11.ddev.site
+name: 'Court House Regular Local'
+scheme: https
+weight: 1
+is_default: false
+path_prefix: ''

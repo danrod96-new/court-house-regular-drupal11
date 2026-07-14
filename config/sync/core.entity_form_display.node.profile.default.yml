@@ -5,6 +5,8 @@ dependencies:
   config:
     - field.field.node.profile.body
     - field.field.node.profile.comment_node_profile
+    - field.field.node.profile.field_domain_access
+    - field.field.node.profile.field_domain_all_affiliates
     - field.field.node.profile.taxonomy_vocabulary_2
     - field.field.node.profile.taxonomy_vocabulary_3
     - field.field.node.profile.taxonomy_vocabulary_4
@@ -40,6 +42,19 @@ content:
     weight: 7
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_domain_access:
+    type: options_buttons
+    weight: 40
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_domain_all_affiliates:
+    type: boolean_checkbox
+    weight: 41
+    region: content
+    settings:
+      display_label: true
     third_party_settings: {  }
   langcode:
     type: language_select

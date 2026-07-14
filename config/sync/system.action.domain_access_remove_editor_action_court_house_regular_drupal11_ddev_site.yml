@@ -1,0 +1,15 @@
+uuid: 837d847c-63ba-4914-8b42-c7285231ea52
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.court_house_regular_drupal11_ddev_site
+  module:
+    - domain_access
+id: domain_access_remove_editor_action_court_house_regular_drupal11_ddev_site
+label: 'Remove editors from the Court House Regular domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id:
+    - court_house_regular_drupal11_ddev_site

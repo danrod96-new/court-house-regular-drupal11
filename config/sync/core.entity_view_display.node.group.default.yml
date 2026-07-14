@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_display.comment.comment_node_group.default
     - field.field.node.group.body
     - field.field.node.group.comment_node_group
+    - field.field.node.group.field_domain_access
+    - field.field.node.group.field_domain_all_affiliates
     - field.field.node.group.group_group
     - field.field.node.group.og_group_ref
     - node.type.group
@@ -56,5 +58,7 @@ content:
     weight: 2
     region: content
 hidden:
+  field_domain_access: true
+  field_domain_all_affiliates: true
   group_group: true
   langcode: true

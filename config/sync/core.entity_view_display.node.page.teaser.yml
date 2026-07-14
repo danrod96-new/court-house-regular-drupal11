@@ -6,6 +6,8 @@ dependencies:
     - core.entity_view_mode.node.teaser
     - field.field.node.page.body
     - field.field.node.page.comment_node_page
+    - field.field.node.page.field_domain_access
+    - field.field.node.page.field_domain_all_affiliates
     - field.field.node.page.field_link
     - field.field.node.page.group_group
     - node.type.page
@@ -45,6 +47,8 @@ content:
     region: content
 hidden:
   comment_node_page: true
+  field_domain_access: true
+  field_domain_all_affiliates: true
   field_link: true
   group_group: true
   langcode: true

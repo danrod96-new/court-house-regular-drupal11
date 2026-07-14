@@ -1,0 +1,15 @@
+uuid: a7c41d29-7059-4b34-ab13-50339ad20b88
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.findlawyerbycourthouse_com
+  module:
+    - domain_access
+id: domain_access_add_editor_action_findlawyerbycourthouse_com
+label: 'Add editors to the Find Lawyer By Court House LIVE domain'
+type: user
+plugin: domain_access_add_editor_action
+configuration:
+  domain_id:
+    - findlawyerbycourthouse_com

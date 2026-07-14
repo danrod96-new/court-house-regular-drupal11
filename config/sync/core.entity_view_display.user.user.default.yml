@@ -3,7 +3,9 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.user.user.field_domain_access
     - field.field.user.user.field_domain_admin
+    - field.field.user.user.field_domain_all_affiliates
     - field.field.user.user.og_user_node
     - field.field.user.user.user_picture
   module:
@@ -42,7 +44,9 @@ content:
     region: content
 hidden:
   customer_profiles: true
+  field_domain_access: true
   field_domain_admin: true
+  field_domain_all_affiliates: true
   langcode: true
   main_profiles: true
   og_user_node: true

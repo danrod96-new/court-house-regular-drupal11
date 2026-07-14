@@ -1,0 +1,15 @@
+uuid: 2dae46d8-ad7c-45f0-93a1-df94057fc9d1
+langcode: en
+status: true
+dependencies:
+  config:
+    - domain.record.www_courthouseregular_com
+  module:
+    - domain_access
+id: domain_access_remove_editor_action_www_courthouseregular_com
+label: 'Remove editors from the Court House Regular LIVE domain'
+type: user
+plugin: domain_access_remove_editor_action
+configuration:
+  domain_id:
+    - www_courthouseregular_com

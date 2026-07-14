@@ -1,0 +1,12 @@
+uuid: a016a6ac-152b-4110-9b92-695547ae3300
+langcode: en
+status: true
+dependencies: {  }
+id: www_courthouseregular_com
+domain_id: 12307203
+hostname: www.courthouseregular.com
+name: 'Court House Regular LIVE'
+scheme: https
+weight: 2
+is_default: true
+path_prefix: ''
