@@ -59,6 +59,22 @@
             }
         },
         {
+          "type": "package",
+          "package": {
+            "name": "jackocnr/intl-tel-input",
+            "version": "dev-master",
+            "type": "drupal-library",
+            "extra": { 
+              "installer-name": "intl-tel-input"
+            },
+            "dist": {
+              "url": "https://github.com/jackocnr/intl-tel-input/archive/refs/tags/v29.1.2.zip",
+              "type": "zip"
+            },
+            "license": "Apache"
+          }
+        },
+        {
             "type": "composer",
             "url": "https://asset-packagist.org"
         }
@@ -121,6 +137,7 @@
         "drupal/views_bulk_operations": "^4.4",
         "drupal/webform": "^6.3",
         "drush/drush": "^13.6",
+        "jackocnr/intl-tel-input": "dev-master",
         "npm-asset/intl-tel-input": "^25.3"
     },
     "conflict": {

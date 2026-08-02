@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "85e4e14e60dff4c4af8b155524575ea6",
+    "content-hash": "3c03333946a0519b097199e8277189d4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -7070,6 +7070,21 @@
             "time": "2026-07-16T22:23:49+00:00"
         },
         {
+            "name": "jackocnr/intl-tel-input",
+            "version": "dev-master",
+            "dist": {
+                "type": "zip",
+                "url": "https://github.com/jackocnr/intl-tel-input/archive/refs/tags/v29.1.2.zip"
+            },
+            "type": "drupal-library",
+            "extra": {
+                "installer-name": "intl-tel-input"
+            },
+            "license": [
+                "Apache"
+            ]
+        },
+        {
             "name": "justinrainbow/json-schema",
             "version": "6.8.2",
             "source": {
@@ -12031,7 +12046,8 @@
     "stability-flags": {
         "drupal/color": 15,
         "drupal/eca": 5,
-        "drupal/shs": 10
+        "drupal/shs": 10,
+        "jackocnr/intl-tel-input": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
