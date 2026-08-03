@@ -80,6 +80,8 @@ module:
   riddler: 0
   rules: 0
   search: 0
+  search_help: 0
+  search_node: 0
   security_review: 0
   shortcut: 0
   shs: 0
@@ -105,6 +107,7 @@ module:
   webform_ui: 0
   forum: 1
   pathauto: 1
+  xmlsitemap: 1
   views: 10
   domain_access: 20
   standard: 1000

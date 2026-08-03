@@ -136,6 +136,7 @@
         "drupal/upgrade_status": "^4.3",
         "drupal/views_bulk_operations": "^4.4",
         "drupal/webform": "^6.3",
+        "drupal/xmlsitemap": "^2.0",
         "drush/drush": "^13.6",
         "jackocnr/intl-tel-input": "dev-master",
         "npm-asset/intl-tel-input": "^25.3"
