@@ -1,0 +1,5 @@
+overridable_configurations:
+  -
+    name: xmlsitemap.settings
+    domains:
+      - www_courthouseregular_com

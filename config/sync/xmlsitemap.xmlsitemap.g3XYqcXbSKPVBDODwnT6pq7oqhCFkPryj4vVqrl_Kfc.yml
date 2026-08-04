@@ -3,6 +3,6 @@ langcode: en
 status: true
 dependencies: {  }
 id: g3XYqcXbSKPVBDODwnT6pq7oqhCFkPryj4vVqrl_Kfc
-label: 'https://court-house-regular-drupal11.ddev.site'
+label: 'https://www.courthouseregular.com'
 context:
   language: en
