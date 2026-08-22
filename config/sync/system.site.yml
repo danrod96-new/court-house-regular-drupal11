@@ -8,7 +8,7 @@ slogan: 'Appearances Are Everything In This Business! ℠'
 page:
   403: ''
   404: ''
-  front: /node
+  front: /node/1600
 admin_compact_mode: false
 weight_select_max: 100
 default_langcode: en
