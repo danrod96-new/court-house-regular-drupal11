@@ -1,1 +1,10 @@
 @import "../../src/scss/init";
+
+.btn-secondary {
+  background-color: $light-grey-3;
+  color: $black-variation-1;
+  padding: 4px 5px;
+  border-radius: 4px;
+  text-shadow: 1px 1px $white;
+  font-weight: normal;
+  }
