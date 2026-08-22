@@ -10,6 +10,7 @@
     "/components/textarea/textarea.css": "/components/textarea/textarea.css",
     "/components/table/table.css": "/components/table/table.css",
     "/components/region/region.css": "/components/region/region.css",
+    "/components/pagination/pagination.css": "/components/pagination/pagination.css",
     "/components/page/page.css": "/components/page/page.css",
     "/components/page-navigation/page-navigation.css": "/components/page-navigation/page-navigation.css",
     "/components/page-front/page-front.css": "/components/page-front/page-front.css",

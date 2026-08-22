@@ -1,0 +1,20 @@
+@import "../../src/scss/init";
+
+.pagination-wrapper {
+  margin-top: 25px;
+
+  .pagination {
+    li {
+      .page-link {
+        border-radius: 0px;
+      }
+
+      &.is-active {
+        .page-link {
+          background-color:  $links-colour;
+          color: $white !important;
+        }
+      }
+    }
+  }
+}

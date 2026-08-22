@@ -131,8 +131,27 @@
   }
 }
 
-/* I had to add these classes here, I couldn't override the buttons */
+/* I had to add these classes here, I couldn't override the buttons and the pagination */
 .btn-primary {
   color: $white !important;
   background-color: $links-colour !important;
+}
+
+.pagination-wrapper {
+  margin-top: 25px;
+
+  .pagination {
+    li {
+      .page-link {
+        border-radius: 0px;
+      }
+
+      &.is-active {
+        .page-link {
+          background-color:  $links-colour;
+          color: $white !important;
+        }
+      }
+    }
+  }
 }

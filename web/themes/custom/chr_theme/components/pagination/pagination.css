@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /**
  * Variables
  * Variables should follow the $component-state-property-size formula for
@@ -192,108 +191,6 @@
   --bs-form-invalid-border-color: rgb(234, 133.8, 143.4);
 }
 
-#main-content #sidebar-first {
-  margin: 26px 15px;
-}
-#main-content #sidebar-first h2 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #333 !important;
-}
-#main-content #sidebar-first a {
-  color: #00008B;
-  padding: 0px;
-}
-#main-content #sidebar-first .logged-in-sidebar-account-menu ul {
-  list-style-type: bullet;
-  margin-left: 15px;
-}
-#main-content #sidebar-first .logged-in-sidebar-account-menu ul li {
-  list-style-image: url(/themes/custom/chr_theme/build/assets/images/menu-leaf.png);
-  list-style-type: square;
-}
-#main-content .page-content {
-  background: #fff;
-  display: inline;
-  margin-bottom: 2.7%;
-  float: right;
-  width: 100%;
-  box-shadow: 0 0 3px #999;
-  margin-top: 25px;
-  padding: 15px 20px;
-  margin: 30px 15px;
-}
-#main-content .page-content h2 {
-  color: #000 !important;
-  font-size: 20px;
-}
-#main-content .page-content h2 a {
-  color: #000;
-  font-weight: bold;
-}
-#main-content .page-content a {
-  color: #00008B;
-}
-#main-content .page-content .breadcrumb {
-  padding-bottom: 6px !important;
-  border-bottom: #eee 1px solid;
-}
-#main-content .page-content .breadcrumb .breadcrumb-item + .breadcrumb-item {
-  padding-left: var(--bs-breadcrumb-item-padding-x);
-}
-#main-content .page-content .breadcrumb .breadcrumb-item + .breadcrumb-item::before {
-  float: left;
-  padding-right: var(--bs-breadcrumb-item-padding-x);
-  content: "»";
-}
-#main-content .page-content .field-name-body a {
-  color: #00008B;
-}
-#main-content .page-content .webform-submission-invite-law-firms-form #edit-actions-submit {
-  margin-top: 1.5em;
-}
-#main-content .page-content .webform-submission-invite-appearance-attorneys-form #edit-submit {
-  margin-top: 1.5em;
-}
-
-.path-forum .action-links {
-  padding-left: 0px;
-}
-.path-forum table th {
-  background: #434343 !important;
-  text-shadow: none;
-  color: #fff;
-  padding: 5px 4px;
-  border-right: 1px solid #c8c7c7;
-}
-.path-forum table th a {
-  color: #fff !important;
-}
-.path-forum table tr.even, .path-forum table tr.odd {
-  background-color: #eee;
-  border-bottom: 1px solid #ccc;
-  padding: 0.1em 0.6em;
-}
-.path-forum table td {
-  background: #ebebeb;
-  color: #747474;
-  text-align: left;
-  padding-left: 10px;
-  border-right: 1px solid #c8c7c7;
-  border-bottom: 1px solid #c8c7c7;
-}
-.path-forum table td a {
-  font-size: 16px;
-}
-
-/* I had to add these classes here, I couldn't override the buttons and the pagination */
-.btn-primary {
-  color: #fff !important;
-  background-color: #00008B !important;
-}
-
 .pagination-wrapper {
   margin-top: 25px;
 }
@@ -305,4 +202,4 @@
   color: #fff !important;
 }
 
-/*# sourceMappingURL=page-content.css.map*/
+/*# sourceMappingURL=pagination.css.map*/
