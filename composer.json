@@ -103,7 +103,7 @@
         "drupal/eca": "^3.0@RC",
         "drupal/entity": "^1.7",
         "drupal/entity_reference_revisions": "^1.14",
-        "drupal/flag": "^5.0",
+        "drupal/flag": "^5.1",
         "drupal/forum": "^1.1",
         "drupal/gin": "^5.0",
         "drupal/group": "^3.3",
