@@ -1,0 +1,8 @@
+# D7 equivalent: custom_permission() (hook_permission).
+invite new users:
+  title: 'Invite Appearance Attorneys'
+  description: 'Send emails from site to friends.'
+
+administer courthouseregular:
+  title: 'Administer Court House Regular'
+  restrict access: true
