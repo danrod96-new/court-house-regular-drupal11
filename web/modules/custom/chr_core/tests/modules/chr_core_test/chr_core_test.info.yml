@@ -1,0 +1,8 @@
+name: 'CHR Core test'
+type: module
+description: 'Support module for chr_core tests: a stand-in for the charter-search view route.'
+package: Testing
+hidden: true
+core_version_requirement: ^10 || ^11
+dependencies:
+  - chr_core:chr_core

@@ -1,0 +1,15 @@
+# Mimics the route Views generates for a charter-search/% page display: the
+# contextual filter is exposed as {arg_0}, mapped in _view_argument_map.
+# Like the Views route, {arg_0} has no default value. A default of 'all'
+# would make the URL generator drop it, turning /charter-search/all into
+# /charter-search.
+chr_core_test.charter_search:
+  path: '/charter-search/{arg_0}'
+  defaults:
+    _controller: '\Drupal\chr_core_test\Controller\CharterSearchController::results'
+    _title: 'Charter search'
+  requirements:
+    _access: 'TRUE'
+  options:
+    _view_argument_map:
+      arg_0: arg_0

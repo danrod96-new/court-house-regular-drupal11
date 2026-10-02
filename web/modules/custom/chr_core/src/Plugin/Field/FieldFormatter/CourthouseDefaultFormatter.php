@@ -9,6 +9,7 @@ use Drupal\Core\Field\FormatterBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\StringTranslation\TranslatableMarkup;
 use Drupal\Core\Url;
+use Drupal\taxonomy\TermInterface;
 use Drupal\taxonomy\TermStorageInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
 
@@ -96,7 +97,7 @@ class CourthouseDefaultFormatter extends FormatterBase {
    */
   public function viewElements(FieldItemListInterface $items, $langcode): array {
     $elements = [];
-    $linked   = $this->getSetting('linked');
+    $linked   = (bool) $this->getSetting('linked');
 
     foreach ($items as $delta => $item) {
       $tid = $item->target_id;
@@ -117,21 +118,11 @@ class CourthouseDefaultFormatter extends FormatterBase {
 
       // Parent terms.
       foreach ($ancestors as $parent) {
-        $list_items[] = [
-          'data'  => $linked
-            ? ['#type' => 'link', '#title' => $parent->label(), '#url' => Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $parent->id()])]
-            : ['#plain_text' => $parent->label()],
-          'class' => ['shs-parent'],
-        ];
+        $list_items[] = $this->buildListItem($parent, $linked, 'shs-parent');
       }
 
       // Selected term.
-      $list_items[] = [
-        'data'  => $linked
-          ? ['#type' => 'link', '#title' => $current_term->label(), '#url' => Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $current_term->id()])]
-          : ['#plain_text' => $current_term->label()],
-        'class' => ['shs-term-selected'],
-      ];
+      $list_items[] = $this->buildListItem($current_term, $linked, 'shs-term-selected');
 
       $elements[$delta] = [
         '#theme'      => 'item_list',
@@ -142,6 +133,26 @@ class CourthouseDefaultFormatter extends FormatterBase {
     }
 
     return $elements;
+  }
+
+  /**
+   * Builds one item_list entry for a term.
+   *
+   * The D7 'data' / 'class' item keys aren't supported by the D8+ item_list
+   * theme: a non-# key is treated as a child render element, so 'class' broke
+   * rendering. Items are render arrays, and <li> attributes go in
+   * #wrapper_attributes.
+   */
+  protected function buildListItem(TermInterface $term, bool $linked, string $class): array {
+    $item = $linked
+      ? [
+        '#type' => 'link',
+        '#title' => $term->label(),
+        '#url' => Url::fromRoute('entity.taxonomy_term.canonical', ['taxonomy_term' => $term->id()]),
+      ]
+      : ['#plain_text' => $term->label()];
+    $item['#wrapper_attributes']['class'][] = $class;
+    return $item;
   }
 
 }

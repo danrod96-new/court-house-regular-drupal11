@@ -1,0 +1,21 @@
+chr_core.adminsettings:
+  type: config_object
+  label: 'Court House Regular settings'
+  mapping:
+    invite_subject:
+      type: label
+      label: 'Default e-mail subject'
+    message_body:
+      type: text
+      label: 'Default e-mail body'
+
+chr_core.adminsettingsinvite:
+  type: config_object
+  label: 'Court House Regular invite settings'
+  mapping:
+    invite_subject:
+      type: label
+      label: 'Default invite e-mail subject'
+    message_body:
+      type: text
+      label: 'Default invite e-mail body'
