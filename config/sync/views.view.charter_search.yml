@@ -358,18 +358,7 @@ display:
       use_ajax: true
       group_by: false
       header: {  }
-      footer:
-        area_text_custom:
-          id: area_text_custom
-          table: views
-          field: area_text_custom
-          relationship: none
-          group_type: group
-          admin_label: ''
-          plugin_id: text_custom
-          empty: false
-          content: '<a href=/receive-search/!1>Search</a> All Receive Assignment Subscribers, Paid and Associate'
-          tokenize: true
+      footer: {  }
       display_extenders: {  }
     cache_metadata:
       max-age: -1
@@ -390,6 +379,27 @@ display:
       exposed_block: true
       display_extenders: {  }
       path: charter-search/%
+    cache_metadata:
+      max-age: -1
+      contexts:
+        - 'languages:language_content'
+        - 'languages:language_interface'
+        - url
+        - url.query_args
+        - user.roles
+      tags:
+        - 'config:field.storage.profile.field_receive_name_of_law_firm'
+  page_2:
+    id: page_2
+    display_title: 'Page 2'
+    display_plugin: page
+    position: 2
+    display_options:
+      title: 'Search for all Receive Assignment Subscribers'
+      defaults:
+        title: false
+      display_extenders: {  }
+      path: receive-search/%
     cache_metadata:
       max-age: -1
       contexts:
