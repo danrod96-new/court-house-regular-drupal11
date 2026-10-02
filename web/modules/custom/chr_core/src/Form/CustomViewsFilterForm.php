@@ -153,7 +153,9 @@ class CustomViewsFilterForm extends FormBase {
    */
   public function submitForm(array &$form, FormStateInterface $form_state): void {
     $values = $form_state->getValue('mc') ?? [];
-    $tid = 0;
+    // 'all' is the Views "no argument" value, so an empty search goes back to
+    // the unfiltered listing rather than to /<base>/0.
+    $tid = 'all';
 
     foreach (array_reverse(self::LEVELS) as $level) {
       $key = $level['key'];
@@ -244,16 +246,16 @@ class CustomViewsFilterForm extends FormBase {
       return $selected;
     }
 
-    // Fresh load: derive the chain from the {tid} route parameter, root
-    // first.
-    $tid = $this->currentRouteMatch->getRawParameter('tid');
-    if (empty($tid) || $tid === 'all' || !is_numeric($tid)) {
+    // Fresh load: derive the chain from the term id in the current URL,
+    // root first.
+    $tid = $this->getContextTid();
+    if ($tid === NULL) {
       return [];
     }
 
     // loadAllParents() returns the term itself first, then ancestors up to
     // the root; reverse it so index 0 is the root (jurisdiction).
-    $chain = array_reverse($this->termStorage->loadAllParents((int) $tid));
+    $chain = array_reverse($this->termStorage->loadAllParents($tid));
 
     $selected = [];
     $depth = 0;
@@ -266,6 +268,39 @@ class CustomViewsFilterForm extends FormBase {
     }
 
     return $selected;
+  }
+
+  /**
+   * Gets the term id the current page is filtered by, if any.
+   *
+   * On a Views page route the contextual filter isn't exposed as {tid}:
+   * Views names its route parameters arg_0, arg_1, ... (or uses the name
+   * given in the path, e.g. %tid) and records the mapping in the route's
+   * _view_argument_map option. So resolve the first argument through that
+   * map, and fall back to a plain {tid} parameter for non-Views routes.
+   *
+   * @return int|null
+   *   The term id, or NULL when there's no numeric argument (e.g. 'all').
+   */
+  protected function getContextTid(): ?int {
+    $candidates = [];
+
+    $route = $this->currentRouteMatch->getRouteObject();
+    $argument_map = $route?->getOption('_view_argument_map') ?? [];
+    if (isset($argument_map['arg_0'])) {
+      $candidates[] = $argument_map['arg_0'];
+    }
+    $candidates[] = 'arg_0';
+    $candidates[] = 'tid';
+
+    foreach (array_unique($candidates) as $name) {
+      $value = $this->currentRouteMatch->getRawParameter($name);
+      if ($value !== NULL && $value !== '') {
+        return ctype_digit((string) $value) ? (int) $value : NULL;
+      }
+    }
+
+    return NULL;
   }
 
 }
