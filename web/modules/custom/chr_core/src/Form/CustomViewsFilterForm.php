@@ -129,9 +129,19 @@ class CustomViewsFilterForm extends FormBase {
       $parent_tid = $current_value !== '' ? (int) $current_value : NULL;
     }
 
-    $form['submit'] = [
+    $form['actions'] = ['#type' => 'actions'];
+    $form['actions']['submit'] = [
       '#type' => 'submit',
       '#value' => $this->t('Apply'),
+    ];
+    // Only offer Reset once there's something to clear.
+    $form['actions']['reset'] = [
+      '#type' => 'submit',
+      '#value' => $this->t('Reset'),
+      '#submit' => ['::resetForm'],
+      '#limit_validation_errors' => [],
+      '#access' => !empty($selected),
+      '#attributes' => ['class' => ['chr-cascade-reset']],
     ];
 
     return $form;
@@ -165,9 +175,29 @@ class CustomViewsFilterForm extends FormBase {
       }
     }
 
-    $base = $this->currentRouteMatch->getRawParameter('base') ?? 'charter-search';
+    $form_state->setRedirectUrl($this->buildSearchUrl($tid));
+  }
 
-    $form_state->setRedirectUrl(Url::fromUserInput("/{$base}/{$tid}"));
+  /**
+   * Submit handler for the Reset button.
+   *
+   * Ignores whatever is currently selected and sends the user back to the
+   * unfiltered listing (/<base>/all); the selects then render empty because
+   * there's no term in the URL to rebuild them from.
+   */
+  public function resetForm(array &$form, FormStateInterface $form_state): void {
+    $form_state->setRedirectUrl($this->buildSearchUrl('all'));
+  }
+
+  /**
+   * Builds the /<base>/<tid> URL the search form redirects to.
+   *
+   * @param int|string $tid
+   *   A term id, or 'all' for the unfiltered listing.
+   */
+  protected function buildSearchUrl(int|string $tid): Url {
+    $base = $this->currentRouteMatch->getRawParameter('base') ?? 'charter-search';
+    return Url::fromUserInput("/{$base}/{$tid}");
   }
 
   // ---------------------------------------------------------------------------
