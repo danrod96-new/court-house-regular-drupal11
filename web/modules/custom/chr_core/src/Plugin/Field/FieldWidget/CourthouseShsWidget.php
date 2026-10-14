@@ -181,7 +181,7 @@ class CourthouseShsWidget extends WidgetBase {
       '#attributes'       => ['class' => ['shs-enabled']],
       '#maxlength'        => NULL,
       '#element_validate' => [[$this, 'validateElement']],
-      '#after_build'      => [[$this, 'afterBuild']],
+      '#after_build'      => [[$this, 'shsAfterBuild']],
       '#shs_settings'     => $shs_settings,
       '#shs_vocabularies' => $vocabularies,
     ];
@@ -198,7 +198,7 @@ class CourthouseShsWidget extends WidgetBase {
    *
    * D7 equivalent: custom_field_widget_afterbuild()
    */
-  public function afterBuild(array $element, FormStateInterface $form_state): array {
+  public function shsAfterBuild(array $element, FormStateInterface $form_state): array {
     static $js_hash = NULL;
     static $library_attached = FALSE;
 
