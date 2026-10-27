@@ -5051,22 +5051,22 @@
         },
         {
             "name": "drupal/profile",
-            "version": "1.14.0",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/profile.git",
-                "reference": "8.x-1.14"
+                "reference": "8.x-1.16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.14.zip",
-                "reference": "8.x-1.14",
-                "shasum": "eda73cb55a9034b318fb87bc9f8db4b778c4fdd6"
+                "url": "https://ftp.drupal.org/files/projects/profile-8.x-1.16.zip",
+                "reference": "8.x-1.16",
+                "shasum": "a2d993414cf3644a21e9ff8d6904306114cd42c5"
             },
             "require": {
-                "drupal/core": "^9 || ^10 || ^11",
+                "drupal/core": "^10.3 || ^11",
                 "drupal/entity": "^1.0",
-                "php": "^7.4 || ^8.0"
+                "php": "^8.1"
             },
             "require-dev": {
                 "drupal/search_api": "~1.30",
@@ -5075,8 +5075,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.14",
-                    "datestamp": "1765287779",
+                    "version": "8.x-1.16",
+                    "datestamp": "1792489590",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
