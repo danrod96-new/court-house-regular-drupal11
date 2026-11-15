@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "78bc382d15007bd0c68ae0c69f9109c1",
+    "content-hash": "f737ce79cb79133e31a5e965e4eb61d2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3324,17 +3324,17 @@
         },
         {
             "name": "drupal/flag",
-            "version": "5.1.1",
+            "version": "5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/flag.git",
-                "reference": "5.1.1"
+                "reference": "5.2.1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/flag-5.1.1.zip",
-                "reference": "5.1.1",
-                "shasum": "e155d03c4820deaf240d622e989ed297be9e6429"
+                "url": "https://ftp.drupal.org/files/projects/flag-5.2.1.zip",
+                "reference": "5.2.1",
+                "shasum": "6bc66d94cfaeb45fea2961ee21250886e6e52b49"
             },
             "require": {
                 "drupal/core": "^10.3 || ^11 || ^12"
@@ -3342,8 +3342,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "5.1.1",
-                    "datestamp": "1791382196",
+                    "version": "5.2.1",
+                    "datestamp": "1794732330",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -3394,6 +3394,10 @@
             ],
             "description": "Create customized flags that users can set on entities.",
             "homepage": "https://www.drupal.org/project/flag",
+            "keywords": [
+                "Actively maintained",
+                "Automation"
+            ],
             "support": {
                 "source": "https://git.drupalcode.org/project/flag"
             }
