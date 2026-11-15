@@ -1647,17 +1647,17 @@
         },
         {
             "name": "drupal/basecore",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/basecore.git",
-                "reference": "1.0.5"
+                "reference": "1.0.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/basecore-1.0.5.zip",
-                "reference": "1.0.5",
-                "shasum": "5cd731b032edab8bce625834840569d5e1c9d8e2"
+                "url": "https://ftp.drupal.org/files/projects/basecore-1.0.6.zip",
+                "reference": "1.0.6",
+                "shasum": "1ef9c3d5bf96691749efab34d8fe50960241ec41"
             },
             "require": {
                 "drupal/core": "^8 || ^9 || ^10 || ^11"
@@ -1665,8 +1665,8 @@
             "type": "drupal-theme",
             "extra": {
                 "drupal": {
-                    "version": "1.0.5",
-                    "datestamp": "1767692767",
+                    "version": "1.0.6",
+                    "datestamp": "1793788443",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -1687,7 +1687,7 @@
                     "homepage": "https://www.drupal.org/user/877552"
                 }
             ],
-            "description": "More than Theme's base theme",
+            "description": "More than Theme's Base+ theme",
             "homepage": "https://www.drupal.org/project/basecore",
             "support": {
                 "source": "https://git.drupalcode.org/project/basecore",
